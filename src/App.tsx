@@ -210,12 +210,7 @@ function App() {
             }}
           >
             <motion.div initial="hidden" animate={["visible", "active"]}>
-              <div
-                className="circles-container"
-                style={{
-                  fontFamily: `${styles[style]?.font}`,
-                }}
-              >
+              <div className="circles-container">
                 <div className="circle-container">
                   <motion.div
                     initial={{ rotate: 0 }}

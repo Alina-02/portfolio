@@ -12,11 +12,15 @@ export const styles = [
     font: "LemonGarlic",
     circleBackground:
       "linear-gradient(0deg,rgba(255, 0, 128, 1) 0%, rgba(179, 255, 0, 1) 72%, rgba(0, 255, 255, 1) 100%)",
+    sectionsBackground: "rgba(255, 0, 128, 1)",
+    sectionsTextColor: "white",
   },
   {
     font: "Maskdown",
     circleBackground:
       "linear-gradient(180deg,rgba(30, 1, 38, 1) 0%, rgba(50, 1, 64, 1) 77%, rgba(63, 2, 89, 1) 100%)",
+    sectionsBackground: "rgba(30, 1, 38, 1)",
+    sectionsTextColor: "white",
   },
   {
     font: "RochestarDemo",
@@ -28,6 +32,7 @@ export const styles = [
     font: "TurquoiseKimono",
     circleBackground:
       "linear-gradient(180deg, rgba(252, 234, 169, 1) 0%, rgba(205, 244, 245, 1) 49%, rgba(107, 217, 242, 1) 100%)",
-    sectionsBackground: "rgba(205, 244, 245, 1)",
+    sectionsBackground: "rgba(252, 234, 169, 1) ",
+    sectionsTextColor: "black",
   },
 ];
