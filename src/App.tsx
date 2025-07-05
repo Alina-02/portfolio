@@ -1,36 +1,10 @@
 import { useState } from "react";
+
 import "./App.css";
 import Flower from "./components/Flower";
 
-const styles = [
-  {
-    font: "ShadigoTrial",
-    circleBackground:
-      "linear-gradient(0deg,rgba(166, 3, 3, 1) 54%, rgba(217, 142, 4, 1) 100%)",
-  },
-  {
-    font: "LemonGarlic",
-    circleBackground:
-      "linear-gradient(0deg,rgba(255, 0, 128, 1) 0%, rgba(179, 255, 0, 1) 72%, rgba(0, 255, 255, 1) 100%)",
-  },
-  {
-    font: "Maskdown",
-    circleBackground:
-      "linear-gradient(180deg,rgba(30, 1, 38, 1) 0%, rgba(50, 1, 64, 1) 77%, rgba(63, 2, 89, 1) 100%)",
-  },
-  {
-    font: "RochestarDemo",
-    circleBackground:
-      "linear-gradient(180deg,rgba(242, 216, 216, 1) 0%, rgba(242, 160, 182, 1) 32%, rgba(140, 123, 101, 1) 100%)",
-    sectionsBackground: "rgba(242, 160, 182, 1)",
-  },
-  {
-    font: "TurquoiseKimono",
-    circleBackground:
-      "linear-gradient(180deg, rgba(252, 234, 169, 1) 0%, rgba(205, 244, 245, 1) 49%, rgba(107, 217, 242, 1) 100%)",
-    sectionsBackground: "rgba(205, 244, 245, 1)",
-  },
-];
+import { styles } from "./utils/styles";
+import { TextFade } from "./components/TextFade";
 
 function App() {
   const [style, setStyle] = useState<number>(0);
@@ -61,44 +35,50 @@ function App() {
         </>
       )}
       <div className="title-div">
-        <h1 style={{ marginBottom: "0.2rem" }}>Hola</h1>
-        <h1 style={{ marginBottom: "1rem", marginTop: "0.8rem" }}>soy</h1>
-        <h1
-          className="title-name"
-          style={{
-            fontFamily: `${styles[style].font}`,
-            fontSize: "8.2rem",
-            marginBottom: "3.5rem",
-          }}
+        <TextFade
+          direction="up"
+          className="pt-0 pb-5 flex-col flex justify-center items-center space-y-0"
         >
-          Alina
-        </h1>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            width: "300px",
-            justifyContent: "space-between",
-            marginBottom: "2rem",
-            alignItems: "center",
-          }}
-        >
-          <button className="arrow-button" onClick={onLeftStyle}>
-            <img
-              src={"../public/icons/arrow-sm-left-svgrepo-com.svg"}
-              alt="mySvgImage"
-              style={{ width: "30px", height: "30px" }}
-            />
-          </button>
-          <h2>Pero también...</h2>
-          <button className="arrow-button" onClick={onRightStyle}>
-            <img
-              src={"../public/icons/arrow-sm-right-svgrepo-com.svg"}
-              alt="mySvgImage"
-              style={{ width: "30px", height: "30px" }}
-            />
-          </button>
-        </div>
+          <h1 style={{ marginBottom: "0.2rem" }}>Hola</h1>
+          <h1 style={{ marginBottom: "1rem", marginTop: "0.8rem" }}>soy</h1>
+
+          <h1
+            className="title-name"
+            style={{
+              fontFamily: `${styles[style].font}`,
+              fontSize: "8.2rem",
+              marginBottom: "3.5rem",
+            }}
+          >
+            Alina
+          </h1>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              width: "375px",
+              justifyContent: "space-between",
+              marginBottom: "2rem",
+              alignItems: "center",
+            }}
+          >
+            <button className="arrow-button" onClick={onLeftStyle}>
+              <img
+                src={"../public/icons/arrow-sm-left-svgrepo-com.svg"}
+                alt="mySvgImage"
+                style={{ width: "30px", height: "30px" }}
+              />
+            </button>
+            <h2>Pero también...</h2>
+            <button className="arrow-button" onClick={onRightStyle}>
+              <img
+                src={"../public/icons/arrow-sm-right-svgrepo-com.svg"}
+                alt="mySvgImage"
+                style={{ width: "30px", height: "30px" }}
+              />
+            </button>
+          </div>
+        </TextFade>
       </div>
 
       <div
