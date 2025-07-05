@@ -1,14 +1,18 @@
 import { useState } from "react";
+import { motion } from "motion/react";
 
 import "./App.css";
+
 import Flower from "./components/Flower";
+import LanguageSwitch from "./components/LanguageSwitch";
+import { TextFade } from "./components/TextFade";
 
 import { styles } from "./utils/styles";
-import { TextFade } from "./components/TextFade";
-import { motion } from "motion/react";
-import LanguageSwitch from "./components/LanguageSwitch";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { t } = useTranslation();
+
   const [style, setStyle] = useState<number>(0);
 
   const [downButtonHover, setDownButtonHover] = useState<boolean>(false);
@@ -92,7 +96,7 @@ function App() {
             }}
           >
             <img
-              src={"../public/icons/arrow-sm-down-svgrepo-com.svg"}
+              src={"/icons/arrow-sm-down-svgrepo-com.svg"}
               alt="mySvgImage"
               style={{ width: "50px", height: "50px" }}
             />
@@ -105,8 +109,10 @@ function App() {
           direction="up"
           className="pt-0 pb-5 flex-col flex justify-center items-center space-y-0"
         >
-          <h1 style={{ marginBottom: "0.2rem" }}>Hola</h1>
-          <h1 style={{ marginBottom: "1rem", marginTop: "0.8rem" }}>soy</h1>
+          <h1 style={{ marginBottom: "0.2rem" }}>{t("Hi")}</h1>
+          <h1 style={{ marginBottom: "1rem", marginTop: "0.8rem" }}>
+            {t("I am")}
+          </h1>
 
           <h1
             className="title-name"
@@ -130,15 +136,15 @@ function App() {
           >
             <button className="arrow-button" onClick={onLeftStyle}>
               <img
-                src={"../public/icons/arrow-sm-left-svgrepo-com.svg"}
+                src={"/icons/arrow-sm-left-svgrepo-com.svg"}
                 alt="mySvgImage"
                 style={{ width: "30px", height: "30px" }}
               />
             </button>
-            <h2>Pero también...</h2>
+            <h2>{t("but also")}</h2>
             <button className="arrow-button" onClick={onRightStyle}>
               <img
-                src={"../public/icons/arrow-sm-right-svgrepo-com.svg"}
+                src={"/icons/arrow-sm-right-svgrepo-com.svg"}
                 alt="mySvgImage"
                 style={{ width: "30px", height: "30px" }}
               />
@@ -216,24 +222,19 @@ function App() {
               backgroundColor: "white",
               height: "400px",
               width: "400px",
+              color: "black",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-          ></div>
+          >
+            <p>{t("photo progress")}</p>
+          </div>
           <div style={{ width: "60%", paddingLeft: "2rem", textAlign: "left" }}>
-            <h2>Sobre mi</h2>
-            <p>
-              ¡Hola! Soy una programadora front-end muy interesada por el diseño
-              UI y la interacción con el usuario.
-            </p>
-            <p>
-              Me gusta proponerme retos nuevos siempre que puedo por lo que no
-              te extrañes si cada vez que pasa por aquí esto ha cambiado.
-              Siempre estoy dispuesta a aprender algo nuevo.
-            </p>
-            <p>
-              El framework con el que me siento más cómoda es React pero también
-              tengo conocimientos en Angular. Respecto al desarrollo móvil tengo
-              conocimientos en Flutter y React Native.
-            </p>
+            <h2>{t("about me")}</h2>
+            <p>{t("about me first line")}</p>
+            <p>{t("about me second line")}</p>
+            <p>{t("about me third line")}</p>
           </div>
         </div>
       </div>

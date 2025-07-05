@@ -1,13 +1,25 @@
 import { motion, type Transition } from "motion/react";
 import React, { useState } from "react";
 import "./LanguageSwitch.css";
+import i18n from "../i18n.ts";
 
 const LanguageSwitch = () => {
   const [isOn, setIsOn] = useState(true);
 
   return (
     <div className="container">
-      <div className="switch" data-is-on={isOn} onClick={() => setIsOn(!isOn)}>
+      <div
+        className="switch"
+        data-is-on={isOn}
+        onClick={() => {
+          setIsOn(!isOn);
+          if (isOn) {
+            i18n.changeLanguage("es");
+          } else {
+            i18n.changeLanguage("en");
+          }
+        }}
+      >
         <motion.div
           className="ball"
           style={{
