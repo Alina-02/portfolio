@@ -4,7 +4,7 @@ import "./LanguageSwitch.css";
 import i18n from "../../i18n";
 
 const LanguageSwitch = () => {
-  const [isOn, setIsOn] = useState(true);
+  const [isOn, setIsOn] = useState(i18n.language === "en");
 
   return (
     <div className="container">

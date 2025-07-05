@@ -5,6 +5,8 @@ export const styles = [
       "linear-gradient(0deg,rgba(166, 3, 3, 1) 54%, rgba(217, 142, 4, 1) 100%)",
     sectionsBackground: "#A60303",
     sectionsTextColor: "#F6E3B3",
+    ringBackground:
+      "linear-gradient(90deg,rgba(242, 191, 39, 1) 0%, rgba(217, 142, 4, 1) 50%, rgba(242, 48, 5, 1) 100%)",
   },
   {
     font: "LemonGarlic",

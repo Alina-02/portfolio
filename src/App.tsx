@@ -7,6 +7,7 @@ import {
 } from "motion/react";
 
 import "./App.css";
+import "./circles.css";
 
 import { TextFade } from "./components/TextFade";
 
@@ -36,7 +37,13 @@ function App() {
   const [style, setStyle] = useState<number>(0);
 
   const [downButtonHover, setDownButtonHover] = useState<boolean>(false);
-  const [zoom, setZoom] = useState<boolean>(false);
+  const [zoom, setZoom] = useState<booleadn>(false);
+  const [circleSelected, setCircleSelected] = useState<
+    "None" | "Projects" | "Courses" | "Curriculum"
+  >("None");
+  const [circleHovered, setCircleHovered] = useState<
+    "None" | "Projects" | "Courses" | "Curriculum"
+  >("None");
 
   const onLeftStyle = () => {
     if (style === 0) {
@@ -56,9 +63,9 @@ function App() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     console.log(latest);
-    if (latest > 450 && !zoom) {
+    if (latest > 475 && !zoom) {
       setZoom(true);
-    } else if (latest < 450 && zoom) {
+    } else if (latest < 475 && zoom) {
       setZoom(false);
     }
   });
@@ -191,41 +198,99 @@ function App() {
         className="main-circle"
         style={{ background: styles[style]?.circleBackground }}
       >
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        {zoom && (
           <div
             style={{
-              borderRadius: "100%",
-              width: "150px",
-              height: "150px",
-              backgroundColor: "white",
-              alignContent: "center",
+              position: "absolute",
+              left: "0",
+              right: "0",
+              bottom: "7vh",
+              marginInline: "auto",
+              width: "fit-content",
             }}
           >
-            Proyectos
+            <motion.div initial="hidden" animate={["visible", "active"]}>
+              <div
+                className="circles-container"
+                style={{
+                  fontFamily: `${styles[style]?.font}`,
+                }}
+              >
+                <div className="circle-container">
+                  <motion.div
+                    initial={{ rotate: 0 }}
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 4,
+                      ease: "linear",
+                      repeat: Infinity,
+                    }}
+                    className="circle-animation"
+                    style={{
+                      background: `${styles[style]?.ringBackground}`,
+                    }}
+                  />
+                  <button
+                    className="button"
+                    onMouseEnter={() => setCircleHovered("Projects")}
+                    onMouseLeave={() => setCircleHovered("None")}
+                    onClick={() => setCircleSelected("Projects")}
+                  >
+                    <p>{t("projects")}</p>
+                  </button>
+                </div>
+
+                <div className="circle-container">
+                  <motion.div
+                    initial={{ rotate: 0 }}
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 4,
+                      ease: "linear",
+                      repeat: Infinity,
+                    }}
+                    className="circle-animation"
+                    style={{
+                      background: `${styles[style]?.ringBackground}`,
+                    }}
+                  />
+                  <button
+                    className="button"
+                    onMouseEnter={() => setCircleHovered("Courses")}
+                    onMouseLeave={() => setCircleHovered("None")}
+                    onClick={() => setCircleSelected("Courses")}
+                  >
+                    <p>{t("courses")}</p>
+                  </button>
+                </div>
+
+                <div className="circle-container">
+                  <motion.div
+                    initial={{ rotate: 0 }}
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 4,
+                      ease: "linear",
+                      repeat: Infinity,
+                    }}
+                    className="circle-animation"
+                    style={{
+                      background: `${styles[style]?.ringBackground}`,
+                    }}
+                  />
+                  <button
+                    className="button"
+                    onMouseEnter={() => setCircleHovered("Curriculum")}
+                    onMouseLeave={() => setCircleHovered("None")}
+                    onClick={() => setCircleSelected("Curriculum")}
+                  >
+                    <p>{t("curriculum")}</p>
+                  </button>
+                </div>
+              </div>
+            </motion.div>
           </div>
-          <div
-            style={{
-              borderRadius: "100%",
-              width: "150px",
-              height: "150px",
-              backgroundColor: "white",
-              alignContent: "center",
-            }}
-          >
-            Cursos
-          </div>
-          <div
-            style={{
-              borderRadius: "100%",
-              width: "150px",
-              height: "150px",
-              backgroundColor: "white",
-              alignContent: "center",
-            }}
-          >
-            Curriculum
-          </div>
-        </div>
+        )}
       </motion.div>
       <div style={{ backgroundColor: "white", height: "400px" }}></div>
       <div
