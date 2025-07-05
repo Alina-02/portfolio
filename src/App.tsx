@@ -1,21 +1,42 @@
 import { useState } from "react";
-import { motion } from "motion/react";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  type Transition,
+} from "motion/react";
 
 import "./App.css";
 
-import Flower from "./components/Flower";
-import LanguageSwitch from "./components/LanguageSwitch";
 import { TextFade } from "./components/TextFade";
 
 import { styles } from "./utils/styles";
 import { useTranslation } from "react-i18next";
+import Flower from "./components/Flower/Flower";
+import LanguageSwitch from "./components/LanguageSwitch/LanguageSwitch";
+
+const mainCircleTransitionIn: Transition = {
+  duration: 1.5,
+  ease: easeOutSine,
+};
+
+const mainCircleTransitionOut: Transition = {
+  duration: 1,
+  ease: easeOutSine,
+};
+
+function easeOutSine(x: number): number {
+  return Math.sin((x * Math.PI) / 2);
+}
 
 function App() {
   const { t } = useTranslation();
+  const { scrollY } = useScroll();
 
   const [style, setStyle] = useState<number>(0);
 
   const [downButtonHover, setDownButtonHover] = useState<boolean>(false);
+  const [zoom, setZoom] = useState<boolean>(false);
 
   const onLeftStyle = () => {
     if (style === 0) {
@@ -32,6 +53,16 @@ function App() {
       setStyle(style + 1);
     }
   };
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    console.log(latest);
+    if (latest > 450 && !zoom) {
+      setZoom(true);
+    } else if (latest < 450 && zoom) {
+      setZoom(false);
+    }
+  });
+
   return (
     <>
       {style === 4 && (
@@ -152,8 +183,11 @@ function App() {
           </div>
         </TextFade>
       </div>
-
-      <div
+      <motion.div
+        transition={zoom ? mainCircleTransitionIn : mainCircleTransitionOut}
+        animate={{
+          scale: zoom ? 1.5 : 1,
+        }}
         className="main-circle"
         style={{ background: styles[style]?.circleBackground }}
       >
@@ -161,8 +195,8 @@ function App() {
           <div
             style={{
               borderRadius: "100%",
-              width: "100px",
-              height: "100px",
+              width: "150px",
+              height: "150px",
               backgroundColor: "white",
               alignContent: "center",
             }}
@@ -172,8 +206,8 @@ function App() {
           <div
             style={{
               borderRadius: "100%",
-              width: "100px",
-              height: "100px",
+              width: "150px",
+              height: "150px",
               backgroundColor: "white",
               alignContent: "center",
             }}
@@ -183,8 +217,8 @@ function App() {
           <div
             style={{
               borderRadius: "100%",
-              width: "100px",
-              height: "100px",
+              width: "150px",
+              height: "150px",
               backgroundColor: "white",
               alignContent: "center",
             }}
@@ -192,8 +226,7 @@ function App() {
             Curriculum
           </div>
         </div>
-      </div>
-
+      </motion.div>
       <div style={{ backgroundColor: "white", height: "400px" }}></div>
       <div
         style={{

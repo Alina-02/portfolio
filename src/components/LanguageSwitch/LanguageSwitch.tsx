@@ -1,7 +1,7 @@
 import { motion, type Transition } from "motion/react";
 import React, { useState } from "react";
 import "./LanguageSwitch.css";
-import i18n from "../i18n.ts";
+import i18n from "../../i18n";
 
 const LanguageSwitch = () => {
   const [isOn, setIsOn] = useState(true);
