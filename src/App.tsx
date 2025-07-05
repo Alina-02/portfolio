@@ -5,9 +5,12 @@ import Flower from "./components/Flower";
 
 import { styles } from "./utils/styles";
 import { TextFade } from "./components/TextFade";
+import { motion } from "motion/react";
 
 function App() {
   const [style, setStyle] = useState<number>(0);
+
+  const [downButtonHover, setDownButtonHover] = useState<boolean>(false);
 
   const onLeftStyle = () => {
     if (style === 0) {
@@ -34,8 +37,61 @@ function App() {
           <Flower right={500} top={-20} size="small" />
         </>
       )}
+      <div
+        style={{
+          position: "absolute",
+          left: "0",
+          right: "0",
+          bottom: "20px",
+          marginInline: "auto",
+          width: "fit-content",
+        }}
+      >
+        <button
+          style={{
+            backgroundColor: "white",
+            borderRadius: "100%",
+            height: "75px",
+            width: "75px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            border: "none",
+          }}
+          onMouseEnter={() => setDownButtonHover(true)}
+          onMouseLeave={() => setDownButtonHover(false)}
+        >
+          <motion.div
+            style={{
+              width: "1px",
+              height: "1px",
+              borderRadius: "100%",
+              position: "absolute",
+            }}
+            animate={{
+              scale: downButtonHover ? 75 : 1,
+              backgroundColor: downButtonHover ? "#1a1a1a" : "white",
+            }}
+          ></motion.div>
+          <motion.div
+            className="downButtonIcon"
+            animate={{
+              filter: downButtonHover
+                ? "invert(100%) sepia(21%) saturate(0%) hue-rotate(106deg) brightness(103%) contrast(101%)"
+                : "invert(6%) sepia(6%) saturate(4%) hue-rotate(351deg) brightness(102%) contrast(90%)",
+            }}
+          >
+            <img
+              src={"../public/icons/arrow-sm-down-svgrepo-com.svg"}
+              alt="mySvgImage"
+              style={{ width: "50px", height: "50px" }}
+            />
+          </motion.div>
+        </button>
+      </div>
       <div className="title-div">
         <TextFade
+          staggerChildren={0.2}
           direction="up"
           className="pt-0 pb-5 flex-col flex justify-center items-center space-y-0"
         >
