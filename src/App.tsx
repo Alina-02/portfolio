@@ -1,12 +1,20 @@
 import { useState } from "react";
 import "./App.css";
+import Flower from "./components/Flower";
 
 const styles = [
-  { font: "ShadigoTrial" },
-  { font: "LemonGarlic" },
-  { font: "Maskdown" },
+  { font: "ShadigoTrial", circleBackground: "red" },
+  {
+    font: "LemonGarlic",
+  },
+  { font: "Maskdown", circleBackground: "black" },
   { font: "RochestarDemo" },
-  { font: "TurquoiseKimono" },
+  {
+    font: "TurquoiseKimono",
+    circleBackground:
+      "linear-gradient(180deg, rgba(252, 234, 169, 1) 0%, rgba(205, 244, 245, 1) 49%, rgba(107, 217, 242, 1) 100%)",
+    sectionsBackground: "rgba(205, 244, 245, 1)",
+  },
 ];
 
 function App() {
@@ -29,9 +37,15 @@ function App() {
   };
   return (
     <>
+      {style === 4 && (
+        <>
+          <Flower left={30} top={-30} />
+          <Flower right={30} top={170} />
+        </>
+      )}
       <div className="title-div">
         <h1 style={{ marginBottom: "0.2rem" }}>Hola</h1>
-        <h1 style={{ marginBottom: "1.5rem", marginTop: "0.8rem" }}>Soy</h1>
+        <h1 style={{ marginBottom: "1.5rem", marginTop: "0.8rem" }}>soy</h1>
         <h1
           className="title-name"
           style={{
@@ -52,30 +66,36 @@ function App() {
             alignItems: "center",
           }}
         >
-          <button
-            style={{ borderRadius: "100%", width: "50px", height: "50px" }}
-            onClick={onLeftStyle}
-          >
-            -
+          <button className="arrow-button" onClick={onLeftStyle}>
+            <img
+              src={"../public/icons/arrow-sm-left-svgrepo-com.svg"}
+              alt="mySvgImage"
+              style={{ width: "30px", height: "30px" }}
+            />
           </button>
           <h2>Pero también...</h2>
-          <button
-            style={{ borderRadius: "100%", width: "50px", height: "50px" }}
-            onClick={onRightStyle}
-          >
-            -
+          <button className="arrow-button" onClick={onRightStyle}>
+            <img
+              src={"../public/icons/arrow-sm-right-svgrepo-com.svg"}
+              alt="mySvgImage"
+              style={{ width: "30px", height: "30px" }}
+            />
           </button>
         </div>
       </div>
 
-      <div className="main-circle">
-        <div>
+      <div
+        className="main-circle"
+        style={{ background: styles[style]?.circleBackground }}
+      >
+        <div style={{ display: "flex", flexDirection: "row" }}>
           <div
             style={{
               borderRadius: "100%",
               width: "100px",
               height: "100px",
               backgroundColor: "white",
+              alignContent: "center",
             }}
           >
             Proyectos
@@ -86,6 +106,7 @@ function App() {
               width: "100px",
               height: "100px",
               backgroundColor: "white",
+              alignContent: "center",
             }}
           >
             Cursos
@@ -96,12 +117,64 @@ function App() {
               width: "100px",
               height: "100px",
               backgroundColor: "white",
+              alignContent: "center",
             }}
           >
             Curriculum
           </div>
         </div>
       </div>
+
+      <div style={{ backgroundColor: "white", height: "400px" }}></div>
+      <div
+        style={{
+          backgroundColor: styles[style]?.sectionsBackground,
+          height: "600px",
+          width: "100vw",
+          display: "flex",
+          justifyContent: "center",
+          padding: "3rem",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1280px",
+            width: "100%",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              borderRadius: "100%",
+              backgroundColor: "white",
+              height: "400px",
+              width: "400px",
+            }}
+          ></div>
+          <div style={{ width: "60%", paddingLeft: "2rem", textAlign: "left" }}>
+            <h2>Sobre mi</h2>
+            <p>
+              ¡Hola! Soy una programadora front-end muy interesada por el diseño
+              UI y la interacción con el usuario.
+            </p>
+            <p>
+              Me gusta proponerme retos nuevos siempre que puedo por lo que no
+              te extrañes si cada vez que pasa por aquí esto ha cambiado.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div style={{ backgroundColor: "white", height: "300px" }}></div>
+      <div
+        style={{
+          backgroundColor: styles[style]?.sectionsBackground,
+          height: "300px",
+          width: "100vw",
+        }}
+      ></div>
     </>
   );
 }
