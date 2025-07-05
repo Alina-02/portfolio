@@ -41,11 +41,13 @@ function App() {
         <>
           <Flower left={30} top={-30} />
           <Flower right={30} top={170} />
+          <Flower left={400} top={170} size="small" />
+          <Flower right={500} top={-20} size="small" />
         </>
       )}
       <div className="title-div">
         <h1 style={{ marginBottom: "0.2rem" }}>Hola</h1>
-        <h1 style={{ marginBottom: "1.5rem", marginTop: "0.8rem" }}>soy</h1>
+        <h1 style={{ marginBottom: "1rem", marginTop: "0.8rem" }}>soy</h1>
         <h1
           className="title-name"
           style={{
@@ -62,7 +64,7 @@ function App() {
             flexDirection: "row",
             width: "300px",
             justifyContent: "space-between",
-            marginBottom: "6rem",
+            marginBottom: "2rem",
             alignItems: "center",
           }}
         >
@@ -130,7 +132,7 @@ function App() {
         style={{
           backgroundColor: styles[style]?.sectionsBackground,
           height: "600px",
-          width: "100vw",
+
           display: "flex",
           justifyContent: "center",
           padding: "3rem",
@@ -163,6 +165,12 @@ function App() {
             <p>
               Me gusta proponerme retos nuevos siempre que puedo por lo que no
               te extrañes si cada vez que pasa por aquí esto ha cambiado.
+              Siempre estoy dispuesta a aprender algo nuevo.
+            </p>
+            <p>
+              El framework con el que me siento más cómoda es React pero también
+              tengo conocimientos en Angular. Respecto al desarrollo móvil tengo
+              conocimientos en Flutter y React Native.
             </p>
           </div>
         </div>

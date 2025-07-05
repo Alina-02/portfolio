@@ -6,10 +6,11 @@ interface Props {
   right?: number;
   top?: number;
   bottom?: number;
+  size?: "small" | "normal";
 }
 
 const Flower = (props: Props) => {
-  const { left, top, right, bottom } = props;
+  const { left, top, right, bottom, size } = props;
   return (
     <div
       style={{
@@ -20,7 +21,7 @@ const Flower = (props: Props) => {
         bottom: bottom,
       }}
     >
-      <div className="flower" />
+      <div className={size === "small" ? "small-flower" : "flower"} />
     </div>
   );
 };

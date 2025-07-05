@@ -1,6 +1,6 @@
 .flower {
-  width: 280px;
-  height: 100px;
+  width: 15vw;
+  height: 5vw;
   background: #0ca9f5;
   background: radial-gradient(
     circle,
@@ -16,8 +16,8 @@
   content: "";
   display: block;
   position: absolute;
-  width: 280px;
-  height: 100px;
+  width: 15vw;
+  height: 5vw;
   background: #0ca9f5;
   background: radial-gradient(
     circle,
@@ -32,8 +32,55 @@
 .flower::after {
   content: "";
   display: block;
-  width: 280px;
-  height: 100px;
+  width: 15vw;
+  height: 5vw;
+  background: #0ca9f5;
+  background: radial-gradient(
+    circle,
+    rgba(12, 169, 245, 1) 0%,
+    rgba(60, 193, 243, 1) 56%,
+    rgba(205, 244, 245, 1) 100%
+  );
+  border-radius: 50px;
+  transform: rotate(-60deg);
+}
+
+.small-flower {
+  width: 10vw;
+  height: 3vw;
+  background: #0ca9f5;
+  background: radial-gradient(
+    circle,
+    rgba(12, 169, 245, 1) 0%,
+    rgba(60, 193, 243, 1) 56%,
+    rgba(205, 244, 245, 1) 100%
+  );
+  border-radius: 50px;
+  margin-top: 200px;
+}
+
+.small-flower::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10vw;
+  height: 3vw;
+  background: #0ca9f5;
+  background: radial-gradient(
+    circle,
+    rgba(12, 169, 245, 1) 0%,
+    rgba(60, 193, 243, 1) 56%,
+    rgba(205, 244, 245, 1) 100%
+  );
+  border-radius: 50px;
+  transform: rotate(60deg);
+}
+
+.small-flower::after {
+  content: "";
+  display: block;
+  width: 10vw;
+  height: 3vw;
   background: #0ca9f5;
   background: radial-gradient(
     circle,
