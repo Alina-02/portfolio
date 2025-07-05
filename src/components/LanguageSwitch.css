@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80px;
+}
+
+.switch {
+  width: 30px;
+  height: 80px;
+  background-color: #d8d6d6;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 50px;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.switch[data-is-on="true"] {
+  align-items: flex-start;
+}
+
+.ball {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 40px;
+  will-change: transform;
+}

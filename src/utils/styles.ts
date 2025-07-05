@@ -3,6 +3,8 @@ export const styles = [
     font: "ShadigoTrial",
     circleBackground:
       "linear-gradient(0deg,rgba(166, 3, 3, 1) 54%, rgba(217, 142, 4, 1) 100%)",
+    sectionsBackground: "#A60303",
+    sectionsTextColor: "#F6E3B3",
   },
   {
     font: "LemonGarlic",

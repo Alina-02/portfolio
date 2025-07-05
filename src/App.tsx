@@ -6,6 +6,7 @@ import Flower from "./components/Flower";
 import { styles } from "./utils/styles";
 import { TextFade } from "./components/TextFade";
 import { motion } from "motion/react";
+import LanguageSwitch from "./components/LanguageSwitch";
 
 function App() {
   const [style, setStyle] = useState<number>(0);
@@ -37,6 +38,15 @@ function App() {
           <Flower right={500} top={-20} size="small" />
         </>
       )}
+      <div
+        style={{
+          position: "absolute",
+          left: "15px",
+          top: "15px",
+        }}
+      >
+        <LanguageSwitch />
+      </div>
       <div
         style={{
           position: "absolute",
@@ -182,6 +192,7 @@ function App() {
       <div
         style={{
           backgroundColor: styles[style]?.sectionsBackground,
+          color: styles[style]?.sectionsTextColor,
           height: "600px",
 
           display: "flex",
