@@ -139,7 +139,7 @@ function App() {
               marginBottom: "3.5rem",
             }}
           >
-            Alina
+            yo
           </h1>
           <div
             style={{
@@ -286,10 +286,135 @@ function App() {
       <div
         style={{
           backgroundColor: styles[style]?.sectionsBackground,
-          height: "300px",
+          height: "325px",
           width: "100vw",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          color: `white`,
+          paddingTop: "1vh",
         }}
-      ></div>
+      >
+        <h2 style={{ fontFamily: `${styles[style]?.font}`, fontSize: "2rem" }}>
+          {t("contactme")}
+        </h2>
+        <div
+          style={{
+            maxWidth: "1280px",
+            height: "220px",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+
+            fontWeight: "500",
+            fontSize: "1.25rem",
+
+            marginTop: "2vh",
+            marginBottom: "2vh",
+          }}
+        >
+          <div
+            style={{
+              width: "25%",
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-around",
+              alignItems: "center",
+              margin: "0.75vw",
+            }}
+          >
+            <img
+              src={"/icons/github.svg"}
+              alt="github icon"
+              style={{
+                width: "75px",
+                height: "75px",
+                filter: `${styles[style]?.iconstFilter}`,
+              }}
+            />
+            <a>linkamigithub.com</a>
+          </div>
+          {/*} <a target="_blank" href="https://icons8.com/icon/8808/linkedin">
+            LinkedIn
+          </a>
+          icon by
+          <a target="_blank" href="https://icons8.com">
+            Icons8
+          </a>*/}
+          <div
+            style={{
+              width: "25%",
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-around",
+              alignItems: "center",
+              margin: "0.75vw",
+            }}
+          >
+            <img
+              src={"/icons/linkedin.svg"}
+              alt="linkedin icon"
+              style={{
+                width: "75px",
+                height: "75px",
+                filter: `${styles[style]?.iconstFilter}`,
+              }}
+            />
+            <a>linkamilinkedin.com</a>
+          </div>
+          <div
+            style={{
+              width: "25%",
+
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-around",
+              alignItems: "center",
+
+              margin: "0.75vw",
+            }}
+          >
+            <img
+              src={"/icons/call.svg"}
+              alt="calls icon"
+              style={{
+                width: "70px",
+                height: "70px",
+                filter: `${styles[style]?.iconstFilter}`,
+              }}
+            />
+            <p style={{ margin: "0" }}>+34 000 000 000</p>
+          </div>
+          <div
+            style={{
+              width: "25%",
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-around",
+              alignItems: "center",
+
+              margin: "0.75vw",
+            }}
+          >
+            <img
+              src={"/icons/email.svg"}
+              alt="email icon"
+              style={{
+                width: "75px",
+                height: "75px",
+                filter: `${styles[style]?.iconstFilter}`,
+              }}
+            />
+            <a>correoelectronico@gmail.com</a>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

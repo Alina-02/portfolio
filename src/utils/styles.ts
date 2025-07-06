@@ -8,6 +8,8 @@ export const styles = [
     ringBackground:
       "linear-gradient(90deg,rgba(242, 191, 39, 1) 0%, rgba(217, 142, 4, 1) 50%, rgba(242, 48, 5, 1) 100%)",
     ringAboutMe: "rgba(217, 142, 4, 1)",
+    iconstFilter:
+      "invert(95%) sepia(2%) saturate(7486%) hue-rotate(221deg) brightness(123%) contrast(101%)",
   },
   {
     font: "LemonGarlic",
