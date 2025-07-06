@@ -300,87 +300,86 @@ function App() {
                   marginRight: "5vw",
                 }}
               >
-                <h3 style={{ marginBottom: "0.5vh" }}>Education</h3>
+                <h3 style={{ marginBottom: "0.5vh" }}>
+                  {t("curriculumsection.education")}
+                </h3>
                 <p style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
-                  <strong>Universitat Politècnica de València </strong> <br />
-                  Computer Science. <i>GPA: 8.7/10</i> <br />
-                  <strong>Thesis</strong>: Application of AI in the Tourism
-                  Sector
-                  <strong>Honors</strong>: 7 Academic Excellence Awards
-                  (Matrículas de Honor)"
+                  <strong>{t("curriculumsection.upv")} </strong> <br />
+                  {t("curriculumsection.degree")}
+                  <i>{t("curriculumsection.gpa")}</i> <br />
+                  <strong>{t("curriculumsection.thesis")}</strong>:{" "}
+                  {t("curriculumsection.thesistitle")}
+                  <br />
+                  <strong>{t("curriculumsection.honors")}</strong>:{" "}
+                  {t("curriculumsection.honorsinformation")}
                 </p>
 
-                <h3 style={{ marginBottom: "0.5vh" }}>Volunteer</h3>
+                <h3 style={{ marginBottom: "0.5vh" }}>
+                  {t("curriculumsection.volunteer")}
+                </h3>
                 <p style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
-                  <strong>TESO NGO</strong>
-                  <br /> <i>September 2023 – June 2024</i> <br />
-                  Participated in reuse and refurbishment of electronic devices
-                  for community use.
+                  <strong>{t("curriculumsection.teso")}</strong>
+                  <br /> <i>{t("curriculumsection.tesodate")}</i> <br />
+                  {t("curriculumsection.tesodescription")}
                 </p>
 
-                <h3 style={{ marginBottom: "0.5vh" }}>Skills</h3>
+                <h3 style={{ marginBottom: "0.5vh" }}>
+                  {t("curriculumsection.skills")}
+                </h3>
 
                 <p style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
-                  <strong>Languages</strong>
+                  <strong>{t("curriculumsection.languages")}</strong>
                   <ul>
-                    <li>Native Spanish</li>
-                    <li>Cambridge Cambridge C1 Advanced</li>
-                    <li>Intermediate Valencian</li>
+                    <li>{t("curriculumsection.language1")}</li>
+                    <li>{t("curriculumsection.language2")}</li>
+                    <li>{t("curriculumsection.language3")}</li>
                   </ul>
-                  <strong>Technical</strong>
+                  <strong>{t("curriculumsection.technical")}</strong>
                   <ul>
-                    <li>
-                      Intermediate/High React with TypeScript. Material UI,
-                      TailwindCSS, Motion.
-                    </li>
-                    <li>Intermediate Java</li>
-                    <li>Basic Flutter</li>
+                    <li>{t("curriculumsection.technical1")}</li>
+                    <li>{t("curriculumsection.technical2")}</li>
+                    <li>{t("curriculumsection.technical3")}</li>
                   </ul>
                 </p>
               </div>
               <div
                 style={{ color: "white", maxWidth: "375px", textAlign: "left" }}
               >
-                <h3 style={{ marginBottom: "0.5vh" }}>Experience</h3>
+                <h3 style={{ marginBottom: "0.5vh" }}>
+                  {t("curriculumsection.experience")}
+                </h3>
                 <p style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
-                  <strong>DialApplet Junior Front-End Developer</strong> <br />
-                  <i>December 2023 – May 2025</i> <br />
+                  <strong>{t("curriculumsection.experiencetitle1")}</strong>{" "}
+                  <br />
+                  <i>{t("curriculumsection.experiencedate1")}</i> <br />
                   <ul>
-                    <li>
-                      Developed and maintained user interfaces using React and
-                      TypeScript.
-                    </li>
-                    <li>Implemented responsive components with Material UI.</li>
-                    <li>
-                      Collaborated with back-end team to integrate RESTful APIs.
-                    </li>
-                    <li>
-                      Improved UI performance and usability through refactoring
-                      and testing.
-                    </li>
+                    <li>{t("curriculumsection.experiencelist11")}</li>
+                    <li>{t("curriculumsection.experiencelist21")}</li>
+                    <li>{t("curriculumsection.experiencelist31")}</li>
+                    <li>{t("curriculumsection.experiencelist41")}</li>
                   </ul>
                 </p>
                 <p style={{ fontSize: "0.8rem" }}>
-                  <strong>
-                    Universitat Politècnica de València Undergraduate Research
-                    Student
-                  </strong>
-                  <br /> <i>February 2024 – August 2025</i>
+                  <strong>{t("curriculumsection.experiencetitle2")}</strong>
+                  <br /> <i>{t("curriculumsection.experiencedate2")}</i>
                   <ul>
-                    <li>
-                      Conducted research for final thesis on applying AI in the
-                      tourism industry.
-                    </li>
-                    <li>
-                      Developed a prototype recommendation system for travel
-                      personalization.
-                    </li>
-                    <li>
-                      Analyzed existing solutions and proposed innovative
-                      improvements.
-                    </li>
+                    <li>{t("curriculumsection.experiencelist21")}</li>
+                    <li>{t("curriculumsection.experiencelist22")}</li>
+                    <li>{t("curriculumsection.experiencelist32")}</li>
                   </ul>
                 </p>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginTop: "2vw",
+                  }}
+                >
+                  <button style={{ cursor: "pointer" }} onClick={() => {}}>
+                    {t("curriculumsection.download")}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
