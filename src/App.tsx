@@ -29,6 +29,11 @@ const mainCircleTransitionOut: Transition = {
   ease: easeOutSine,
 };
 
+const smallCircleTransitionIn: Transition = {
+  duration: 1.5,
+  ease: easeOutSine,
+};
+
 function easeOutSine(x: number): number {
   return Math.sin((x * Math.PI) / 2);
 }
@@ -40,7 +45,10 @@ function App() {
   const [style, setStyle] = useState<number>(0);
 
   const [downButtonHover, setDownButtonHover] = useState<boolean>(false);
-  const [zoom, setZoom] = useState<booleadn>(false);
+  const [leftButtonHover, setLeftButtonHover] = useState<boolean>(false);
+  const [rightButtonHover, setRightButtonHover] = useState<boolean>(false);
+
+  const [zoom, setZoom] = useState<boolean>(false);
   const [circleSelected, setCircleSelected] = useState<
     "None" | "Projects" | "Courses" | "Curriculum"
   >("None");
@@ -70,6 +78,7 @@ function App() {
       setZoom(true);
     } else if (latest < 475 && zoom) {
       setZoom(false);
+      setCircleSelected("None");
     }
   });
 
@@ -178,10 +187,208 @@ function App() {
         className="main-circle"
         style={{ background: styles[style]?.circleBackground }}
       >
+        {circleSelected !== "None" && (
+          <>
+            <button
+              className="left-righ-buttons"
+              style={{
+                left: "350px",
+                bottom: "350px",
+              }}
+              onMouseEnter={() => setLeftButtonHover(true)}
+              onMouseLeave={() => setLeftButtonHover(false)}
+              onClick={() => {
+                switch (circleSelected) {
+                  case "Projects": {
+                    setCircleSelected("Curriculum");
+                    break;
+                  }
+                  case "Curriculum": {
+                    setCircleSelected("Courses");
+                    break;
+                  }
+                  case "Courses": {
+                    setCircleSelected("Projects");
+                    break;
+                  }
+                }
+              }}
+            >
+              <motion.div
+                className="floating-button-animation"
+                animate={{
+                  scale: leftButtonHover ? 45 : 1,
+                  backgroundColor: leftButtonHover ? "#1a1a1a" : "white",
+                }}
+              ></motion.div>
+              <motion.div
+                style={{ width: "40px", height: "40px" }}
+                animate={{
+                  filter: leftButtonHover
+                    ? "invert(100%) sepia(21%) saturate(0%) hue-rotate(106deg) brightness(103%) contrast(101%)"
+                    : "invert(6%) sepia(6%) saturate(4%) hue-rotate(351deg) brightness(102%) contrast(90%)",
+                }}
+              >
+                <img
+                  src={"/icons/arrow-sm-left-svgrepo-com.svg"}
+                  alt="mySvgImage"
+                  style={{ width: "40px", height: "40px" }}
+                />
+              </motion.div>
+            </button>
+
+            <button
+              className="left-righ-buttons"
+              style={{
+                right: "350px",
+                bottom: "350px",
+              }}
+              onMouseEnter={() => setRightButtonHover(true)}
+              onMouseLeave={() => setRightButtonHover(false)}
+              onClick={() => {
+                switch (circleSelected) {
+                  case "Projects": {
+                    setCircleSelected("Courses");
+                    break;
+                  }
+                  case "Curriculum": {
+                    setCircleSelected("Projects");
+                    break;
+                  }
+                  case "Courses": {
+                    setCircleSelected("Curriculum");
+                    break;
+                  }
+                }
+              }}
+            >
+              <motion.div
+                className="floating-button-animation"
+                animate={{
+                  scale: rightButtonHover ? 45 : 1,
+                  backgroundColor: rightButtonHover ? "#1a1a1a" : "white",
+                }}
+              ></motion.div>
+              <motion.div
+                style={{ width: "40px", height: "40px" }}
+                animate={{
+                  filter: rightButtonHover
+                    ? "invert(100%) sepia(21%) saturate(0%) hue-rotate(106deg) brightness(103%) contrast(101%)"
+                    : "invert(6%) sepia(6%) saturate(4%) hue-rotate(351deg) brightness(102%) contrast(90%)",
+                }}
+              >
+                <img
+                  src={"/icons/arrow-sm-right-svgrepo-com.svg"}
+                  alt="mySvgImage"
+                  style={{ width: "40px", height: "40px" }}
+                />
+              </motion.div>
+            </button>
+          </>
+        )}
+
+        {circleSelected === "Curriculum" && (
+          <div
+            style={{ display: "flex", flexDirection: "column", color: "white" }}
+          >
+            <h2>{t("curriculum")}</h2>
+            <div style={{ display: "flex" }}>
+              <div
+                style={{
+                  maxWidth: "375px",
+                  textAlign: "left",
+                  marginRight: "5vw",
+                }}
+              >
+                <h3 style={{ marginBottom: "0.5vh" }}>Education</h3>
+                <p style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
+                  <strong>Universitat Politècnica de València </strong> <br />
+                  Computer Science. <i>GPA: 8.7/10</i> <br />
+                  <strong>Thesis</strong>: Application of AI in the Tourism
+                  Sector
+                  <strong>Honors</strong>: 7 Academic Excellence Awards
+                  (Matrículas de Honor)"
+                </p>
+
+                <h3 style={{ marginBottom: "0.5vh" }}>Volunteer</h3>
+                <p style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
+                  <strong>TESO NGO</strong>
+                  <br /> <i>September 2023 – June 2024</i> <br />
+                  Participated in reuse and refurbishment of electronic devices
+                  for community use.
+                </p>
+
+                <h3 style={{ marginBottom: "0.5vh" }}>Skills</h3>
+
+                <p style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
+                  <strong>Languages</strong>
+                  <ul>
+                    <li>Native Spanish</li>
+                    <li>Cambridge Cambridge C1 Advanced</li>
+                    <li>Intermediate Valencian</li>
+                  </ul>
+                  <strong>Technical</strong>
+                  <ul>
+                    <li>
+                      Intermediate/High React with TypeScript. Material UI,
+                      TailwindCSS, Motion.
+                    </li>
+                    <li>Intermediate Java</li>
+                    <li>Basic Flutter</li>
+                  </ul>
+                </p>
+              </div>
+              <div
+                style={{ color: "white", maxWidth: "375px", textAlign: "left" }}
+              >
+                <h3 style={{ marginBottom: "0.5vh" }}>Experience</h3>
+                <p style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
+                  <strong>DialApplet Junior Front-End Developer</strong> <br />
+                  <i>December 2023 – May 2025</i> <br />
+                  <ul>
+                    <li>
+                      Developed and maintained user interfaces using React and
+                      TypeScript.
+                    </li>
+                    <li>Implemented responsive components with Material UI.</li>
+                    <li>
+                      Collaborated with back-end team to integrate RESTful APIs.
+                    </li>
+                    <li>
+                      Improved UI performance and usability through refactoring
+                      and testing.
+                    </li>
+                  </ul>
+                </p>
+                <p style={{ fontSize: "0.8rem" }}>
+                  <strong>
+                    Universitat Politècnica de València Undergraduate Research
+                    Student
+                  </strong>
+                  <br /> <i>February 2024 – August 2025</i>
+                  <ul>
+                    <li>
+                      Conducted research for final thesis on applying AI in the
+                      tourism industry.
+                    </li>
+                    <li>
+                      Developed a prototype recommendation system for travel
+                      personalization.
+                    </li>
+                    <li>
+                      Analyzed existing solutions and proposed innovative
+                      improvements.
+                    </li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
         {zoom && (
           <div className="circles-container-container">
-            <motion.div initial="hidden" animate={["visible", "active"]}>
-              <div className="circles-container">
+            <div className="circles-container">
+              {circleSelected === "None" && (
                 <div className="circle-container">
                   <motion.div
                     initial={{ rotate: 0 }}
@@ -202,10 +409,12 @@ function App() {
                     onMouseLeave={() => setCircleHovered("None")}
                     onClick={() => setCircleSelected("Projects")}
                   >
-                    <p>{t("projects")}</p>
+                    <h2 style={{ fontSize: "1.5rem" }}>{t("projects")}</h2>
                   </button>
                 </div>
+              )}
 
+              {circleSelected === "None" && (
                 <div className="circle-container">
                   <motion.div
                     initial={{ rotate: 0 }}
@@ -226,10 +435,12 @@ function App() {
                     onMouseLeave={() => setCircleHovered("None")}
                     onClick={() => setCircleSelected("Courses")}
                   >
-                    <p>{t("courses")}</p>
+                    <h2 style={{ fontSize: "1.5rem" }}>{t("courses")}</h2>
                   </button>
                 </div>
+              )}
 
+              {circleSelected === "None" && (
                 <div className="circle-container">
                   <motion.div
                     initial={{ rotate: 0 }}
@@ -250,11 +461,11 @@ function App() {
                     onMouseLeave={() => setCircleHovered("None")}
                     onClick={() => setCircleSelected("Curriculum")}
                   >
-                    <p>{t("curriculum")}</p>
+                    <h2 style={{ fontSize: "1.5rem" }}>{t("curriculum")}</h2>
                   </button>
                 </div>
-              </div>
-            </motion.div>
+              )}
+            </div>
           </div>
         )}
       </motion.div>
