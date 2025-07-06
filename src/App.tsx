@@ -7,9 +7,10 @@ import {
 } from "motion/react";
 
 import "./App.css";
-import "./circles.css";
-import "./aboutme.css";
-import "./floatingbutton.css";
+import "./styles/circles.css";
+import "./styles/aboutme.css";
+import "./styles/floatingbutton.css";
+import "./styles/contactme.css";
 
 import { TextFade } from "./components/TextFade";
 
@@ -284,48 +285,16 @@ function App() {
       </div>
       <div style={{ backgroundColor: "white", height: "300px" }}></div>
       <div
+        className="contact-me-container"
         style={{
           backgroundColor: styles[style]?.sectionsBackground,
-          height: "325px",
-          width: "100vw",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          color: `white`,
-          paddingTop: "1vh",
         }}
       >
         <h2 style={{ fontFamily: `${styles[style]?.font}`, fontSize: "2rem" }}>
           {t("contactme")}
         </h2>
-        <div
-          style={{
-            maxWidth: "1280px",
-            height: "220px",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-
-            fontWeight: "500",
-            fontSize: "1.25rem",
-
-            marginTop: "2vh",
-            marginBottom: "2vh",
-          }}
-        >
-          <div
-            style={{
-              width: "25%",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-around",
-              alignItems: "center",
-              margin: "0.75vw",
-            }}
-          >
+        <div className="contact-me-information-container">
+          <div className="contact-me-element">
             <img
               src={"/icons/github.svg"}
               alt="github icon"
@@ -335,73 +304,11 @@ function App() {
                 filter: `${styles[style]?.iconstFilter}`,
               }}
             />
-            <a>linkamigithub.com</a>
+            <a href="https://github.com/Alina-02" target="_blank">
+              GitHub
+            </a>
           </div>
-          {/*} <a target="_blank" href="https://icons8.com/icon/8808/linkedin">
-            LinkedIn
-          </a>
-          icon by
-          <a target="_blank" href="https://icons8.com">
-            Icons8
-          </a>*/}
-          <div
-            style={{
-              width: "25%",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-around",
-              alignItems: "center",
-              margin: "0.75vw",
-            }}
-          >
-            <img
-              src={"/icons/linkedin.svg"}
-              alt="linkedin icon"
-              style={{
-                width: "75px",
-                height: "75px",
-                filter: `${styles[style]?.iconstFilter}`,
-              }}
-            />
-            <a>linkamilinkedin.com</a>
-          </div>
-          <div
-            style={{
-              width: "25%",
-
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-around",
-              alignItems: "center",
-
-              margin: "0.75vw",
-            }}
-          >
-            <img
-              src={"/icons/call.svg"}
-              alt="calls icon"
-              style={{
-                width: "70px",
-                height: "70px",
-                filter: `${styles[style]?.iconstFilter}`,
-              }}
-            />
-            <p style={{ margin: "0" }}>+34 000 000 000</p>
-          </div>
-          <div
-            style={{
-              width: "25%",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-around",
-              alignItems: "center",
-
-              margin: "0.75vw",
-            }}
-          >
+          <div className="contact-me-element">
             <img
               src={"/icons/email.svg"}
               alt="email icon"
@@ -411,7 +318,38 @@ function App() {
                 filter: `${styles[style]?.iconstFilter}`,
               }}
             />
-            <a>correoelectronico@gmail.com</a>
+            <a>alinamontma@gmail.com</a>
+          </div>
+          {/*} <a target="_blank" href="https://icons8.com/icon/8808/linkedin">
+            LinkedIn
+          </a>
+          icon by
+          <a target="_blank" href="https://icons8.com">
+            Icons8
+          </a>*/}
+          <div className="contact-me-element">
+            <img
+              src={"/icons/linkedin.svg"}
+              alt="linkedin icon"
+              style={{
+                width: "75px",
+                height: "75px",
+                filter: `${styles[style]?.iconstFilter}`,
+              }}
+            />
+            <a href="https://linkedin.com/in/alina-montoliu-2oo2">LinkedIn</a>
+          </div>
+          <div className="contact-me-element">
+            <img
+              src={"/icons/call.svg"}
+              alt="calls icon"
+              style={{
+                width: "70px",
+                height: "70px",
+                filter: `${styles[style]?.iconstFilter}`,
+              }}
+            />
+            <p style={{ margin: "0" }}>+34 685 63 18 05</p>
           </div>
         </div>
       </div>
