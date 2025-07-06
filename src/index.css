@@ -23,6 +23,10 @@
   src: url(/fonts/UT\ Shadigo\ Trial.woff);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-family: Roboto, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

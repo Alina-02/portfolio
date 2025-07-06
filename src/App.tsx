@@ -19,6 +19,8 @@ import { useTranslation } from "react-i18next";
 import Flower from "./components/Flower/Flower";
 import LanguageSwitch from "./components/LanguageSwitch/LanguageSwitch";
 
+import i18n from "./i18n";
+
 const mainCircleTransitionIn: Transition = {
   duration: 1.5,
   ease: easeOutSine,
@@ -289,7 +291,13 @@ function App() {
 
         {circleSelected === "Curriculum" && (
           <div
-            style={{ display: "flex", flexDirection: "column", color: "white" }}
+            id="curriculum"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              color: "white",
+              zIndex: "1",
+            }}
           >
             <h2>{t("curriculum")}</h2>
             <div style={{ display: "flex" }}>
@@ -327,7 +335,7 @@ function App() {
                   {t("curriculumsection.skills")}
                 </h3>
 
-                <p style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
+                <div style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
                   <strong>{t("curriculumsection.languages")}</strong>
                   <ul>
                     <li>{t("curriculumsection.language1")}</li>
@@ -340,7 +348,7 @@ function App() {
                     <li>{t("curriculumsection.technical2")}</li>
                     <li>{t("curriculumsection.technical3")}</li>
                   </ul>
-                </p>
+                </div>
               </div>
               <div
                 style={{ color: "white", maxWidth: "375px", textAlign: "left" }}
@@ -348,7 +356,7 @@ function App() {
                 <h3 style={{ marginBottom: "0.5vh" }}>
                   {t("curriculumsection.experience")}
                 </h3>
-                <p style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
+                <div style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
                   <strong>{t("curriculumsection.experiencetitle1")}</strong>{" "}
                   <br />
                   <i>{t("curriculumsection.experiencedate1")}</i> <br />
@@ -358,8 +366,8 @@ function App() {
                     <li>{t("curriculumsection.experiencelist31")}</li>
                     <li>{t("curriculumsection.experiencelist41")}</li>
                   </ul>
-                </p>
-                <p style={{ fontSize: "0.8rem" }}>
+                </div>
+                <div style={{ fontSize: "0.8rem" }}>
                   <strong>{t("curriculumsection.experiencetitle2")}</strong>
                   <br /> <i>{t("curriculumsection.experiencedate2")}</i>
                   <ul>
@@ -367,7 +375,7 @@ function App() {
                     <li>{t("curriculumsection.experiencelist22")}</li>
                     <li>{t("curriculumsection.experiencelist32")}</li>
                   </ul>
-                </p>
+                </div>
                 <div
                   style={{
                     display: "flex",
@@ -376,9 +384,24 @@ function App() {
                     marginTop: "2vw",
                   }}
                 >
-                  <button style={{ cursor: "pointer" }} onClick={() => {}}>
+                  <a
+                    style={{
+                      cursor: "pointer",
+                      color: "black",
+                      backgroundColor: "white",
+
+                      borderRadius: "10px",
+                      padding: "1vh",
+                    }}
+                    href={
+                      i18n.language === "en"
+                        ? "docs/CV_Alina_Montoliu_Eng.pdf"
+                        : "docs/CV_Alina_Montoliu_Mateo.pdf"
+                    }
+                    download
+                  >
                     {t("curriculumsection.download")}
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -460,7 +483,14 @@ function App() {
                     onMouseLeave={() => setCircleHovered("None")}
                     onClick={() => setCircleSelected("Curriculum")}
                   >
-                    <h2 style={{ fontSize: "1.5rem" }}>{t("curriculum")}</h2>
+                    <h2 style={{ fontSize: "1.5rem" }}>
+                      <a
+                        href="#curriculum"
+                        style={{ color: "black", fontWeight: 500 }}
+                      >
+                        {t("curriculum")}
+                      </a>
+                    </h2>
                   </button>
                 </div>
               )}
