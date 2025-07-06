@@ -430,13 +430,11 @@ function App() {
                 }}
               >
                 <CourseCard mainInfo="coursessection.cooking" year="" web="" />
-
                 <CourseCard
                   mainInfo="coursessection.course1.title"
                   year="coursessection.course1.year"
                   web="coursessection.course1.web"
                 />
-
                 <CourseCard
                   mainInfo="coursessection.course2.title"
                   year="coursessection.course2.year"
@@ -494,6 +492,20 @@ function App() {
                 />
               </div>
             </div>
+          </div>
+        )}
+
+        {circleSelected === "Projects" && (
+          <div
+            id="projects"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              color: "white",
+              zIndex: "1",
+            }}
+          >
+            <h2>{t("projects")}</h2>
           </div>
         )}
 
