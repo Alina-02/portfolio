@@ -20,6 +20,7 @@ import Flower from "./components/Flower/Flower";
 import LanguageSwitch from "./components/LanguageSwitch/LanguageSwitch";
 
 import i18n from "./i18n";
+import CourseCard from "./components/CourseCard/CourseCard";
 
 const mainCircleTransitionIn: Transition = {
   duration: 1.5,
@@ -407,6 +408,96 @@ function App() {
             </div>
           </div>
         )}
+
+        {circleSelected === "Courses" && (
+          <div
+            id="courses"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              color: "white",
+              zIndex: "1",
+            }}
+          >
+            <h2>{t("courses")}</h2>
+            <div style={{ fontSize: "0.8rem" }}>
+              <div
+                style={{
+                  display: "flex",
+                  width: "1000px",
+                  height: "150px",
+                  justifyContent: "space-around",
+                }}
+              >
+                <CourseCard mainInfo="Cooking..." year="" web="" />
+
+                <CourseCard
+                  mainInfo="JavaScript​: From First Steps to
+                  Professional"
+                  year="2025"
+                  web="Frontend Masters"
+                />
+
+                <CourseCard
+                  mainInfo="Website Accessibility, v3"
+                  year="2025"
+                  web="Frontend Masters"
+                />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  width: "1000px",
+                  height: "150px",
+                  justifyContent: "space-around",
+                  marginTop: "2vh",
+                }}
+              >
+                <CourseCard
+                  mainInfo="CSS Foundations"
+                  year="2025"
+                  web="Frontend Masters"
+                />
+                <CourseCard
+                  mainInfo="Complete Intro to Web Development, v3"
+                  year="2025"
+                  web="Frontend Masters"
+                />
+                <CourseCard
+                  mainInfo="Getting Started with CSS"
+                  year="2025"
+                  web="Frontend Masters"
+                />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  width: "1000px",
+                  height: "150px",
+                  justifyContent: "space-around",
+                  marginTop: "2vh",
+                }}
+              >
+                <CourseCard
+                  mainInfo="Getting Started with JavaScript, v2"
+                  year="2025"
+                  web="Frontend Masters"
+                />
+                <CourseCard
+                  mainInfo="Aspectos básicos: Datos, datos, en todas partes"
+                  year="2023"
+                  web="Coursera"
+                />
+                <CourseCard
+                  mainInfo="Curso profesional de React"
+                  year="2023"
+                  web="Código Facilito"
+                />
+              </div>
+            </div>
+          </div>
+        )}
+
         {zoom && (
           <div className="circles-container-container">
             <div className="circles-container">
@@ -457,7 +548,14 @@ function App() {
                     onMouseLeave={() => setCircleHovered("None")}
                     onClick={() => setCircleSelected("Courses")}
                   >
-                    <h2 style={{ fontSize: "1.5rem" }}>{t("courses")}</h2>
+                    <h2 style={{ fontSize: "1.5rem" }}>
+                      <a
+                        href="#courses"
+                        style={{ color: "black", fontWeight: 500 }}
+                      >
+                        {t("courses")}
+                      </a>
+                    </h2>
                   </button>
                 </div>
               )}
