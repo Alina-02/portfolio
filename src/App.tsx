@@ -429,19 +429,18 @@ function App() {
                   justifyContent: "space-around",
                 }}
               >
-                <CourseCard mainInfo="Cooking..." year="" web="" />
+                <CourseCard mainInfo="coursessection.cooking" year="" web="" />
 
                 <CourseCard
-                  mainInfo="JavaScript​: From First Steps to
-                  Professional"
-                  year="2025"
-                  web="Frontend Masters"
+                  mainInfo="coursessection.course1.title"
+                  year="coursessection.course1.year"
+                  web="coursessection.course1.web"
                 />
 
                 <CourseCard
-                  mainInfo="Website Accessibility, v3"
-                  year="2025"
-                  web="Frontend Masters"
+                  mainInfo="coursessection.course2.title"
+                  year="coursessection.course2.year"
+                  web="coursessection.course2.web"
                 />
               </div>
               <div
@@ -454,19 +453,19 @@ function App() {
                 }}
               >
                 <CourseCard
-                  mainInfo="CSS Foundations"
-                  year="2025"
-                  web="Frontend Masters"
+                  mainInfo="coursessection.course3.title"
+                  year="coursessection.course3.year"
+                  web="coursessection.course3.web"
                 />
                 <CourseCard
-                  mainInfo="Complete Intro to Web Development, v3"
-                  year="2025"
-                  web="Frontend Masters"
+                  mainInfo="coursessection.course4.title"
+                  year="coursessection.course4.year"
+                  web="coursessection.course4.web"
                 />
                 <CourseCard
-                  mainInfo="Getting Started with CSS"
-                  year="2025"
-                  web="Frontend Masters"
+                  mainInfo="coursessection.course5.title"
+                  year="coursessection.course5.year"
+                  web="coursessection.course5.web"
                 />
               </div>
               <div
@@ -479,19 +478,19 @@ function App() {
                 }}
               >
                 <CourseCard
-                  mainInfo="Getting Started with JavaScript, v2"
-                  year="2025"
-                  web="Frontend Masters"
+                  mainInfo="coursessection.course6.title"
+                  year="coursessection.course6.year"
+                  web="coursessection.course6.web"
                 />
                 <CourseCard
-                  mainInfo="Aspectos básicos: Datos, datos, en todas partes"
-                  year="2023"
-                  web="Coursera"
+                  mainInfo="coursessection.course7.title"
+                  year="coursessection.course7.year"
+                  web="coursessection.course7.web"
                 />
                 <CourseCard
-                  mainInfo="Curso profesional de React"
-                  year="2023"
-                  web="Código Facilito"
+                  mainInfo="coursessection.course8.title"
+                  year="coursessection.course8.year"
+                  web="coursessection.course8.web"
                 />
               </div>
             </div>

@@ -78,7 +78,49 @@ i18n
             download: "Download CV",
           },
           projectssection: {},
-          coursessection: {},
+          coursessection: {
+            cooking: "Cooking...",
+            course1: {
+              title: "JavaScript​: From First Steps to Professional",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course2: {
+              title: "Website Accessibility, v3",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course3: {
+              title: "CSS Foundations",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course4: {
+              title: "Complete Intro to Web Development, v3",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course5: {
+              title: "Getting Started with CSS",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course6: {
+              title: "Getting Started with JavaScript, v2",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course7: {
+              title: "Basic aspects: Data, data, everywhere",
+              year: "2023",
+              web: "Coursera",
+            },
+            course8: {
+              title: "Professional React Course",
+              year: "2023",
+              web: "Codigo Facilito",
+            },
+          },
         },
       },
       es: {
@@ -142,6 +184,49 @@ i18n
               "Desarrollo de un prototipo de recomendación personalizado para viajes.",
             experiencelist32: "Análisis de soluciones actuales e innovaciones.",
             download: "Descargar CV",
+          },
+          coursessection: {
+            cooking: "En proceso...",
+            course1: {
+              title: "JavaScript​: From First Steps to Professional",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course2: {
+              title: "Website Accessibility, v3",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course3: {
+              title: "CSS Foundations",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course4: {
+              title: "Complete Intro to Web Development, v3",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course5: {
+              title: "Getting Started with CSS",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course6: {
+              title: "Getting Started with JavaScript, v2",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course7: {
+              title: "Basic aspects: Data, data, everywhere",
+              year: "2023",
+              web: "Coursera",
+            },
+            course8: {
+              title: "Professional React Course",
+              year: "2023",
+              web: "Codigo Facilito",
+            },
           },
         },
       },
