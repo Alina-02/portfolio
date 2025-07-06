@@ -1,26 +1,26 @@
 @font-face {
   font-family: LemonGarlic;
-  src: url(../public/fonts/Lemon\ Garlic.otf);
+  src: url(/fonts/Lemon\ Garlic.otf);
 }
 
 @font-face {
   font-family: Maskdown;
-  src: url(../public/fonts/Maskdown.otf);
+  src: url(/fonts/Maskdown.otf);
 }
 
 @font-face {
   font-family: RochestarDemo;
-  src: url(../public/fonts/Rochestar\ Demo.otf);
+  src: url(/fonts/Rochestar\ Demo.otf);
 }
 
 @font-face {
   font-family: TurquoiseKimono;
-  src: url(../public/fonts/Turquoise-Kimono.ttf);
+  src: url(/fonts/Turquoise-Kimono.ttf);
 }
 
 @font-face {
   font-family: ShadigoTrial;
-  src: url(../public/fonts/UT\ Shadigo\ Trial.woff);
+  src: url(/fonts/UT\ Shadigo\ Trial.woff);
 }
 
 :root {

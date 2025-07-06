@@ -313,12 +313,13 @@ function App() {
             style={{
               borderRadius: "100%",
               backgroundColor: "white",
-              height: "400px",
-              width: "400px",
+              height: "375px",
+              width: "375px",
               color: "black",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              border: `30px solid ${styles[style]?.ringAboutMe}`,
             }}
           >
             <p>{t("photo progress")}</p>
