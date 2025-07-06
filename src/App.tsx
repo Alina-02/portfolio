@@ -275,12 +275,18 @@ function App() {
           >
             <p>{t("photo progress")}</p>
           </div>
-          <div className="about-me-text">
-            <h2>{t("about me")}</h2>
-            <p>{t("about me first line")}</p>
-            <p>{t("about me second line")}</p>
-            <p>{t("about me third line")}</p>
-          </div>
+          <TextFade
+            staggerChildren={0.7}
+            direction="up"
+            className="about-me-text"
+          >
+            <div className="about-me-text">
+              <h2>{t("about me")}</h2>
+              <p>{t("about me first line")}</p>
+              <p>{t("about me second line")}</p>
+              <p>{t("about me third line")}</p>
+            </div>
+          </TextFade>
         </div>
       </div>
       <div style={{ backgroundColor: "white", height: "300px" }}></div>
@@ -293,65 +299,67 @@ function App() {
         <h2 style={{ fontFamily: `${styles[style]?.font}`, fontSize: "2rem" }}>
           {t("contactme")}
         </h2>
-        <div className="contact-me-information-container">
-          <div className="contact-me-element">
-            <img
-              src={"/icons/github.svg"}
-              alt="github icon"
-              style={{
-                width: "75px",
-                height: "75px",
-                filter: `${styles[style]?.iconstFilter}`,
-              }}
-            />
-            <a href="https://github.com/Alina-02" target="_blank">
-              GitHub
-            </a>
-          </div>
-          <div className="contact-me-element">
-            <img
-              src={"/icons/email.svg"}
-              alt="email icon"
-              style={{
-                width: "75px",
-                height: "75px",
-                filter: `${styles[style]?.iconstFilter}`,
-              }}
-            />
-            <a>alinamontma@gmail.com</a>
-          </div>
-          {/*} <a target="_blank" href="https://icons8.com/icon/8808/linkedin">
+        <TextFade staggerChildren={0.4} direction="up">
+          <div className="contact-me-information-container">
+            <div className="contact-me-element">
+              <img
+                src={"/icons/github.svg"}
+                alt="github icon"
+                style={{
+                  width: "75px",
+                  height: "75px",
+                  filter: `${styles[style]?.iconstFilter}`,
+                }}
+              />
+              <a href="https://github.com/Alina-02" target="_blank">
+                GitHub
+              </a>
+            </div>
+            <div className="contact-me-element">
+              <img
+                src={"/icons/email.svg"}
+                alt="email icon"
+                style={{
+                  width: "75px",
+                  height: "75px",
+                  filter: `${styles[style]?.iconstFilter}`,
+                }}
+              />
+              <a>alinamontma@gmail.com</a>
+            </div>
+            {/*} <a target="_blank" href="https://icons8.com/icon/8808/linkedin">
             LinkedIn
           </a>
           icon by
           <a target="_blank" href="https://icons8.com">
             Icons8
           </a>*/}
-          <div className="contact-me-element">
-            <img
-              src={"/icons/linkedin.svg"}
-              alt="linkedin icon"
-              style={{
-                width: "75px",
-                height: "75px",
-                filter: `${styles[style]?.iconstFilter}`,
-              }}
-            />
-            <a href="https://linkedin.com/in/alina-montoliu-2oo2">LinkedIn</a>
+            <div className="contact-me-element">
+              <img
+                src={"/icons/linkedin.svg"}
+                alt="linkedin icon"
+                style={{
+                  width: "75px",
+                  height: "75px",
+                  filter: `${styles[style]?.iconstFilter}`,
+                }}
+              />
+              <a href="https://linkedin.com/in/alina-montoliu-2oo2">LinkedIn</a>
+            </div>
+            <div className="contact-me-element">
+              <img
+                src={"/icons/call.svg"}
+                alt="calls icon"
+                style={{
+                  width: "70px",
+                  height: "70px",
+                  filter: `${styles[style]?.iconstFilter}`,
+                }}
+              />
+              <p style={{ margin: "0" }}>+34 685 63 18 05</p>
+            </div>
           </div>
-          <div className="contact-me-element">
-            <img
-              src={"/icons/call.svg"}
-              alt="calls icon"
-              style={{
-                width: "70px",
-                height: "70px",
-                filter: `${styles[style]?.iconstFilter}`,
-              }}
-            />
-            <p style={{ margin: "0" }}>+34 685 63 18 05</p>
-          </div>
-        </div>
+        </TextFade>
       </div>
     </>
   );
