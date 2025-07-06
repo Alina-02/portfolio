@@ -8,6 +8,8 @@ import {
 
 import "./App.css";
 import "./circles.css";
+import "./aboutme.css";
+import "./floatingbutton.css";
 
 import { TextFade } from "./components/TextFade";
 
@@ -89,37 +91,14 @@ function App() {
       >
         <LanguageSwitch />
       </div>
-      <div
-        style={{
-          position: "absolute",
-          left: "0",
-          right: "0",
-          bottom: "20px",
-          marginInline: "auto",
-          width: "fit-content",
-        }}
-      >
+      <div className="floating-button-container">
         <button
-          style={{
-            backgroundColor: "white",
-            borderRadius: "100%",
-            height: "75px",
-            width: "75px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            border: "none",
-          }}
+          className="floating-button"
           onMouseEnter={() => setDownButtonHover(true)}
           onMouseLeave={() => setDownButtonHover(false)}
         >
           <motion.div
-            style={{
-              width: "1px",
-              height: "1px",
-              borderRadius: "100%",
-              position: "absolute",
-            }}
+            className="floating-button-animation"
             animate={{
               scale: downButtonHover ? 75 : 1,
               backgroundColor: downButtonHover ? "#1a1a1a" : "white",
@@ -199,16 +178,7 @@ function App() {
         style={{ background: styles[style]?.circleBackground }}
       >
         {zoom && (
-          <div
-            style={{
-              position: "absolute",
-              left: "0",
-              right: "0",
-              bottom: "7vh",
-              marginInline: "auto",
-              width: "fit-content",
-            }}
-          >
+          <div className="circles-container-container">
             <motion.div initial="hidden" animate={["visible", "active"]}>
               <div className="circles-container">
                 <div className="circle-container">
@@ -289,42 +259,22 @@ function App() {
       </motion.div>
       <div style={{ backgroundColor: "white", height: "400px" }}></div>
       <div
+        className="about-me-container"
         style={{
           backgroundColor: styles[style]?.sectionsBackground,
           color: styles[style]?.sectionsTextColor,
-          height: "600px",
-
-          display: "flex",
-          justifyContent: "center",
-          padding: "3rem",
         }}
       >
-        <div
-          style={{
-            maxWidth: "1280px",
-            width: "100%",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
+        <div className="about-me-information-wrapper">
           <div
+            className="about-me-photo"
             style={{
-              borderRadius: "100%",
-              backgroundColor: "white",
-              height: "375px",
-              width: "375px",
-              color: "black",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
               border: `30px solid ${styles[style]?.ringAboutMe}`,
             }}
           >
             <p>{t("photo progress")}</p>
           </div>
-          <div style={{ width: "60%", paddingLeft: "2rem", textAlign: "left" }}>
+          <div className="about-me-text">
             <h2>{t("about me")}</h2>
             <p>{t("about me first line")}</p>
             <p>{t("about me second line")}</p>

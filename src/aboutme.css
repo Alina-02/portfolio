@@ -1,0 +1,32 @@
+.about-me-container {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.about-me-information-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-me-photo {
+  border-radius: 100%;
+  background-color: white;
+  height: 375px;
+  width: 375px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-text {
+  width: 60%;
+  padding-left: 2rem;
+  text-align: left;
+}
