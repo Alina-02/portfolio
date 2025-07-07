@@ -9,10 +9,12 @@ interface Props {
   link: string;
   description: string;
   technologies: ReactElement<any, any>;
+  mainColor: string;
 }
 
 const ProjectCard = (props: Props) => {
-  const { imagelink, title, year, link, description, technologies } = props;
+  const { imagelink, title, year, link, description, technologies, mainColor } =
+    props;
   const { t } = useTranslation();
   return (
     <li style={{ background: "white", borderRadius: "20px" }}>
@@ -23,7 +25,10 @@ const ProjectCard = (props: Props) => {
           alt="Project screenshot"
         />
         <div className="project-card__overlay">
-          <div className="project-card-header">
+          <div
+            className="project-card-header"
+            style={{ borderColor: `${mainColor}` }}
+          >
             <svg className="project-card__arc">
               <path />
             </svg>

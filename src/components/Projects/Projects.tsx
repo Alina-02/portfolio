@@ -23,6 +23,7 @@ export default function Projects() {
     <div id="example">
       <motion.ul ref={ref} style={{ maskImage }}>
         <ProjectCard
+          mainColor={"#554037"}
           imagelink={"/img/booknote2.png"}
           title={"BookNote 2.0"}
           year={"2025"}
@@ -37,6 +38,7 @@ export default function Projects() {
           }
         />
         <ProjectCard
+          mainColor={"#FA9EAD"}
           imagelink={"/img/funkypomodoro.png"}
           title={"Funky Pomodoro"}
           year={"2025"}
@@ -50,6 +52,7 @@ export default function Projects() {
           }
         />
         <ProjectCard
+          mainColor={"#3EDD76"}
           imagelink={"/img/randON.png"}
           title={"RandOn"}
           year={"2025"}
@@ -64,6 +67,7 @@ export default function Projects() {
           }
         />
         <ProjectCard
+          mainColor={"#EF233C"}
           imagelink={"/img/pokeapp.png"}
           title={"PokeApp"}
           year={"2024"}
@@ -78,6 +82,7 @@ export default function Projects() {
           }
         />
         <ProjectCard
+          mainColor={"#774936"}
           imagelink={"/img/booknote1.png"}
           title={"BooknNote 1.0"}
           year={"2023"}
