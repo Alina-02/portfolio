@@ -33,6 +33,7 @@ const ProjectCard = (props: Props) => {
               <span className="project-card-year">{year + " - "}</span>
 
               <a
+                target="_blank"
                 style={{ color: "black" }}
                 className="project-card-status"
                 href={link}

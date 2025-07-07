@@ -26,7 +26,7 @@ export default function Projects() {
           imagelink={"/img/booknote2.png"}
           title={"BookNote 2.0"}
           year={"2025"}
-          link={""}
+          link={"https://github.com/Alina-02/booknote-2"}
           description={"projectssection.project1.description"}
           technologies={
             <>
@@ -40,7 +40,7 @@ export default function Projects() {
           imagelink={"/img/funkypomodoro.png"}
           title={"Funky Pomodoro"}
           year={"2025"}
-          link={""}
+          link={"https://github.com/Alina-02/funky-pomodoro"}
           description={"projectssection.project2.description"}
           technologies={
             <>
@@ -53,7 +53,7 @@ export default function Projects() {
           imagelink={"/img/randON.png"}
           title={"RandOn"}
           year={"2025"}
-          link={""}
+          link={"https://github.com/Alina-02/spfy-rec"}
           description={"projectssection.project3.description"}
           technologies={
             <>
@@ -66,8 +66,8 @@ export default function Projects() {
         <ProjectCard
           imagelink={"/img/pokeapp.png"}
           title={"PokeApp"}
-          year={"2023"}
-          link={""}
+          year={"2024"}
+          link={"https://github.com/Alina-02/PokeApp"}
           description={"projectssection.project4.description"}
           technologies={
             <>
@@ -81,7 +81,7 @@ export default function Projects() {
           imagelink={"/img/booknote1.png"}
           title={"BooknNote 1.0"}
           year={"2023"}
-          link={""}
+          link={"https://github.com/Alina-02/booknote-project"}
           description={"projectssection.project5.description"}
           technologies={
             <>
