@@ -81,11 +81,11 @@ function App() {
     if (latest > 475 && latest < 700 && !zoom) {
       setZoom(true);
     } else if (latest < 475 && zoom) {
-      setZoom(false);
-      setCircleSelected("None");
+      setZoom(true);
+      //setCircleSelected("None");
     } else if (latest >= 900) {
-      setZoom(false);
-      setCircleSelected("None");
+      setZoom(true);
+      //setCircleSelected("None");
     }
   });
 
@@ -431,9 +431,9 @@ function App() {
               <div
                 style={{
                   display: "flex",
-                  maxWidth: "800px",
-                  width: "60vw",
-                  maxHeight: "150px",
+                  maxWidth: "500px",
+                  width: "35vw",
+                  maxHeight: "75px",
                   justifyContent: "space-around",
                 }}
               >
@@ -452,9 +452,9 @@ function App() {
               <div
                 style={{
                   display: "flex",
-                  maxWidth: "800px",
-                  width: "60vw",
-                  maxHeight: "150px",
+                  maxWidth: "500px",
+                  width: "35vw",
+                  maxHeight: "75px",
                   justifyContent: "space-around",
                   marginTop: "2vh",
                 }}
@@ -478,9 +478,9 @@ function App() {
               <div
                 style={{
                   display: "flex",
-                  maxWidth: "800px",
-                  width: "60vw",
-                  maxHeight: "150px",
+                  maxWidth: "500px",
+                  width: "35vw",
+                  maxHeight: "75px",
                   justifyContent: "space-around",
                   marginTop: "2vh",
                 }}
@@ -548,7 +548,7 @@ function App() {
                       onMouseLeave={() => setCircleHovered("None")}
                       onClick={() => setCircleSelected("Projects")}
                     >
-                      <h2 style={{ fontSize: "1.5rem" }}>{t("projects")}</h2>
+                      <h2 style={{ fontSize: "1rem" }}>{t("projects")}</h2>
                     </button>
                   </a>
                 </div>
@@ -579,7 +579,7 @@ function App() {
                       onMouseLeave={() => setCircleHovered("None")}
                       onClick={() => setCircleSelected("Courses")}
                     >
-                      <h2 style={{ fontSize: "1.5rem" }}>{t("courses")}</h2>
+                      <h2 style={{ fontSize: "1rem" }}>{t("courses")}</h2>
                     </button>
                   </a>
                 </div>
@@ -610,7 +610,7 @@ function App() {
                       onMouseLeave={() => setCircleHovered("None")}
                       onClick={() => setCircleSelected("Curriculum")}
                     >
-                      <h2 style={{ fontSize: "1.5rem" }}>{t("curriculum")}</h2>
+                      <h2 style={{ fontSize: "1rem" }}>{t("curriculum")}</h2>
                     </button>
                   </a>
                 </div>
