@@ -96,7 +96,7 @@ i18n
             },
             project5: {
               description:
-                "Una aplicación web para guardar las citas de tus libros favoritos porque un día me di cuenta de que necesitaba",
+                "A web application to save quotes from your favorite books — because one day I realized I needed it.",
             },
           },
           coursessection: {
