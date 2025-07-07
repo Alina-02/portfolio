@@ -77,7 +77,28 @@ i18n
               "Analyzed existing solutions and proposed innovative improvements.",
             download: "Download CV",
           },
-          projectssection: {},
+          projectssection: {
+            project1: {
+              description:
+                "The book quote-saving app, two years later — now incorporating the new knowledge I've gained in design and development. In progress.",
+            },
+            project2: {
+              description:
+                "A small Pomodoro app — because I couldn’t find any website I really liked.",
+            },
+            project3: {
+              description:
+                "A web application that recommends music based on the genre you choose and the songs in your Spotify library. I just felt like discovering something new.",
+            },
+            project4: {
+              description:
+                "A basic project to learn how to use MUI. Who doesn't have a Pokémon app?",
+            },
+            project5: {
+              description:
+                "Una aplicación web para guardar las citas de tus libros favoritos porque un día me di cuenta de que necesitaba",
+            },
+          },
           coursessection: {
             cooking: "Cooking...",
             course1: {
@@ -184,6 +205,29 @@ i18n
               "Desarrollo de un prototipo de recomendación personalizado para viajes.",
             experiencelist32: "Análisis de soluciones actuales e innovaciones.",
             download: "Descargar CV",
+          },
+
+          projectssection: {
+            project1: {
+              description:
+                "La app para guardar citas de libros dos años después incorporando los nuevos conocimientos adquiridos sobre diseño y desarrollo. En progreso.",
+            },
+            project2: {
+              description:
+                "Un pequeño pomodoro porque no encontraba ninguna web que me gustara.",
+            },
+            project3: {
+              description:
+                "Una aplicación web que recomienda música en base al género que  elijas y las canciones de tu librería de Spotify. Tenía ganas de escuchar música nueva.",
+            },
+            project4: {
+              description:
+                "Un proyecto básico para aprender a utilizar MUI. ¿Quién no tiene una app de pokemon?",
+            },
+            project5: {
+              description:
+                "Una aplicación web para guardar las citas de tus libros favoritos porque un día me di cuenta de que necesitaba",
+            },
           },
           coursessection: {
             cooking: "En proceso...",

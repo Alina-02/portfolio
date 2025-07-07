@@ -26,45 +26,35 @@ export default function Projects() {
           title={"BookNote 2.0"}
           year={"2025"}
           link={""}
-          description={
-            "La app para guardar citas de libros dos años después incorporando los nuevos conocimientos adquiridos sobre diseño y desarrollo."
-          }
+          description={"projectssection.project1.description"}
         />
         <ProjectCard
           imagelink={"/img/funkypomodoro.png"}
           title={"Funky Pomodoro"}
           year={"2025"}
           link={""}
-          description={
-            "Un pequeño pomodoro porque no encontraba ninguna web que me gustara."
-          }
+          description={"projectssection.project2.description"}
         />
         <ProjectCard
           imagelink={"/img/randON.png"}
           title={"RandOn"}
           year={"2025"}
           link={""}
-          description={
-            "Una aplicación web que recomienda música en base al género que  elijas y las canciones de tu librería de Spotify. Tenía ganas de escuchar música nueva."
-          }
+          description={"projectssection.project3.description"}
         />
         <ProjectCard
           imagelink={"/img/pokeapp.png"}
           title={"PokeApp"}
           year={"2023"}
           link={""}
-          description={
-            "Un proyecto básico para aprender a utilizar MUI. ¿Quién no tiene una app de pokemon?"
-          }
+          description={"projectssection.project4.description"}
         />
         <ProjectCard
           imagelink={"/img/booknote1.png"}
           title={"BooknNote 1.0"}
           year={"2023"}
           link={""}
-          description={
-            "Una aplicación web para guardar las citas de tus libros favoritos porque un día me di cuenta de que necesitaba"
-          }
+          description={"projectssection.project5.description"}
         />
       </motion.ul>
     </div>

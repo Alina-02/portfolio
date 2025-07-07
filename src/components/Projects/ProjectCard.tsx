@@ -41,7 +41,7 @@ const ProjectCard = (props: Props) => {
               </p>
             </div>
           </div>
-          <p className="project-card__description">{description}</p>
+          <p className="project-card__description">{t(description)}</p>
         </div>
       </div>
     </li>
