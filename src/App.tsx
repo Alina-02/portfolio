@@ -21,6 +21,7 @@ import LanguageSwitch from "./components/LanguageSwitch/LanguageSwitch";
 
 import i18n from "./i18n";
 import CourseCard from "./components/CourseCard/CourseCard";
+import Projects from "./components/Projects/Projects";
 
 const mainCircleTransitionIn: Transition = {
   duration: 1.5,
@@ -152,7 +153,7 @@ function App() {
               marginBottom: "3.5rem",
             }}
           >
-            yo
+            Alina
           </h1>
           <div
             style={{
@@ -424,7 +425,7 @@ function App() {
               <div
                 style={{
                   display: "flex",
-                  width: "1000px",
+                  width: "800px",
                   height: "150px",
                   justifyContent: "space-around",
                 }}
@@ -444,7 +445,7 @@ function App() {
               <div
                 style={{
                   display: "flex",
-                  width: "1000px",
+                  width: "800px",
                   height: "150px",
                   justifyContent: "space-around",
                   marginTop: "2vh",
@@ -469,7 +470,7 @@ function App() {
               <div
                 style={{
                   display: "flex",
-                  width: "1000px",
+                  width: "800px",
                   height: "150px",
                   justifyContent: "space-around",
                   marginTop: "2vh",
@@ -506,6 +507,7 @@ function App() {
             }}
           >
             <h2>{t("projects")}</h2>
+            <Projects />
           </div>
         )}
 

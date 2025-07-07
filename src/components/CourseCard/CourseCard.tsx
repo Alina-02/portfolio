@@ -13,7 +13,7 @@ const CourseCard = (props: Props) => {
   const { t } = useTranslation();
 
   return (
-    <div className="card">
+    <div className="coursecard">
       <div className="card_title title-white">
         <p>{t(mainInfo)}</p>
         <p style={{ fontWeight: 100 }}>
