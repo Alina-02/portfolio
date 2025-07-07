@@ -81,11 +81,11 @@ function App() {
     if (latest > 475 && latest < 700 && !zoom) {
       setZoom(true);
     } else if (latest < 475 && zoom) {
-      setZoom(true);
-      //setCircleSelected("None");
+      setZoom(false);
+      setCircleSelected("None");
     } else if (latest >= 900) {
-      setZoom(true);
-      //setCircleSelected("None");
+      setZoom(false);
+      setCircleSelected("None");
     }
   });
 
@@ -200,7 +200,7 @@ function App() {
               className="left-righ-buttons"
               style={{
                 zIndex: 2,
-                left: "18vw",
+                left: "31vw",
                 bottom: "350px",
               }}
               onMouseEnter={() => setLeftButtonHover(true)}
@@ -225,12 +225,12 @@ function App() {
               <motion.div
                 className="floating-button-animation"
                 animate={{
-                  scale: leftButtonHover ? 45 : 1,
+                  scale: leftButtonHover ? 25 : 1,
                   backgroundColor: leftButtonHover ? "#1a1a1a" : "white",
                 }}
               ></motion.div>
               <motion.div
-                style={{ width: "40px", height: "40px" }}
+                style={{ width: "25px", height: "25px" }}
                 animate={{
                   filter: leftButtonHover
                     ? "invert(100%) sepia(21%) saturate(0%) hue-rotate(106deg) brightness(103%) contrast(101%)"
@@ -240,7 +240,7 @@ function App() {
                 <img
                   src={"/icons/arrow-sm-left-svgrepo-com.svg"}
                   alt="mySvgImage"
-                  style={{ width: "40px", height: "40px" }}
+                  style={{ width: "25px", height: "25px" }}
                 />
               </motion.div>
             </button>
@@ -249,7 +249,7 @@ function App() {
               className="left-righ-buttons"
               style={{
                 zIndex: 2,
-                right: "18vw",
+                right: "31vw",
                 bottom: "350px",
               }}
               onMouseEnter={() => setRightButtonHover(true)}
@@ -274,12 +274,12 @@ function App() {
               <motion.div
                 className="floating-button-animation"
                 animate={{
-                  scale: rightButtonHover ? 45 : 1,
+                  scale: rightButtonHover ? 25 : 1,
                   backgroundColor: rightButtonHover ? "#1a1a1a" : "white",
                 }}
               ></motion.div>
               <motion.div
-                style={{ width: "40px", height: "40px" }}
+                style={{ width: "25px", height: "25px" }}
                 animate={{
                   filter: rightButtonHover
                     ? "invert(100%) sepia(21%) saturate(0%) hue-rotate(106deg) brightness(103%) contrast(101%)"
@@ -289,7 +289,7 @@ function App() {
                 <img
                   src={"/icons/arrow-sm-right-svgrepo-com.svg"}
                   alt="mySvgImage"
-                  style={{ width: "40px", height: "40px" }}
+                  style={{ width: "25px", height: "25px" }}
                 />
               </motion.div>
             </button>

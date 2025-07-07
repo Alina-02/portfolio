@@ -51,9 +51,10 @@
   border-radius: 100%;
   background-color: white;
   position: absolute;
+  padding: 0;
 
-  width: 45px;
-  height: 45px;
+  width: 25px;
+  height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
