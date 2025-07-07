@@ -78,9 +78,12 @@ function App() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     console.log(latest);
-    if (latest > 475 && !zoom) {
+    if (latest > 475 && latest < 700 && !zoom) {
       setZoom(true);
     } else if (latest < 475 && zoom) {
+      setZoom(false);
+      setCircleSelected("None");
+    } else if (latest >= 900) {
       setZoom(false);
       setCircleSelected("None");
     }
@@ -186,7 +189,7 @@ function App() {
       <motion.div
         transition={zoom ? mainCircleTransitionIn : mainCircleTransitionOut}
         animate={{
-          scale: zoom ? 1.5 : 1,
+          scale: zoom ? 2.5 : 1,
         }}
         className="main-circle"
         style={{ background: styles[style]?.circleBackground }}
@@ -301,6 +304,7 @@ function App() {
               flexDirection: "column",
               color: "white",
               zIndex: "1",
+              width: "60vw",
             }}
           >
             <h2>{t("curriculum")}</h2>
