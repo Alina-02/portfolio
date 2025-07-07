@@ -540,7 +540,10 @@ function App() {
                   />
                   <a
                     href="#projects"
-                    style={{ color: "black", fontWeight: 500 }}
+                    style={{
+                      color: "black",
+                      fontWeight: 500,
+                    }}
                   >
                     <button
                       className="button"
@@ -548,7 +551,14 @@ function App() {
                       onMouseLeave={() => setCircleHovered("None")}
                       onClick={() => setCircleSelected("Projects")}
                     >
-                      <h2 style={{ fontSize: "1rem" }}>{t("projects")}</h2>
+                      <h2
+                        style={{
+                          fontSize: "1rem",
+                          fontFamily: `${styles[style]?.font}`,
+                        }}
+                      >
+                        {t("projects")}
+                      </h2>
                     </button>
                   </a>
                 </div>
@@ -579,7 +589,14 @@ function App() {
                       onMouseLeave={() => setCircleHovered("None")}
                       onClick={() => setCircleSelected("Courses")}
                     >
-                      <h2 style={{ fontSize: "1rem" }}>{t("courses")}</h2>
+                      <h2
+                        style={{
+                          fontSize: "1rem",
+                          fontFamily: `${styles[style]?.font}`,
+                        }}
+                      >
+                        {t("courses")}
+                      </h2>
                     </button>
                   </a>
                 </div>
@@ -610,7 +627,14 @@ function App() {
                       onMouseLeave={() => setCircleHovered("None")}
                       onClick={() => setCircleSelected("Curriculum")}
                     >
-                      <h2 style={{ fontSize: "1rem" }}>{t("curriculum")}</h2>
+                      <h2
+                        style={{
+                          fontSize: "0.8rem",
+                          fontFamily: `${styles[style]?.font}`,
+                        }}
+                      >
+                        {t("curriculum")}
+                      </h2>
                     </button>
                   </a>
                 </div>

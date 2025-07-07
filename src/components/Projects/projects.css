@@ -1,6 +1,6 @@
 #example {
   width: 40vw;
-  max-width: 700px;
+  max-width: 400px;
   position: relative;
 }
 
@@ -22,7 +22,7 @@
 #example ul {
   display: flex;
   list-style: none;
-  height: 350px;
+  height: 225px;
   overflow-x: scroll;
   padding: 20px 0;
   flex: 0 0 600px;
@@ -47,7 +47,7 @@
 }
 
 #example li {
-  flex: 0 0 250px;
+  flex: 0 0 150px;
   background: black;
 }
 
@@ -98,14 +98,14 @@
   width: 80px;
   height: 80px;
   position: absolute;
-  bottom: 100%;
+  bottom: 99%;
   right: 0;
   z-index: 1;
 }
 
 .project-card__arc path {
   fill: white;
-  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  d: path("M 40 80 c 20 0 0 -22 40 -40 v 40 Z");
 }
 
 .project-card:hover .project-card__header {
@@ -120,28 +120,28 @@
 }
 
 .project-card__title {
-  font-size: 1em;
+  font-size: 0.75em;
   margin: 0;
-  color: #6a515e;
+  color: black;
 }
 
 .project-card__tagline {
   display: block;
   margin: 1em 0;
-  font-size: 0.8em;
-  color: #d7bdca;
+  font-size: 0.6em;
+  color: black;
 }
 
 .project-card__status {
-  font-size: 0.8em;
-  color: #d7bdca;
+  font-size: 0.7em;
+  color: black;
 }
 
 .project-card__description {
-  font-size: 0.8em;
+  font-size: 0.6em;
   padding: 0 2em 2em;
   margin: 0;
-  color: #d7bdca;
+  color: black;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 7;
