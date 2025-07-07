@@ -1,6 +1,7 @@
 .coursecard {
   margin: 10px auto;
-  width: 140px;
+  max-width: 140px;
+  width: 15vw;
   height: 90px;
   border-radius: 20px;
   box-shadow: 5px 5px 20px 4px rgba(0, 0, 0, 0.15),
@@ -30,7 +31,6 @@
   border-radius: 0px 0px 40px 40px;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: "0.8vh";
 }
 
 .coursecard:hover {
@@ -47,14 +47,14 @@
   color: black;
 }
 
-@media all and (max-width: 500px) {
-  .card-list {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-  }
-}
-
 p {
   margin-top: 5px;
   margin-bottom: 5px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 725px) {
+  p {
+    font-size: 1.7vw;
+  }
 }

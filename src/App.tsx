@@ -196,7 +196,8 @@ function App() {
             <button
               className="left-righ-buttons"
               style={{
-                left: "350px",
+                zIndex: 2,
+                left: "18vw",
                 bottom: "350px",
               }}
               onMouseEnter={() => setLeftButtonHover(true)}
@@ -244,7 +245,8 @@ function App() {
             <button
               className="left-righ-buttons"
               style={{
-                right: "350px",
+                zIndex: 2,
+                right: "18vw",
                 bottom: "350px",
               }}
               onMouseEnter={() => setRightButtonHover(true)}
@@ -425,8 +427,9 @@ function App() {
               <div
                 style={{
                   display: "flex",
-                  width: "800px",
-                  height: "150px",
+                  maxWidth: "800px",
+                  width: "60vw",
+                  maxHeight: "150px",
                   justifyContent: "space-around",
                 }}
               >
@@ -445,8 +448,9 @@ function App() {
               <div
                 style={{
                   display: "flex",
-                  width: "800px",
-                  height: "150px",
+                  maxWidth: "800px",
+                  width: "60vw",
+                  maxHeight: "150px",
                   justifyContent: "space-around",
                   marginTop: "2vh",
                 }}
@@ -470,8 +474,9 @@ function App() {
               <div
                 style={{
                   display: "flex",
-                  width: "800px",
-                  height: "150px",
+                  maxWidth: "800px",
+                  width: "60vw",
+                  maxHeight: "150px",
                   justifyContent: "space-around",
                   marginTop: "2vh",
                 }}
@@ -529,14 +534,19 @@ function App() {
                       background: `${styles[style]?.ringBackground}`,
                     }}
                   />
-                  <button
-                    className="button"
-                    onMouseEnter={() => setCircleHovered("Projects")}
-                    onMouseLeave={() => setCircleHovered("None")}
-                    onClick={() => setCircleSelected("Projects")}
+                  <a
+                    href="#projects"
+                    style={{ color: "black", fontWeight: 500 }}
                   >
-                    <h2 style={{ fontSize: "1.5rem" }}>{t("projects")}</h2>
-                  </button>
+                    <button
+                      className="button"
+                      onMouseEnter={() => setCircleHovered("Projects")}
+                      onMouseLeave={() => setCircleHovered("None")}
+                      onClick={() => setCircleSelected("Projects")}
+                    >
+                      <h2 style={{ fontSize: "1.5rem" }}>{t("projects")}</h2>
+                    </button>
+                  </a>
                 </div>
               )}
 
@@ -555,21 +565,19 @@ function App() {
                       background: `${styles[style]?.ringBackground}`,
                     }}
                   />
-                  <button
-                    className="button"
-                    onMouseEnter={() => setCircleHovered("Courses")}
-                    onMouseLeave={() => setCircleHovered("None")}
-                    onClick={() => setCircleSelected("Courses")}
+                  <a
+                    href="#courses"
+                    style={{ color: "black", fontWeight: 500 }}
                   >
-                    <h2 style={{ fontSize: "1.5rem" }}>
-                      <a
-                        href="#courses"
-                        style={{ color: "black", fontWeight: 500 }}
-                      >
-                        {t("courses")}
-                      </a>
-                    </h2>
-                  </button>
+                    <button
+                      className="button"
+                      onMouseEnter={() => setCircleHovered("Courses")}
+                      onMouseLeave={() => setCircleHovered("None")}
+                      onClick={() => setCircleSelected("Courses")}
+                    >
+                      <h2 style={{ fontSize: "1.5rem" }}>{t("courses")}</h2>
+                    </button>
+                  </a>
                 </div>
               )}
 
@@ -588,21 +596,19 @@ function App() {
                       background: `${styles[style]?.ringBackground}`,
                     }}
                   />
-                  <button
-                    className="button"
-                    onMouseEnter={() => setCircleHovered("Curriculum")}
-                    onMouseLeave={() => setCircleHovered("None")}
-                    onClick={() => setCircleSelected("Curriculum")}
+                  <a
+                    href="#curriculum"
+                    style={{ color: "black", fontWeight: 500 }}
                   >
-                    <h2 style={{ fontSize: "1.5rem" }}>
-                      <a
-                        href="#curriculum"
-                        style={{ color: "black", fontWeight: 500 }}
-                      >
-                        {t("curriculum")}
-                      </a>
-                    </h2>
-                  </button>
+                    <button
+                      className="button"
+                      onMouseEnter={() => setCircleHovered("Curriculum")}
+                      onMouseLeave={() => setCircleHovered("None")}
+                      onClick={() => setCircleSelected("Curriculum")}
+                    >
+                      <h2 style={{ fontSize: "1.5rem" }}>{t("curriculum")}</h2>
+                    </button>
+                  </a>
                 </div>
               )}
             </div>
