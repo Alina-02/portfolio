@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   padding: 3rem;
+  font-size: 1rem;
 }
 
 .about-me-information-wrapper {
@@ -25,8 +26,12 @@
   align-items: center;
 }
 
-.about-me-text {
+.about-me-text-container {
   width: 60%;
   padding-left: 2rem;
   text-align: left;
+}
+
+.about-me-text {
+  font-size: 1rem;
 }

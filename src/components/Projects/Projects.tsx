@@ -92,7 +92,6 @@ export default function Projects() {
             <>
               <TechChip color="#0081A3" name="React" />
               <TechChip color="#f7df1e" textColor="black" name="JavaScript" />
-              <TechChip color="#0073E6" name="MUI" />
             </>
           }
         />

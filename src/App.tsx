@@ -111,6 +111,12 @@ function App() {
       <div className="floating-button-container">
         <button
           className="floating-button"
+          onClick={() => {
+            setZoom(true);
+            setCircleSelected("None");
+            console.log(document?.getElementById("circles"));
+            document?.getElementById("circles-container")?.scrollIntoView();
+          }}
           onMouseEnter={() => setDownButtonHover(true)}
           onMouseLeave={() => setDownButtonHover(false)}
         >
@@ -304,22 +310,24 @@ function App() {
               flexDirection: "column",
               color: "white",
               zIndex: "1",
-              width: "60vw",
+              width: "30vw",
             }}
           >
-            <h2>{t("curriculum")}</h2>
+            <h2 style={{ fontFamily: `${styles[style]?.font}` }}>
+              {t("curriculum")}
+            </h2>
             <div style={{ display: "flex" }}>
               <div
                 style={{
-                  maxWidth: "375px",
+                  maxWidth: "275px",
                   textAlign: "left",
-                  marginRight: "5vw",
+                  marginRight: "1vw",
                 }}
               >
-                <h3 style={{ marginBottom: "0.5vh" }}>
+                <h3 style={{ marginBottom: "0.5vh", fontSize: "0.6rem" }}>
                   {t("curriculumsection.education")}
                 </h3>
-                <p style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
+                <p style={{ fontSize: "0.4rem", marginTop: "0.5vh" }}>
                   <strong>{t("curriculumsection.upv")} </strong> <br />
                   {t("curriculumsection.degree")}
                   <i>{t("curriculumsection.gpa")}</i> <br />
@@ -330,20 +338,20 @@ function App() {
                   {t("curriculumsection.honorsinformation")}
                 </p>
 
-                <h3 style={{ marginBottom: "0.5vh" }}>
+                <h3 style={{ marginBottom: "0.5vh", fontSize: "0.6rem" }}>
                   {t("curriculumsection.volunteer")}
                 </h3>
-                <p style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
+                <p style={{ fontSize: "0.4rem", marginTop: "0.5vh" }}>
                   <strong>{t("curriculumsection.teso")}</strong>
                   <br /> <i>{t("curriculumsection.tesodate")}</i> <br />
                   {t("curriculumsection.tesodescription")}
                 </p>
 
-                <h3 style={{ marginBottom: "0.5vh" }}>
+                <h3 style={{ marginBottom: "0.5vh", fontSize: "0.6rem" }}>
                   {t("curriculumsection.skills")}
                 </h3>
 
-                <div style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
+                <div style={{ fontSize: "0.4rem", marginTop: "0.5vh" }}>
                   <strong>{t("curriculumsection.languages")}</strong>
                   <ul>
                     <li>{t("curriculumsection.language1")}</li>
@@ -359,13 +367,13 @@ function App() {
                 </div>
               </div>
               <div
-                style={{ color: "white", maxWidth: "375px", textAlign: "left" }}
+                style={{ color: "white", maxWidth: "275px", textAlign: "left" }}
               >
-                <h3 style={{ marginBottom: "0.5vh" }}>
+                <h3 style={{ marginBottom: "0.5vh", fontSize: "0.6rem" }}>
                   {t("curriculumsection.experience")}
                 </h3>
-                <div style={{ fontSize: "0.8rem", marginTop: "0.5vh" }}>
-                  <strong>{t("curriculumsection.experiencetitle1")}</strong>{" "}
+                <div style={{ fontSize: "0.4rem", marginTop: "0.5vh" }}>
+                  <strong>{t("curriculumsection.experiencetitle1")}</strong>
                   <br />
                   <i>{t("curriculumsection.experiencedate1")}</i> <br />
                   <ul>
@@ -375,7 +383,7 @@ function App() {
                     <li>{t("curriculumsection.experiencelist41")}</li>
                   </ul>
                 </div>
-                <div style={{ fontSize: "0.8rem" }}>
+                <div style={{ fontSize: "0.4rem" }}>
                   <strong>{t("curriculumsection.experiencetitle2")}</strong>
                   <br /> <i>{t("curriculumsection.experiencedate2")}</i>
                   <ul>
@@ -397,9 +405,11 @@ function App() {
                       cursor: "pointer",
                       color: "black",
                       backgroundColor: "white",
-
+                      fontSize: "0.6rem",
                       borderRadius: "10px",
-                      padding: "1vh",
+                      padding: "0.5vh",
+                      paddingLeft: "0.7vh",
+                      paddingRight: "0.7vh",
                     }}
                     href={
                       i18n.language === "en"
@@ -426,7 +436,9 @@ function App() {
               zIndex: "1",
             }}
           >
-            <h2>{t("courses")}</h2>
+            <h2 style={{ fontFamily: `${styles[style]?.font}` }}>
+              {t("courses")}
+            </h2>
             <div style={{ fontSize: "0.8rem" }}>
               <div
                 style={{
@@ -515,14 +527,16 @@ function App() {
               zIndex: "1",
             }}
           >
-            <h2>{t("projects")}</h2>
+            <h2 style={{ fontFamily: `${styles[style]?.font}` }}>
+              {t("projects")}
+            </h2>
             <Projects />
           </div>
         )}
 
         {zoom && (
           <div className="circles-container-container">
-            <div className="circles-container">
+            <div className="circles-container" id="circles">
               {circleSelected === "None" && (
                 <div className="circle-container">
                   <motion.div
@@ -658,18 +672,25 @@ function App() {
               border: `30px solid ${styles[style]?.ringAboutMe}`,
             }}
           >
-            <p>{t("photo progress")}</p>
+            <p className="about-me-text">{t("photo progress")}</p>
           </div>
           <TextFade
             staggerChildren={0.7}
             direction="up"
-            className="about-me-text"
+            className="about-me-text-container"
           >
-            <div className="about-me-text">
-              <h2>{t("about me")}</h2>
-              <p>{t("about me first line")}</p>
-              <p>{t("about me second line")}</p>
-              <p>{t("about me third line")}</p>
+            <div className="about-me-text-container">
+              <h2
+                style={{
+                  fontFamily: `${styles[style]?.font}`,
+                  fontSize: "2rem",
+                }}
+              >
+                {t("about me")}
+              </h2>
+              <p className="about-me-text">{t("about me first line")}</p>
+              <p className="about-me-text">{t("about me second line")}</p>
+              <p className="about-me-text">{t("about me third line")}</p>
             </div>
           </TextFade>
         </div>
