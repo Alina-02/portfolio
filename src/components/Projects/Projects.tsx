@@ -12,6 +12,7 @@ import { useRef } from "react";
 
 import "./projects.css";
 import ProjectCard from "./ProjectCard";
+import TechChip from "./TechChip";
 
 export default function Projects() {
   const ref = useRef(null);
@@ -27,6 +28,13 @@ export default function Projects() {
           year={"2025"}
           link={""}
           description={"projectssection.project1.description"}
+          technologies={
+            <>
+              <TechChip color="#0081A3" name="React" />
+              <TechChip color="#3178c6" name="TypeScript" />
+              <TechChip color="#0073E6" name="MUI" />
+            </>
+          }
         />
         <ProjectCard
           imagelink={"/img/funkypomodoro.png"}
@@ -34,6 +42,12 @@ export default function Projects() {
           year={"2025"}
           link={""}
           description={"projectssection.project2.description"}
+          technologies={
+            <>
+              <TechChip color="#0081A3" name="React" />
+              <TechChip color="#3178c6" name="TypeScript" />
+            </>
+          }
         />
         <ProjectCard
           imagelink={"/img/randON.png"}
@@ -41,6 +55,13 @@ export default function Projects() {
           year={"2025"}
           link={""}
           description={"projectssection.project3.description"}
+          technologies={
+            <>
+              <TechChip color="#0081A3" name="React" />
+              <TechChip color="#3178c6" name="TypeScript" />
+              <TechChip color="#0073E6" name="MUI" />
+            </>
+          }
         />
         <ProjectCard
           imagelink={"/img/pokeapp.png"}
@@ -48,6 +69,13 @@ export default function Projects() {
           year={"2023"}
           link={""}
           description={"projectssection.project4.description"}
+          technologies={
+            <>
+              <TechChip color="#0081A3" name="React" />
+              <TechChip color="#3178c6" name="TypeScript" />
+              <TechChip color="#0073E6" name="MUI" />
+            </>
+          }
         />
         <ProjectCard
           imagelink={"/img/booknote1.png"}
@@ -55,6 +83,13 @@ export default function Projects() {
           year={"2023"}
           link={""}
           description={"projectssection.project5.description"}
+          technologies={
+            <>
+              <TechChip color="#0081A3" name="React" />
+              <TechChip color="#f7df1e" textColor="black" name="JavaScript" />
+              <TechChip color="#0073E6" name="MUI" />
+            </>
+          }
         />
       </motion.ul>
     </div>
