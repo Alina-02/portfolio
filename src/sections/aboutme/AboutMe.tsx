@@ -31,7 +31,6 @@ const AboutMe = (props: Props) => {
           <h2
             style={{
               fontFamily: `${styles[style]?.font}`,
-              fontSize: "2rem",
             }}
           >
             {t("about me")}
