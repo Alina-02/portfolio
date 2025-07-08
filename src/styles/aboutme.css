@@ -16,6 +16,8 @@
 }
 
 .about-me-photo {
+  width: 40%;
+
   border-radius: 100%;
   background-color: white;
   height: 375px;
@@ -33,5 +35,5 @@
 }
 
 .about-me-text {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }

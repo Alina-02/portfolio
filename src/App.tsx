@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   motion,
   useMotionValueEvent,
@@ -56,9 +56,8 @@ function App() {
   const [circleSelected, setCircleSelected] = useState<
     "None" | "Projects" | "Courses" | "Curriculum"
   >("None");
-  const [circleHovered, setCircleHovered] = useState<
-    "None" | "Projects" | "Courses" | "Curriculum"
-  >("None");
+
+  const circlesRef = useRef(null);
 
   const onLeftStyle = () => {
     if (style === 0) {
@@ -114,8 +113,8 @@ function App() {
           onClick={() => {
             setZoom(true);
             setCircleSelected("None");
-            console.log(document?.getElementById("circles"));
-            document?.getElementById("circles-container")?.scrollIntoView();
+
+            setTimeout(() => circlesRef?.current?.scrollIntoView(), 100);
           }}
           onMouseEnter={() => setDownButtonHover(true)}
           onMouseLeave={() => setDownButtonHover(false)}
@@ -536,7 +535,7 @@ function App() {
 
         {zoom && (
           <div className="circles-container-container">
-            <div className="circles-container" id="circles">
+            <div className="circles-container" ref={circlesRef}>
               {circleSelected === "None" && (
                 <div className="circle-container">
                   <motion.div
@@ -561,8 +560,6 @@ function App() {
                   >
                     <button
                       className="button"
-                      onMouseEnter={() => setCircleHovered("Projects")}
-                      onMouseLeave={() => setCircleHovered("None")}
                       onClick={() => setCircleSelected("Projects")}
                     >
                       <h2
@@ -599,8 +596,6 @@ function App() {
                   >
                     <button
                       className="button"
-                      onMouseEnter={() => setCircleHovered("Courses")}
-                      onMouseLeave={() => setCircleHovered("None")}
                       onClick={() => setCircleSelected("Courses")}
                     >
                       <h2
@@ -637,8 +632,6 @@ function App() {
                   >
                     <button
                       className="button"
-                      onMouseEnter={() => setCircleHovered("Curriculum")}
-                      onMouseLeave={() => setCircleHovered("None")}
                       onClick={() => setCircleSelected("Curriculum")}
                     >
                       <h2
@@ -679,7 +672,7 @@ function App() {
             direction="up"
             className="about-me-text-container"
           >
-            <div className="about-me-text-container">
+            <div>
               <h2
                 style={{
                   fontFamily: `${styles[style]?.font}`,
@@ -700,6 +693,7 @@ function App() {
         className="contact-me-container"
         style={{
           backgroundColor: styles[style]?.sectionsBackground,
+          color: styles[style]?.sectionsTextColor,
         }}
       >
         <h2 style={{ fontFamily: `${styles[style]?.font}`, fontSize: "2rem" }}>
