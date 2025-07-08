@@ -6,20 +6,27 @@ interface Props {
   mainInfo: string;
   year: string;
   web: string;
+  imgLink: string;
 }
 
 const CourseCard = (props: Props) => {
-  const { mainInfo, year, web } = props;
+  const { mainInfo, year, web, imgLink } = props;
   const { t } = useTranslation();
 
   return (
-    <div className="coursecard">
-      <div className="card_title title-white">
-        <p>{t(mainInfo)}</p>
-        <p style={{ fontWeight: 100 }}>
+    <div className="course-card">
+      <img className="course-image" src={imgLink}></img>
+      <div className="course-text">
+        <p>
+          {t(mainInfo)} - {t(year)}
+        </p>
+        <p
+          style={{
+            fontWeight: 100,
+          }}
+        >
           <i>{t(web)}</i>
         </p>
-        <p style={{ fontWeight: 100 }}>{t(year)}</p>
       </div>
     </div>
   );

@@ -50,9 +50,9 @@ function App() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     console.log(latest);
-    if (latest > 475 && latest < 700 && !zoom) {
+    if (latest > 350 && latest < 700 && !zoom) {
       setZoom(true);
-    } else if (latest < 475 && zoom) {
+    } else if (latest < 350 && zoom) {
       setZoom(false);
       setCircleSelected("None");
     } else if (latest >= 900) {

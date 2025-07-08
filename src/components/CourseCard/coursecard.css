@@ -1,28 +1,45 @@
-.coursecard {
-  margin: 5px auto;
-  max-width: 100px;
-  width: 8vw;
-  height: 60px;
-  border-radius: 20px;
-  box-shadow: 5px 5px 20px 4px rgba(0, 0, 0, 0.15),
-    -5px -5px 30px 7px rgba(0, 0, 0, 0.12);
-  transition: 0.4s;
+.course-card-container {
+  display: flex;
+  max-width: 450px;
+  width: 100%;
+  max-height: 75px;
+  margin-top: 2vh;
+  gap: 1rem;
+}
+
+.course-card {
+  max-width: 180px;
+  width: 15vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+
+  background-color: white;
+  color: black;
+  flex-direction: row;
+  padding: 5px;
+  padding-left: 12.5px;
+  padding-right: 12.5px;
+  border-radius: 5px;
+  gap: 1vw;
+}
+
+.course-image {
+  width: 20px;
+  height: 20px;
+}
+
+.course-text {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  width: 100%;
 }
 
 .coursecard .card_title {
   text-align: center;
   font-family: sans-serif;
   font-weight: bold;
-}
-
-.coursecard:hover {
-  transform: scale(1.1, 1.1);
-  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
 }
 
 .title-white {
@@ -33,18 +50,32 @@
   color: black;
 }
 
-p {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 0.5rem;
+.course-card p {
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  font-size: 0.4rem;
 }
 
-@media (max-width: 725px) {
-  p {
+@media (max-width: 1350px) {
+  .course-card {
+    width: 11vw;
+  }
+}
+
+@media (max-width: 850px) {
+  .course-card {
+    width: 12vw;
+    gap: 0.5rem;
+    padding: 2.5px;
+    padding-left: 5.5px;
+    padding-right: 5.5px;
+
     font-size: 1vw;
   }
 
-  .coursecard {
-    padding: 0.6em;
+  .course-card-container {
+    margin-top: 1vh;
+    gap: 0.5rem;
   }
 }
