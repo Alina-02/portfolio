@@ -176,15 +176,7 @@ function App() {
         circlesRef={circlesRef}
       />
       <div style={{ backgroundColor: "white", height: "400px" }}></div>
-      <div
-        className="about-me-container"
-        style={{
-          backgroundColor: styles[style]?.sectionsBackground,
-          color: styles[style]?.sectionsTextColor,
-        }}
-      >
-        <AboutMe style={style} />
-      </div>
+      <AboutMe style={style} />
       <div style={{ backgroundColor: "white", height: "300px" }}></div>
       <ContactMe style={style} />
     </>
