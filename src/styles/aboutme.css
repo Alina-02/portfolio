@@ -21,16 +21,19 @@ h2 {
 }
 
 .about-me-photo {
-  width: 40%;
-
-  border-radius: 100%;
-  background-color: white;
-  height: 375px;
-  width: 375px;
-  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  height: 375px;
+  width: 375px;
+
+  aspect-ratio: 1 / 1;
+
+  border-radius: 100%;
+
+  background-color: white;
+  color: black;
 }
 
 .about-me-text-container {
@@ -41,4 +44,21 @@ h2 {
 
 .about-me-text {
   font-size: 1.1rem;
+}
+
+@media (max-width: 800px) {
+  .about-me-information-wrapper {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .about-me-photo {
+    margin-bottom: 2rem;
+  }
+
+  .about-me-text-container {
+    text-align: center;
+    width: 100%;
+    padding-left: 0;
+  }
 }
