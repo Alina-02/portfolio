@@ -96,7 +96,7 @@ const MainSection = (props: Props) => {
                 scale: leftButtonHover ? 25 : 1,
                 backgroundColor: leftButtonHover ? "#1a1a1a" : "white",
               }}
-            ></motion.div>
+            />
             <motion.div
               style={{ width: "25px", height: "25px" }}
               animate={{
@@ -427,7 +427,7 @@ const MainSection = (props: Props) => {
                   >
                     <h2
                       style={{
-                        fontSize: "1rem",
+                        marginBottom: "0",
                         fontFamily: `${styles[style]?.font}`,
                       }}
                     >
@@ -460,7 +460,7 @@ const MainSection = (props: Props) => {
                   >
                     <h2
                       style={{
-                        fontSize: "1rem",
+                        marginBottom: "0",
                         fontFamily: `${styles[style]?.font}`,
                       }}
                     >
@@ -496,7 +496,7 @@ const MainSection = (props: Props) => {
                   >
                     <h2
                       style={{
-                        fontSize: "0.8rem",
+                        marginBottom: "0",
                         fontFamily: `${styles[style]?.font}`,
                       }}
                     >
