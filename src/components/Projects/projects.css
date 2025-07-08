@@ -1,5 +1,5 @@
 #example {
-  width: 40vw;
+  width: 25vw;
   max-width: 500px;
   position: relative;
 }
@@ -24,10 +24,10 @@
   list-style: none;
   height: 225px;
   overflow-x: scroll;
-  padding: 20px 0;
-  flex: 0 0 600px;
+  padding: 0.5rem 0;
+  flex: 0 0 450px;
   margin: 0 auto;
-  gap: 20px;
+  gap: 1rem;
 }
 
 #example ::-webkit-scrollbar {

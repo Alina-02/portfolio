@@ -1,5 +1,6 @@
-h2 {
-  margin-bottom: 0.4em;
+.main-circle h2 {
+  margin-top: 0.8rem;
+  margin-bottom: 0.4rem;
   font-size: 1.5rem;
 }
 
@@ -7,7 +8,7 @@ h2 {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 35vh;
+  bottom: 45vh;
   margin-inline: auto;
   width: fit-content;
 }
@@ -53,6 +54,7 @@ h2 {
 }
 
 .button h2 {
+  margin-top: 0;
   font-size: 0.8rem;
 }
 
@@ -118,7 +120,7 @@ h2 {
 
 @media (max-width: 750px) {
   .circles-container-container {
-    bottom: 25vh;
+    bottom: 33vh;
   }
   .circles-container {
     flex-direction: column;

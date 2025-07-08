@@ -1,4 +1,4 @@
-import React, { type JSX, type ReactElement } from "react";
+import React, { type ReactElement } from "react";
 import "./projects.css";
 import { useTranslation } from "react-i18next";
 
@@ -8,7 +8,7 @@ interface Props {
   year: string;
   link: string;
   description: string;
-  technologies: ReactElement<any, any>;
+  technologies: ReactElement<unknown, string>;
   mainColor: string;
 }
 
