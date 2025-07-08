@@ -33,7 +33,11 @@ const ContactMe = (props: Props) => {
                 filter: `${styles[style]?.iconstFilter}`,
               }}
             />
-            <a href="https://github.com/Alina-02" target="_blank">
+            <a
+              className="a-contact"
+              href="https://github.com/Alina-02"
+              target="_blank"
+            >
               GitHub
             </a>
           </div>
@@ -47,7 +51,7 @@ const ContactMe = (props: Props) => {
                 filter: `${styles[style]?.iconstFilter}`,
               }}
             />
-            <a>alinamontma@gmail.com</a>
+            <a className="a-contact">alinamontma@gmail.com</a>
           </div>
           {/*} <a target="_blank" href="https://icons8.com/icon/8808/linkedin">
             LinkedIn
@@ -66,7 +70,12 @@ const ContactMe = (props: Props) => {
                 filter: `${styles[style]?.iconstFilter}`,
               }}
             />
-            <a href="https://linkedin.com/in/alina-montoliu-2oo2">LinkedIn</a>
+            <a
+              className="a-contact"
+              href="https://linkedin.com/in/alina-montoliu-2oo2"
+            >
+              LinkedIn
+            </a>
           </div>
           <div className="contact-me-element">
             <img
@@ -78,7 +87,7 @@ const ContactMe = (props: Props) => {
                 filter: `${styles[style]?.iconstFilter}`,
               }}
             />
-            <p style={{ margin: "0" }}>+34 685 63 18 05</p>
+            <p className="p-tel">+34 685 63 18 05</p>
           </div>
         </div>
       </TextFade>
