@@ -164,7 +164,12 @@ function App() {
       </div>
       <div style={{ backgroundColor: "white", height: "40vh" }}></div>
       <Transition zoom={zoom} style={style} />
-      <div style={{ backgroundColor: "#A60303", height: "900px" }}></div>
+      <div
+        style={{
+          background: styles[style]?.reverseBackground,
+          height: "900px",
+        }}
+      ></div>
       <div
         style={{
           backgroundColor: "white",
