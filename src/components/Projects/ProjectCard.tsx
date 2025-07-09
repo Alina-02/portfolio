@@ -1,6 +1,7 @@
 import React, { type ReactElement } from "react";
 import "./projects.css";
 import { useTranslation } from "react-i18next";
+import TechChip from "./TechChip";
 
 interface Props {
   imagelink: string;
@@ -17,42 +18,27 @@ const ProjectCard = (props: Props) => {
     props;
   const { t } = useTranslation();
   return (
-    <li style={{ background: "white", borderRadius: "20px" }}>
-      <div className="project-card">
-        <img
-          src={imagelink}
-          className="project-card__image"
-          alt="Project screenshot"
-        />
-        <div className="project-card__overlay">
-          <div
-            className="project-card-header"
-            style={{ borderColor: `${mainColor}` }}
-          >
-            <svg className="project-card__arc">
-              <path />
-            </svg>
-
-            <div className="project-card-header-text">
-              <h3 className="project-card__title">{title}</h3>
-              <span className="project-card-year">{year + " - "}</span>
-
-              <a
-                target="_blank"
-                style={{ color: "black" }}
-                className="project-card-status"
-                href={link}
-              >
-                {t("Repository")}
-              </a>
-
-              <div style={{ display: "flex" }}>{technologies}</div>
-            </div>
-          </div>
-          <p className="project-card__description">{t(description)}</p>
-        </div>
+    <div
+      style={{
+        minWidth: "350px",
+        width: "350px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "start",
+      }}
+    >
+      <h3 style={{ fontSize: "1.75rem", marginBottom: "0px" }}>{title}</h3>
+      <p>
+        <i>{year}</i> -{" "}
+        <a href={link} style={{ textDecoration: "underline" }}>
+          Repository
+        </a>
+      </p>
+      <div style={{ display: "flex" }}>{technologies}</div>
+      <div>
+        <p style={{ textAlign: "left" }}>{t(description)}</p>
       </div>
-    </li>
+    </div>
   );
 };
 

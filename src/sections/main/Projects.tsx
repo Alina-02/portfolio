@@ -11,21 +11,27 @@ const ProjectsSection = (props: Props) => {
   const { style } = props;
   const { t } = useTranslation();
   return (
-    <div
-      id="projects"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        color: "white",
-        zIndex: "1",
-        alignItems: "center",
-        padding: "2rem",
-        backgroundColor: styles[style]?.sectionsBackground,
-      }}
-    >
-      <h2 style={{ fontFamily: `${styles[style]?.font}` }}>{t("projects")}</h2>
-      <Projects />
-    </div>
+    <>
+      <div
+        id="projects"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          color: "white",
+          zIndex: "1",
+          alignItems: "center",
+          padding: "2rem",
+          backgroundColor: styles[style]?.sectionsBackground,
+          width: "100%",
+        }}
+      >
+        <h2 style={{ fontFamily: `${styles[style]?.font}` }}>
+          {t("projects")}
+        </h2>
+        <Projects />
+      </div>
+      <div style={{ height: "50px", backgroundColor: "white" }}></div>
+    </>
   );
 };
 
