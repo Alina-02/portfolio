@@ -1,15 +1,15 @@
 .course-card-container {
   display: flex;
-  max-width: 450px;
+  max-width: 1250px;
   width: 100%;
-  max-height: 75px;
   margin-top: 2vh;
   gap: 1rem;
 }
 
 .course-card {
-  max-width: 180px;
-  width: 15vw;
+  max-width: 400px;
+  width: 30vw;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,16 +17,16 @@
   background-color: white;
   color: black;
   flex-direction: row;
-  padding: 5px;
-  padding-left: 12.5px;
-  padding-right: 12.5px;
+  padding: 10px;
+  padding-left: 16.5px;
+  padding-right: 16.5px;
   border-radius: 5px;
   gap: 1vw;
 }
 
 .course-image {
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
 }
 
 .course-text {
@@ -54,7 +54,7 @@
   margin: 0;
   text-align: left;
   width: 100%;
-  font-size: 0.4rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 1350px) {

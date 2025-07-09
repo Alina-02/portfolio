@@ -13,7 +13,10 @@ import LanguageSwitch from "./components/LanguageSwitch/LanguageSwitch";
 
 import AboutMe from "./sections/aboutme/AboutMe";
 import ContactMe from "./sections/contactme/ContactMe";
-import MainSection from "./sections/main/MainSection";
+import Curriculum from "./sections/main/Curriculum";
+import Courses from "./sections/main/Courses";
+import Transition from "./sections/main/MainSection";
+import ProjectsSection from "./sections/main/Projects";
 
 function App() {
   const { t } = useTranslation();
@@ -22,8 +25,6 @@ function App() {
   const [style, setStyle] = useState<number>(0);
 
   const [downButtonHover, setDownButtonHover] = useState<boolean>(false);
-  const [leftButtonHover, setLeftButtonHover] = useState<boolean>(false);
-  const [rightButtonHover, setRightButtonHover] = useState<boolean>(false);
 
   const [zoom, setZoom] = useState<boolean>(false);
   const [circleSelected, setCircleSelected] = useState<
@@ -50,12 +51,9 @@ function App() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     console.log(latest);
-    if (latest > 350 && latest < 700 && !zoom) {
+    if (latest > 250 && latest < 700 && !zoom) {
       setZoom(true);
-    } else if (latest < 350 && zoom) {
-      setZoom(false);
-      setCircleSelected("None");
-    } else if (latest >= 900) {
+    } else if (latest < 250 && zoom) {
       setZoom(false);
       setCircleSelected("None");
     }
@@ -153,7 +151,7 @@ function App() {
                 style={{ width: "30px", height: "30px" }}
               />
             </button>
-            <h2>{t("but also")}</h2>
+            <h2 style={{ fontSize: "2rem" }}>{t("but also")}</h2>
             <button className="arrow-button" onClick={onRightStyle}>
               <img
                 src={"/icons/arrow-sm-right-svgrepo-com.svg"}
@@ -164,18 +162,131 @@ function App() {
           </div>
         </TextFade>
       </div>
-      <MainSection
-        zoom={zoom}
-        circleSelected={circleSelected}
-        setCircleSelected={setCircleSelected}
-        style={style}
-        leftButtonHover={leftButtonHover}
-        setLeftButtonHover={setLeftButtonHover}
-        rightButtonHover={rightButtonHover}
-        setRightButtonHover={setRightButtonHover}
-        circlesRef={circlesRef}
-      />
-      <div style={{ backgroundColor: "white", height: "400px" }}></div>
+      <div style={{ backgroundColor: "white", height: "40vh" }}></div>
+      <Transition zoom={zoom} style={style} />
+      <div style={{ backgroundColor: "#A60303", height: "900px" }}></div>
+      <div
+        style={{
+          backgroundColor: "white",
+          height: "400px",
+        }}
+      >
+        <div
+          ref={circlesRef}
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            height: "100%",
+            alignItems: "center",
+          }}
+        >
+          <div className="circle-container">
+            <motion.div
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 4,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+              className="circle-animation"
+              style={{
+                background: `${styles[style]?.ringBackground}`,
+              }}
+            />
+            <a
+              href="#projects"
+              style={{
+                color: "black",
+                fontWeight: 500,
+              }}
+            >
+              <button
+                className="button"
+                onClick={() => setCircleSelected("Projects")}
+              >
+                <h2
+                  style={{
+                    marginBottom: "0",
+                    fontFamily: `${styles[style]?.font}`,
+                  }}
+                >
+                  {t("projects")}
+                </h2>
+              </button>
+            </a>
+          </div>
+
+          <div className="circle-container">
+            <motion.div
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 4,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+              className="circle-animation"
+              style={{
+                background: `${styles[style]?.ringBackground}`,
+              }}
+            />
+            <a href="#courses" style={{ color: "black", fontWeight: 500 }}>
+              <button
+                className="button"
+                onClick={() => setCircleSelected("Courses")}
+              >
+                <h2
+                  style={{
+                    marginBottom: "0",
+                    fontFamily: `${styles[style]?.font}`,
+                  }}
+                >
+                  {t("courses")}
+                </h2>
+              </button>
+            </a>
+          </div>
+
+          <div className="circle-container">
+            <motion.div
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 4,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+              className="circle-animation"
+              style={{
+                background: `${styles[style]?.ringBackground}`,
+              }}
+            />
+            <a href="#curriculum" style={{ color: "black", fontWeight: 500 }}>
+              <button
+                className="button"
+                onClick={() => setCircleSelected("Curriculum")}
+              >
+                <h2
+                  style={{
+                    marginBottom: "0",
+                    fontFamily: `${styles[style]?.font}`,
+                  }}
+                >
+                  {t("curriculum")}
+                </h2>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        {<>{console.log(circleSelected)}</>}
+        {circleSelected === "Curriculum" && <Curriculum style={style} />}
+        {circleSelected === "Courses" && <Courses style={style} />}
+        {circleSelected === "Projects" && <ProjectsSection style={style} />}
+      </div>
       <AboutMe style={style} />
       <div style={{ backgroundColor: "white", height: "300px" }}></div>
       <ContactMe style={style} />
