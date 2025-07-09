@@ -3,6 +3,8 @@ import { styles } from "../../utils/styles";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
 
+import "../../styles/curriculum.css";
+
 interface Props {
   style: number;
 }
@@ -105,7 +107,7 @@ const Curriculum = (props: Props) => {
               <strong>{t("curriculumsection.experiencetitle1")}</strong>
               <br />
               <i>{t("curriculumsection.experiencedate1")}</i> <br />
-              <ul>
+              <ul style={{ textAlign: "left" }}>
                 <li>{t("curriculumsection.experiencelist11")}</li>
                 <li>{t("curriculumsection.experiencelist21")}</li>
                 <li>{t("curriculumsection.experiencelist31")}</li>
@@ -115,31 +117,15 @@ const Curriculum = (props: Props) => {
             <div style={{ fontSize: "1rem" }}>
               <strong>{t("curriculumsection.experiencetitle2")}</strong>
               <br /> <i>{t("curriculumsection.experiencedate2")}</i>
-              <ul>
+              <ul style={{ textAlign: "left" }}>
                 <li>{t("curriculumsection.experiencelist21")}</li>
                 <li>{t("curriculumsection.experiencelist22")}</li>
                 <li>{t("curriculumsection.experiencelist32")}</li>
               </ul>
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                marginTop: "2vw",
-              }}
-            >
+            <div className="download-button-container">
               <a
-                style={{
-                  cursor: "pointer",
-                  color: "black",
-                  backgroundColor: "white",
-                  fontSize: "0.6rem",
-                  borderRadius: "10px",
-                  padding: "0.5vh",
-                  paddingLeft: "0.7vh",
-                  paddingRight: "0.7vh",
-                }}
+                className="download-button"
                 href={
                   i18n.language === "en"
                     ? "docs/CV_Alina_Montoliu_Eng.pdf"

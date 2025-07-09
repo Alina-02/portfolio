@@ -24,7 +24,7 @@
   list-style: none;
   height: 525px;
   overflow-x: scroll;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   flex: 0 0 450px;
   margin: 0 auto;
   gap: 1rem;
@@ -83,19 +83,19 @@
 
 .project-card-header {
   border-top: solid;
-  border-width: 5px;
+  border-width: 10px;
   border-color: black;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1em;
-  padding: 0.75em;
+  padding: 1em;
   border-radius: 20px 0 0 0;
   background-color: white;
   transform: translateY(-150%);
   transition: 0.2s ease-in-out;
-  min-height: 70px;
+  min-height: 200px;
 }
 
 .project-card__arc {
@@ -124,31 +124,31 @@
 }
 
 .project-card__title {
-  font-size: 0.75em;
-  margin: 0;
+  font-size: 1.75em;
+  margin: 0.5rem;
   color: black;
 }
 
 .project-card__tagline {
   display: block;
-  margin: 1em 0;
-  font-size: 0.6em;
+  margin: 2rem 0;
+  font-size: 1rem;
   color: black;
 }
 
 .project-card-status {
   text-decoration: underline;
-  font-size: 0.4em;
+  font-size: 1.2rem;
   color: black;
 }
 
 .project-card-year {
-  font-size: 0.5em;
+  font-size: 1.2rem;
   color: black;
 }
 
 .project-card__description {
-  font-size: 0.5em;
+  font-size: 1.2rem;
   padding: 0 2em 2em;
   margin: 0;
   color: black;
