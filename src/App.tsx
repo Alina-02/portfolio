@@ -170,22 +170,8 @@ function App() {
           height: "900px",
         }}
       ></div>
-      <div
-        style={{
-          backgroundColor: "white",
-          height: "400px",
-        }}
-      >
-        <div
-          ref={circlesRef}
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-around",
-            height: "100%",
-            alignItems: "center",
-          }}
-        >
+      <div className="main-container">
+        <div ref={circlesRef} className="circles-container">
           <div className="circle-container">
             <motion.div
               initial={{ rotate: 0 }}
