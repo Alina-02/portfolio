@@ -44,13 +44,13 @@ const Courses = (props: Props) => {
               mainInfo="coursessection.course1.title"
               year="coursessection.course1.year"
               web="coursessection.course1.web"
-              imgLink="/img/fm.png"
+              imgLink="/portfolio/img/fm.png"
             />
             <CourseCard
               mainInfo="coursessection.course2.title"
               year="coursessection.course2.year"
               web="coursessection.course2.web"
-              imgLink="/img/fm.png"
+              imgLink="/portfolio/img/fm.png"
             />
           </div>
           <div className="course-card-container">
@@ -58,13 +58,13 @@ const Courses = (props: Props) => {
               mainInfo="coursessection.course3.title"
               year="coursessection.course3.year"
               web="coursessection.course3.web"
-              imgLink="/img/fm.png"
+              imgLink="/portfolio/img/fm.png"
             />
             <CourseCard
               mainInfo="coursessection.course4.title"
               year="coursessection.course4.year"
               web="coursessection.course4.web"
-              imgLink="/img/fm.png"
+              imgLink="/portfolio/img/fm.png"
             />
           </div>
           <div className="course-card-container">
@@ -72,13 +72,13 @@ const Courses = (props: Props) => {
               mainInfo="coursessection.course5.title"
               year="coursessection.course5.year"
               web="coursessection.course5.web"
-              imgLink="/img/fm.png"
+              imgLink="/portfolio/img/fm.png"
             />
             <CourseCard
               mainInfo="coursessection.course6.title"
               year="coursessection.course6.year"
               web="coursessection.course6.web"
-              imgLink="/img/fm.png"
+              imgLink="/portfolio/img/fm.png"
             />
           </div>
           <div className="course-card-container">
@@ -86,13 +86,13 @@ const Courses = (props: Props) => {
               mainInfo="coursessection.course7.title"
               year="coursessection.course7.year"
               web="coursessection.course7.web"
-              imgLink="/img/coursera.png"
+              imgLink="/portfolio/img/coursera.png"
             />
             <CourseCard
               mainInfo="coursessection.course8.title"
               year="coursessection.course8.year"
               web="coursessection.course8.web"
-              imgLink="/img/cf.png"
+              imgLink="/portfolio/img/cf.png"
             />
           </div>
         </div>
