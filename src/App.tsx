@@ -146,7 +146,7 @@ function App() {
           >
             <button className="arrow-button" onClick={onLeftStyle}>
               <img
-                src={"/icons/arrow-sm-left-svgrepo-com.svg"}
+                src={"/portfolio/icons/arrow-sm-left-svgrepo-com.svg"}
                 alt="mySvgImage"
                 style={{ width: "30px", height: "30px" }}
               />
@@ -154,7 +154,7 @@ function App() {
             <h2 style={{ fontSize: "2rem" }}>{t("but also")}</h2>
             <button className="arrow-button" onClick={onRightStyle}>
               <img
-                src={"/icons/arrow-sm-right-svgrepo-com.svg"}
+                src={"/portfolio/icons/arrow-sm-right-svgrepo-com.svg"}
                 alt="mySvgImage"
                 style={{ width: "30px", height: "30px" }}
               />
