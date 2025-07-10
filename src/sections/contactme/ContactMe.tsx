@@ -1,4 +1,3 @@
-import React from "react";
 import { TextFade } from "../../components/TextFade";
 import { styles } from "../../utils/styles";
 

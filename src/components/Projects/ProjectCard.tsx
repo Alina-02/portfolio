@@ -1,7 +1,6 @@
-import React, { type ReactElement } from "react";
+import { type ReactElement } from "react";
 import "./projects.css";
 import { useTranslation } from "react-i18next";
-import TechChip from "./TechChip";
 
 interface Props {
   imagelink: string;
@@ -14,8 +13,7 @@ interface Props {
 }
 
 const ProjectCard = (props: Props) => {
-  const { imagelink, title, year, link, description, technologies, mainColor } =
-    props;
+  const { title, year, link, description, technologies } = props;
   const { t } = useTranslation();
   return (
     <div

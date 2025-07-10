@@ -1,4 +1,3 @@
-import React from "react";
 import { styles } from "../../utils/styles";
 import { useTranslation } from "react-i18next";
 import Projects from "../../components/Projects/Projects";

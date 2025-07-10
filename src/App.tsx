@@ -85,7 +85,7 @@ function App() {
             setZoom(true);
             setCircleSelected("None");
 
-            setTimeout(() => circlesRef?.current?.scrollIntoView(), 100);
+            //setTimeout(() => circlesRef?.current?.scrollIntoView(), 100);
           }}
           onMouseEnter={() => setDownButtonHover(true)}
           onMouseLeave={() => setDownButtonHover(false)}

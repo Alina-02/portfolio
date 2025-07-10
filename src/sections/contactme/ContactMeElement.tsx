@@ -1,4 +1,3 @@
-import React from "react";
 import { styles } from "../../utils/styles";
 import "../../styles/contactme.css";
 

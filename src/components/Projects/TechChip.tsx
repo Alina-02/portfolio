@@ -1,4 +1,3 @@
-import React from "react";
 import "./techchip.css";
 
 interface Props {

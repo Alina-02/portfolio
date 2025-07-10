@@ -1,5 +1,5 @@
-import { motion, type Transition } from "motion/react";
-import React from "react";
+import { motion } from "motion/react";
+import type { Transition } from "motion/react";
 import { styles } from "../../utils/styles";
 
 import "../../styles/circles.css";

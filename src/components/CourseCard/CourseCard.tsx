@@ -1,4 +1,3 @@
-import React from "react";
 import "./coursecard.css";
 import { useTranslation } from "react-i18next";
 
