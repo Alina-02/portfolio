@@ -25,24 +25,24 @@ const ContactMe = (props: Props) => {
         <div className="contact-me-grid">
           <ContactMeElement
             style={style}
-            iconLink={"/icons/email.svg"}
+            iconLink={"/portfolio/icons/email.svg"}
             text={"alinamontma@gmail.com"}
           />
           <ContactMeElement
             style={style}
-            iconLink={"/icons/github.svg"}
+            iconLink={"/portfolio/icons/github.svg"}
             webLink={"https://github.com/Alina-02"}
             text={"GitHub"}
             reverse
           />
           <ContactMeElement
             style={style}
-            iconLink={"/icons/call.svg"}
+            iconLink={"/portfolio/icons/call.svg"}
             text={"+34 685 63 18 05"}
           />
           <ContactMeElement
             style={style}
-            iconLink={"/icons/linkedin.svg"}
+            iconLink={"/portfolio/icons/linkedin.svg"}
             webLink={"https://linkedin.com/in/alina-montoliu-2oo2"}
             text={"LinkedIn"}
             reverse
