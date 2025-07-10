@@ -106,7 +106,7 @@ function App() {
             }}
           >
             <img
-              src={"/portfolio/public/icons/arrow-sm-down-svgrepo-com.svg"}
+              src={"/portfolio/icons/arrow-sm-down-svgrepo-com.svg"}
               alt="mySvgImage"
               style={{ width: "50px", height: "50px" }}
             />
