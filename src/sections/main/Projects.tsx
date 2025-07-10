@@ -21,7 +21,6 @@ const ProjectsSection = (props: Props) => {
           alignItems: "center",
           padding: "2rem",
           backgroundColor: styles[style]?.sectionsBackground,
-          width: "100%",
         }}
       >
         <h2 style={{ fontFamily: `${styles[style]?.font}` }}>
