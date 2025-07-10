@@ -1,6 +1,6 @@
 @font-face {
   font-family: LemonGarlic;
-  src: url(/fonts/Lemon\ Garlic.otf);
+  src: url(/fonts/Lemon-Garlic.otf);
 }
 
 @font-face {
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: RochestarDemo;
-  src: url(/fonts/Rochestar\ Demo.otf);
+  src: url(/fonts/Rochestar-Demo.otf);
 }
 
 @font-face {
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: ShadigoTrial;
-  src: url(/fonts/UT\ Shadigo\ Trial.woff);
+  src: url(/fonts/Shadigo-Trial.woff);
 }
 
 html {
