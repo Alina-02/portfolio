@@ -72,6 +72,19 @@ function App() {
       <div
         style={{
           position: "absolute",
+          right: "15px",
+          top: "15px",
+          borderRadius: "20px",
+          backgroundColor: "#ffc233",
+          paddingLeft: "1rem",
+          paddingRight: "1rem",
+        }}
+      >
+        <p>This website is in progress.</p>
+      </div>
+      <div
+        style={{
+          position: "absolute",
           left: "15px",
           top: "15px",
         }}
