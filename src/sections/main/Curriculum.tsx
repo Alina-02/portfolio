@@ -16,17 +16,17 @@ const Curriculum = (props: Props) => {
     <>
       <div
         id="curriculum"
+        className="curriculum-container"
         style={{
           backgroundColor: styles[style]?.sectionsBackground,
-          display: "flex",
-          flexDirection: "column",
-          color: "white",
-          zIndex: "1",
-          padding: "2rem",
+          color: styles[style]?.sectionsTextColor,
         }}
       >
         <h2
-          style={{ fontFamily: `${styles[style]?.font}`, fontSize: "2.5rem" }}
+          style={{
+            fontFamily: `${styles[style]?.font}`,
+            fontSize: styles[style]?.h2FontSize,
+          }}
         >
           {t("curriculum")}
         </h2>
@@ -88,7 +88,6 @@ const Curriculum = (props: Props) => {
           </div>
           <div
             style={{
-              color: "white",
               maxWidth: "550px",
               textAlign: "right",
             }}

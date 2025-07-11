@@ -20,7 +20,14 @@ const ContactMe = (props: Props) => {
         color: styles[style]?.sectionsTextColor,
       }}
     >
-      <h2 style={{ fontFamily: `${styles[style]?.font}` }}>{t("contactme")}</h2>
+      <h2
+        style={{
+          fontFamily: `${styles[style]?.font}`,
+          fontSize: styles[style]?.h2FontSize,
+        }}
+      >
+        {t("contactme")}
+      </h2>
       <TextFade staggerChildren={0.4} direction="up">
         <div className="contact-me-grid">
           <ContactMeElement

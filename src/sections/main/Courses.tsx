@@ -19,14 +19,18 @@ const Courses = (props: Props) => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          color: "white",
           zIndex: "1",
           padding: "2rem",
+
+          color: styles[style]?.sectionsTextColor,
           backgroundColor: styles[style]?.sectionsBackground,
         }}
       >
         <h2
-          style={{ fontFamily: `${styles[style]?.font}`, fontSize: "2.5rem" }}
+          style={{
+            fontFamily: `${styles[style]?.font}`,
+            fontSize: styles[style]?.h2FontSize,
+          }}
         >
           {t("courses")}
         </h2>

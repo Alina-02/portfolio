@@ -213,6 +213,7 @@ function App() {
                   style={{
                     marginBottom: "0",
                     fontFamily: `${styles[style]?.font}`,
+                    fontSize: styles[style]?.circlesFontSize,
                   }}
                 >
                   {t("projects")}
@@ -244,6 +245,7 @@ function App() {
                   style={{
                     marginBottom: "0",
                     fontFamily: `${styles[style]?.font}`,
+                    fontSize: styles[style]?.circlesFontSize,
                   }}
                 >
                   {t("courses")}
@@ -275,6 +277,7 @@ function App() {
                   style={{
                     marginBottom: "0",
                     fontFamily: `${styles[style]?.font}`,
+                    fontSize: styles[style]?.circlesFontSize,
                   }}
                 >
                   {t("curriculum")}

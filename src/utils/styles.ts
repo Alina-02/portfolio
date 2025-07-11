@@ -13,6 +13,8 @@ export const styles = [
     ringAboutMe: "rgba(217, 142, 4, 1)",
     iconstFilter:
       "invert(95%) sepia(2%) saturate(7486%) hue-rotate(221deg) brightness(123%) contrast(101%)",
+    h2FontSize: "2.5rem",
+    circlesFontSize: "1.5rem",
   },
   {
     font: "LemonGarlic",
@@ -27,6 +29,8 @@ export const styles = [
       "linear-gradient(90deg,#FF0080  0%, #FF8000 25%, #FFD000 50%, #B3FF00 75%, #00FFFF 100%)",
 
     ringAboutMe: "rgba(179, 255, 0, 1)",
+    h2FontSize: "2.75rem",
+    circlesFontSize: "1.9rem",
   },
   {
     font: "Maskdown",
@@ -40,6 +44,8 @@ export const styles = [
     ringBackground:
       "linear-gradient(90deg,rgba(50, 1, 64, 1)  0%, rgba(63, 2, 89, 1)50%, rgb(116, 36, 150) 100%)",
     ringAboutMe: "rgba(63, 2, 89, 1)",
+    h2FontSize: "2.75rem",
+    circlesFontSize: "2rem",
   },
   {
     font: "RochestarDemo",
@@ -49,10 +55,12 @@ export const styles = [
       "linear-gradient(0deg,rgba(242, 216, 216, 1) 0%, rgba(242, 160, 182, 1) 32%, rgba(140, 123, 101, 1) 100%)",
 
     sectionsBackground: "rgba(242, 160, 182, 1)",
-    sectionsTextColor: "rgb(41, 25, 5) ",
+    sectionsTextColor: "black",
     ringBackground:
       "linear-gradient(90deg,rgba(242, 160, 182, 1)  0%, rgba(242, 216, 216, 1) 75%)",
     ringAboutMe: "#8C7B65",
+    h2FontSize: "3rem",
+    circlesFontSize: "2.5rem",
   },
   {
     font: "TurquoiseKimono",
@@ -67,5 +75,7 @@ export const styles = [
       "linear-gradient(90deg,#F49840  0%, #F2C029 50%, rgba(252, 234, 169, 1) 100%)",
 
     ringAboutMe: "rgba(107, 217, 242, 1)",
+    h2FontSize: "3.25rem",
+    circlesFontSize: "3rem",
   },
 ];

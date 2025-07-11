@@ -24,7 +24,10 @@ const ContactMeElement = (props: Props) => {
         style={{
           width: "35px",
           height: "35px",
-          filter: `${styles[style]?.iconstFilter}`,
+          filter:
+            styles[style]?.sectionsTextColor === "black"
+              ? ""
+              : `${styles[style]?.iconstFilter}`,
         }}
       />
 
@@ -33,6 +36,7 @@ const ContactMeElement = (props: Props) => {
           className="a-contact"
           target="_blank"
           href={webLink ? webLink : "None"}
+          style={{ color: styles[style]?.sectionsTextColor }}
         >
           {text}
         </a>

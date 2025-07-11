@@ -16,17 +16,23 @@ const ProjectsSection = (props: Props) => {
         style={{
           display: "flex",
           flexDirection: "column",
-          color: "white",
           zIndex: "1",
           alignItems: "center",
           padding: "2rem",
+
+          color: styles[style]?.sectionsTextColor,
           backgroundColor: styles[style]?.sectionsBackground,
         }}
       >
-        <h2 style={{ fontFamily: `${styles[style]?.font}` }}>
+        <h2
+          style={{
+            fontFamily: `${styles[style]?.font}`,
+            fontSize: styles[style]?.h2FontSize,
+          }}
+        >
           {t("projects")}
         </h2>
-        <Projects />
+        <Projects style={style} />
       </div>
       <div style={{ height: "50px", backgroundColor: "white" }}></div>
     </>

@@ -4,7 +4,12 @@ import "./projects.css";
 import ProjectCard from "./ProjectCard";
 import TechChip from "./TechChip";
 
-export default function Projects() {
+interface Props {
+  style: number;
+}
+
+export default function Projects(props: Props) {
+  const { style } = props;
   return (
     <div
       className="scrollbar"
@@ -17,6 +22,7 @@ export default function Projects() {
       }}
     >
       <ProjectCard
+        style={style}
         imagelink={""}
         title={"BookNote 2.0"}
         year={"2025"}
@@ -32,6 +38,7 @@ export default function Projects() {
         mainColor={""}
       />
       <ProjectCard
+        style={style}
         imagelink={""}
         title={"Funky Pomodoro"}
         year={"2025"}
@@ -46,6 +53,7 @@ export default function Projects() {
         mainColor={""}
       />
       <ProjectCard
+        style={style}
         imagelink={""}
         title={"RandOn"}
         year={"2025"}
@@ -61,6 +69,7 @@ export default function Projects() {
         mainColor={""}
       />
       <ProjectCard
+        style={style}
         imagelink={""}
         title={"PokeApp"}
         year={"2024"}
@@ -76,6 +85,7 @@ export default function Projects() {
         mainColor={""}
       />
       <ProjectCard
+        style={style}
         imagelink={""}
         title={"BooknNote 1.0"}
         year={"2023"}
