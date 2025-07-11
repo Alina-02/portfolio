@@ -50,7 +50,6 @@ function App() {
   };
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log(latest);
     if (latest > 250 && latest < 700 && !zoom) {
       setZoom(true);
     } else if (latest < 250 && zoom) {
@@ -286,7 +285,6 @@ function App() {
         </div>
       </div>
       <div>
-        {<>{console.log(circleSelected)}</>}
         {circleSelected === "Curriculum" && <Curriculum style={style} />}
         {circleSelected === "Courses" && <Courses style={style} />}
         {circleSelected === "Projects" && <ProjectsSection style={style} />}
