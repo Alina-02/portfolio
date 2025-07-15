@@ -3,6 +3,7 @@ import { motion, useMotionValueEvent, useScroll } from "motion/react";
 
 import "./App.css";
 import "./styles/floatingbutton.css";
+import "./styles/bubbles.css";
 
 import { TextFade } from "./components/TextFade";
 
@@ -68,19 +69,13 @@ function App() {
           <Flower right={500} top={-20} size="small" />
         </>
       )}
-      <div
-        style={{
-          position: "absolute",
-          right: "15px",
-          top: "15px",
-          borderRadius: "20px",
-          backgroundColor: "#ffc233",
-          paddingLeft: "1rem",
-          paddingRight: "1rem",
-        }}
-      >
-        <p>This website is in progress.</p>
-      </div>
+      {style === 1 && (
+        <div id="background-wrap">
+          <div className="bubble x1"></div>
+          <div className="bubble x2"></div>
+        </div>
+      )}
+
       <div
         style={{
           position: "absolute",

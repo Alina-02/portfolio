@@ -35,7 +35,17 @@ const Transition = (props: Props) => {
         scale: zoom ? 2 : 1,
       }}
       className="main-circle"
-      style={{ background: styles[style]?.circleBackground }}
+      style={{
+        background: styles[style]?.circleBackground,
+        boxShadow:
+          style === 0
+            ? `
+      0 0 10px 5px rgba(255, 165, 0, 0.5),   /* Orange */
+      0 0 20px 10px rgba(255, 223, 0, 0.5),  /* Yellow */
+      0 0 30px 0px rgba(255, 223, 0, 0.3)   /* Softer Yellow */
+    `
+            : "none",
+      }}
     ></motion.div>
   );
 };
