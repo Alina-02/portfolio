@@ -1,7 +1,6 @@
 import { type ReactElement } from "react";
 import "./projects.css";
 import { useTranslation } from "react-i18next";
-import { styles } from "../../utils/styles";
 
 interface Props {
   imagelink: string;
@@ -15,8 +14,7 @@ interface Props {
 }
 
 const ProjectCard = (props: Props) => {
-  const { imagelink, title, year, link, description, technologies, style } =
-    props;
+  const { imagelink, title, year, link, description, technologies } = props;
   const { t } = useTranslation();
   return (
     <div
