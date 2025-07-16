@@ -23,7 +23,7 @@ export default function Projects(props: Props) {
     >
       <ProjectCard
         style={style}
-        imagelink={""}
+        imagelink={"public/img/booknote2.png"}
         title={"BookNote 2.0"}
         year={"2025"}
         link={"https://github.com/Alina-02/booknote-2"}
@@ -39,7 +39,7 @@ export default function Projects(props: Props) {
       />
       <ProjectCard
         style={style}
-        imagelink={""}
+        imagelink={"public/img/funkypomodoro.png"}
         title={"Funky Pomodoro"}
         year={"2025"}
         link={"https://github.com/Alina-02/funky-pomodoro"}
@@ -54,7 +54,7 @@ export default function Projects(props: Props) {
       />
       <ProjectCard
         style={style}
-        imagelink={""}
+        imagelink={"public/img/randon.png"}
         title={"RandOn"}
         year={"2025"}
         link={"https://github.com/Alina-02/spfy-rec"}
@@ -70,7 +70,7 @@ export default function Projects(props: Props) {
       />
       <ProjectCard
         style={style}
-        imagelink={""}
+        imagelink={"public/img/pokeapp.png"}
         title={"PokeApp"}
         year={"2024"}
         link={"https://github.com/Alina-02/PokeApp"}
@@ -86,7 +86,7 @@ export default function Projects(props: Props) {
       />
       <ProjectCard
         style={style}
-        imagelink={""}
+        imagelink={"public/img/booknote1.png"}
         title={"BooknNote 1.0"}
         year={"2023"}
         link={"https://github.com/Alina-02/booknote-project"}
@@ -94,6 +94,8 @@ export default function Projects(props: Props) {
         technologies={
           <>
             <TechChip color="#0081A3" name="React" />
+            <TechChip color="#00BCFF" name="TailwindCSS" />
+
             <TechChip color="#f7df1e" textColor="black" name="JavaScript" />
           </>
         }

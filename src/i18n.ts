@@ -80,23 +80,23 @@ i18n
           projectssection: {
             project1: {
               description:
-                "The book quote-saving app, two years later — now incorporating the new knowledge I've gained in design and development. In progress.",
+                "In progress. I wanted to rebuild the first application I ever made from scratch, incorporating everything I’ve learned over the past two years. It still uses Firebase as the back-end but now features a more modern design, account management, and a dark mode. I also developed it with the goal of starting to work with animations in React.",
             },
             project2: {
               description:
-                "A small Pomodoro app — because I couldn’t find any website I really liked.",
+                "A small app to set a one-hour Pomodoro timer. I wanted to build a simple project that would let me work with React without relying on MUI for components.",
             },
             project3: {
               description:
-                "A web application that recommends music based on the genre you choose and the songs in your Spotify library. I just felt like discovering something new.",
+                "A music recommendation application based on genres using the Spotify API. It aims to return songs, albums, or artists from the selected genre that are new to the user (not saved in their account in any form). The app is currently online, but using the Spotify API requires explicit permission from Spotify to develop for the general public, so only users on the development whitelist can log in. It was built with MUI, and I’d like to expand it in the future.",
             },
             project4: {
               description:
-                "A basic project to learn how to use MUI. Who doesn't have a Pokémon app?",
+                "My first project using TypeScript, Material UI, and Redux Toolkit. It allows users to view Pokémon information and add them to favorites. This project helped me start working with layouts, focus more on CSS, and consider making a responsive website.",
             },
             project5: {
               description:
-                "A web application to save quotes from your favorite books — because one day I realized I needed it.",
+                "An application that allows adding books and quotes from each of them. It was my first project after learning to use React without following a full tutorial. It helped me strengthen my understanding of basic hooks, fully grasp rendering, improve my JavaScript speed, and learn to use TailwindCSS. It uses Firebase as the back-end.",
             },
           },
           coursessection: {
@@ -210,23 +210,23 @@ i18n
           projectssection: {
             project1: {
               description:
-                "La app para guardar citas de libros dos años después incorporando los nuevos conocimientos adquiridos sobre diseño y desarrollo. En progreso.",
+                "En proceso. Quería volver a realizar la primera aplicación que hice desde cero, incluyendo los conocimientos que he adquirido durante estos dos años. Se vuelve a utilizar Firebase como back-end pero con un diseño más moderno, gestión de cuentas y el añadido de un modo oscuro. También lo desarrollé con el objetivo de comenzar a tratar con animaciones en React.",
             },
             project2: {
               description:
-                "Un pequeño pomodoro porque no encontraba ninguna web que me gustara.",
+                "Un pequeña app para establecer un Pomodoro de una hora. Quería hacer un proyecto pequeño que me permitiera trabajar con React sin tener MUI de intermediario a nivel de componentes. ",
             },
             project3: {
               description:
-                "Una aplicación web que recomienda música en base al género que  elijas y las canciones de tu librería de Spotify. Tenía ganas de escuchar música nueva.",
+                "Una aplicación de recomendación de música en base a géneros utilizando la API de Spotify. Busca devolver canciones, álbumes o artistas del género que se seleccione y que sean nuevas para el usuario (que no tenga guardadas en su cuenta de ninguna forma). Actualmente está online, pero el uso de la API de Spotify requiere un permiso explícito por su parte para poder hacer desarrollos al público general y sólo pueden iniciar sesión quien esté previamente en la lista de desarrollo. Está desarrollada con MUI y me gustaría expandirla en un futuro.",
             },
             project4: {
               description:
-                "Un proyecto básico para aprender a utilizar MUI. ¿Quién no tiene una app de pokemon?",
+                "Mi primer proyecto utilizando TypeScript, Material UI y Redux Toolkit. Permite observar la información de los Pokemons y añadirlos a favoritos. Me ayudó a comenzar a trabajar con layouts, centrarme más en el CSS y tener en consideración que la web fuera responsive.",
             },
             project5: {
               description:
-                "Una aplicación web para guardar las citas de tus libros favoritos porque un día me di cuenta de que necesitaba",
+                "Una aplicación para que permite añadir libros y citas de cada uno de ellos. Mi primer proyecto tras aprender a utilizar React sin seguir un tutorial completo. Me ayudó a afianzarme con los hooks básicos, entender del todo la renderización, ganar velocidad con JavaScript y aprender a usar TailwindCSS. Utiliza Firebase como back-end.",
             },
           },
           coursessection: {
