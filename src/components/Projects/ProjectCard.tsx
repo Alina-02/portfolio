@@ -58,7 +58,14 @@ const ProjectCard = (props: Props) => {
         </p>
         <div style={{ display: "flex" }}>{technologies}</div>
         <div>
-          <p style={{ textAlign: "left" }}>{t(description)}</p>
+          <p
+            style={{
+              textAlign: "left",
+              maxHeight: "400px",
+            }}
+          >
+            {t(description)}
+          </p>
         </div>
       </div>
       <img
