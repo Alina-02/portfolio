@@ -141,6 +141,11 @@ i18n
               year: "2023",
               web: "Codigo Facilito",
             },
+            course9: {
+              title: "Web UX Design for High Converting Websites",
+              year: "2025",
+              web: "Frontend Masters",
+            },
           },
         },
       },
