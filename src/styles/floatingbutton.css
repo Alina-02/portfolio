@@ -5,6 +5,7 @@
   bottom: 20px;
   margin-inline: auto;
   width: fit-content;
+  z-index: 1;
 }
 
 .floating-button {

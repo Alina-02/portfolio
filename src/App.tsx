@@ -75,7 +75,27 @@ function App() {
           <div className="bubble x2"></div>
         </div>
       )}
-
+      <div className="floating-button-container">
+        <a href="#main-container">
+          <button
+            style={{
+              backgroundColor: "white",
+              borderRadius: "50px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "60px",
+              height: "60px",
+            }}
+          >
+            <img
+              src={"/portfolio/icons/arrow-sm-down-svgrepo-com.svg"}
+              alt="mySvgImage"
+              style={{ width: "50px", height: "50px" }}
+            />
+          </button>
+        </a>
+      </div>
       <div
         style={{
           position: "absolute",
@@ -85,41 +105,7 @@ function App() {
       >
         <LanguageSwitch />
       </div>
-      <div className="floating-button-container">
-        <button
-          className="floating-button"
-          onClick={() => {
-            setZoom(true);
-            setCircleSelected("None");
 
-            //setTimeout(() => circlesRef?.current?.scrollIntoView(), 100);
-          }}
-          onMouseEnter={() => setDownButtonHover(true)}
-          onMouseLeave={() => setDownButtonHover(false)}
-        >
-          <motion.div
-            className="floating-button-animation"
-            animate={{
-              scale: downButtonHover ? 75 : 1,
-              backgroundColor: downButtonHover ? "#1a1a1a" : "white",
-            }}
-          ></motion.div>
-          <motion.div
-            className="downButtonIcon"
-            animate={{
-              filter: downButtonHover
-                ? "invert(100%) sepia(21%) saturate(0%) hue-rotate(106deg) brightness(103%) contrast(101%)"
-                : "invert(6%) sepia(6%) saturate(4%) hue-rotate(351deg) brightness(102%) contrast(90%)",
-            }}
-          >
-            <img
-              src={"/portfolio/icons/arrow-sm-down-svgrepo-com.svg"}
-              alt="mySvgImage"
-              style={{ width: "50px", height: "50px" }}
-            />
-          </motion.div>
-        </button>
-      </div>
       <div className="title-div">
         <TextFade
           staggerChildren={0.2}
@@ -177,7 +163,7 @@ function App() {
           height: "900px",
         }}
       ></div>
-      <div className="main-container">
+      <div className="main-container" id="main-container">
         <div ref={circlesRef} className="circles-container">
           <div className="circle-container">
             <motion.div
@@ -282,6 +268,7 @@ function App() {
           </div>
         </div>
       </div>
+      <div id="main-information" />
       <div>
         {circleSelected === "Curriculum" && <Curriculum style={style} />}
         {circleSelected === "Courses" && <Courses style={style} />}
