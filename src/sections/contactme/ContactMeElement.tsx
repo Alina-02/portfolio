@@ -22,8 +22,8 @@ const ContactMeElement = (props: Props) => {
       <img
         src={iconLink}
         style={{
-          width: "35px",
-          height: "35px",
+          width: "30px",
+          height: "30px",
           filter:
             styles[style]?.sectionsTextColor === "black"
               ? ""

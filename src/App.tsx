@@ -18,14 +18,13 @@ import Curriculum from "./sections/main/Curriculum";
 import Courses from "./sections/main/Courses";
 import Transition from "./sections/main/MainSection";
 import ProjectsSection from "./sections/main/Projects";
+import ContactEmail from "./components/Email/ContactEmail";
 
 function App() {
   const { t } = useTranslation();
   const { scrollY } = useScroll();
 
   const [style, setStyle] = useState<number>(0);
-
-  const [downButtonHover, setDownButtonHover] = useState<boolean>(false);
 
   const [zoom, setZoom] = useState<boolean>(false);
   const [circleSelected, setCircleSelected] = useState<
@@ -275,7 +274,9 @@ function App() {
         {circleSelected === "Projects" && <ProjectsSection style={style} />}
       </div>
       <AboutMe style={style} />
-      <div style={{ backgroundColor: "white", height: "300px" }}></div>
+      <div style={{ backgroundColor: "white", padding: "2rem" }}>
+        <ContactEmail style={style} />
+      </div>
       <ContactMe style={style} />
     </>
   );
