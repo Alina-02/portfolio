@@ -15,11 +15,11 @@ export default function ContactEmail(props: Props) {
   const [status, setStatus] = useState("");
   const { t } = useTranslation();
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: string; value: string } }) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setStatus("Sending...");
 
