@@ -24,7 +24,7 @@ i18n
           "photo progress": "Photo in progress...",
           "about me": "About Me",
           "about me first line":
-            "Hi! I'm a front-end developer with a strong interest in UI design and user interaction.",
+            "Hi! I'm a front-end developer with a strong interest in UX/UI.",
           "about me second line":
             "I enjoy challenging myself whenever I can, so don't be surprised if things look different every time you stop by — I'm always eager to learn something new.",
           "about me third line":
@@ -160,7 +160,7 @@ i18n
           "photo progress": "Fotgrafía en proceso...",
           "about me": "Sobre mí",
           "about me first line":
-            "¡Hola! Soy una programadora front-end muy interesada por el diseño UI y la interacción con el usuario.",
+            "¡Hola! Soy una programadora front-end muy interesada por el diseño de interfaces y la interacción con el usuario.",
           "about me second line":
             "Me gusta proponerme retos nuevos siempre que puedo por lo que no te extrañes si cada vez que pasas por aquí esto ha cambiado. Siempre estoy dispuesta a aprender algo nuevo.",
           "about me third line":
