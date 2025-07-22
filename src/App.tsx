@@ -68,12 +68,7 @@ function App() {
           <Flower right={500} top={-20} size="small" />
         </>
       )}
-      {style === 1 && (
-        <div id="background-wrap">
-          <div className="bubble x1"></div>
-          <div className="bubble x2"></div>
-        </div>
-      )}
+
       <div className="floating-button-container">
         <a href="#main-container">
           <button
