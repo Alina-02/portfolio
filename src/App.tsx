@@ -5,8 +5,6 @@ import "./App.css";
 import "./styles/floatingbutton.css";
 import "./styles/bubbles.css";
 
-import { TextFade } from "./components/TextFade";
-
 import { styles } from "./utils/styles";
 import { useTranslation } from "react-i18next";
 import Flower from "./components/Flower/Flower";
@@ -19,6 +17,7 @@ import Courses from "./sections/main/Courses";
 import Transition from "./sections/main/MainSection";
 import ProjectsSection from "./sections/main/Projects";
 import ContactEmail from "./components/Email/ContactEmail";
+import MainTitle from "./components/MainTitle/MainTitle";
 
 function App() {
   const { t } = useTranslation();
@@ -59,7 +58,7 @@ function App() {
   });
 
   return (
-    <>
+    <div style={{ backgroundColor: "black" }}>
       {style === 4 && (
         <>
           <Flower left={30} top={-30} />
@@ -100,57 +99,13 @@ function App() {
         <LanguageSwitch />
       </div>
 
-      <div className="title-div">
-        <TextFade
-          staggerChildren={0.2}
-          direction="up"
-          className="pt-0 pb-5 flex-col flex justify-center items-center space-y-0"
-        >
-          <h1 style={{ marginBottom: "0.2rem" }}>{t("Hi")}</h1>
-          <h1 style={{ marginBottom: "1rem", marginTop: "0.8rem" }}>
-            {t("I am")}
-          </h1>
-
-          <h1
-            className="title-name"
-            style={{
-              fontFamily: `${styles[style].font}`,
-              fontSize: "8.2rem",
-              marginBottom: "3.5rem",
-            }}
-          >
-            Alina
-          </h1>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              width: "375px",
-              justifyContent: "space-between",
-              marginBottom: "2rem",
-              alignItems: "center",
-            }}
-          >
-            <button className="arrow-button" onClick={onLeftStyle}>
-              <img
-                src={"/portfolio/icons/arrow-sm-left-svgrepo-com.svg"}
-                alt="mySvgImage"
-                style={{ width: "30px", height: "30px" }}
-              />
-            </button>
-            <h2 style={{ fontSize: "2rem" }}>{t("but also")}</h2>
-            <button className="arrow-button" onClick={onRightStyle}>
-              <img
-                src={"/portfolio/icons/arrow-sm-right-svgrepo-com.svg"}
-                alt="mySvgImage"
-                style={{ width: "30px", height: "30px" }}
-              />
-            </button>
-          </div>
-        </TextFade>
-      </div>
-      <div style={{ backgroundColor: "white", height: "40vh" }}></div>
-      <Transition zoom={zoom} style={style} />
+      <MainTitle
+        style={style}
+        onLeftStyle={onLeftStyle}
+        onRightStyle={onRightStyle}
+      />
+      <div style={{ backgroundColor: "black", height: "40vh" }}></div>
+      {style !== 1 && <Transition zoom={zoom} style={style} />}
       <div
         style={{
           background: styles[style]?.reverseBackground,
@@ -273,7 +228,7 @@ function App() {
         <ContactEmail style={style} />
       </div>
       <ContactMe style={style} />
-    </>
+    </div>
   );
 }
 

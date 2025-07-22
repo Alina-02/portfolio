@@ -8,6 +8,7 @@ export const styles = [
 
     sectionsBackground: "#A60303",
     sectionsTextColor: "white",
+    titleTextColor: "black",
     ringBackground:
       "linear-gradient(90deg,rgba(242, 191, 39, 1) 0%, rgba(217, 142, 4, 1) 50%, rgba(242, 48, 5, 1) 100%)",
     ringAboutMe: "rgba(217, 142, 4, 1)",
@@ -25,6 +26,7 @@ export const styles = [
 
     sectionsBackground: "rgba(255, 0, 128, 1)",
     sectionsTextColor: "white",
+    titleTextColor: "white",
     ringBackground:
       "linear-gradient(90deg,#FF0080  0%, #FF8000 25%, #FFD000 50%, #B3FF00 75%, #00FFFF 100%)",
 
