@@ -104,6 +104,48 @@ function App() {
         onLeftStyle={onLeftStyle}
         onRightStyle={onRightStyle}
       />
+      {style === 1 && (
+        <>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+
+              width: "100%",
+              position: "absolute",
+              top: "350px",
+            }}
+          >
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src={"/portfolio/dragon/left_eye.svg"}
+                alt="mySvgImage"
+                style={{ width: "400px", height: "350px" }}
+              />
+              <div style={{ width: "350px" }} />
+              <img
+                src={"/portfolio/dragon/right_eye.svg"}
+                alt="mySvgImage"
+                style={{ width: "400px", height: "350px" }}
+              />
+            </div>
+            <div>
+              {" "}
+              <img
+                src={"/portfolio/dragon/nose.svg"}
+                alt="mySvgImage"
+                style={{ width: "110px", height: "45px" }}
+              />
+            </div>
+          </div>
+        </>
+      )}
       <div style={{ backgroundColor: "black", height: "40vh" }}></div>
       {style !== 1 && <Transition zoom={zoom} style={style} />}
       <div
