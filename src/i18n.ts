@@ -15,6 +15,7 @@ i18n
     resources: {
       en: {
         translation: {
+          repository: "Repository",
           Hi: "Hi",
           "I am": "I'm",
           "but also": "But also...",
@@ -161,13 +162,14 @@ i18n
       },
       es: {
         translation: {
+          repository: "Repositorio",
           Hi: "Hola",
           "I am": "soy",
           "but also": "Pero también...",
           projects: "Proyectos",
           courses: "Cursos",
           curriculum: "Currículum",
-          "photo progress": "Fotgrafía en proceso...",
+          "photo progress": "Fotografía en proceso...",
           "about me": "Sobre mí",
           "about me first line":
             "¡Hola! Soy una programadora front-end muy interesada por el diseño de interfaces y la interacción con el usuario.",
