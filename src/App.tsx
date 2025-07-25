@@ -55,6 +55,8 @@ function App() {
     } else if (latest < 250 && zoom) {
       setZoom(false);
       setCircleSelected("None");
+    } else if (latest > 1700) {
+      setZoom(false);
     }
   });
 
@@ -115,7 +117,6 @@ function App() {
             className="title-name"
             style={{
               fontFamily: `${styles[style].font}`,
-              fontSize: "8.2rem",
               marginBottom: "3.5rem",
             }}
           >
@@ -138,7 +139,7 @@ function App() {
                 style={{ width: "30px", height: "30px" }}
               />
             </button>
-            <h2 style={{ fontSize: "2rem" }}>{t("but also")}</h2>
+            <h2 className="subtitle-but-also">{t("but also")}</h2>
             <button className="arrow-button" onClick={onRightStyle}>
               <img
                 src={"/portfolio/icons/arrow-sm-right-svgrepo-com.svg"}
