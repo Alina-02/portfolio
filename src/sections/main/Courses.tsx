@@ -45,6 +45,12 @@ const Courses = (props: Props) => {
         >
           <div className="course-card-container">
             <CourseCard
+              mainInfo="coursessection.course10.title"
+              year="coursessection.course10.year"
+              web="coursessection.course10.web"
+              imgLink="/portfolio/img/fm.png"
+            />
+            <CourseCard
               mainInfo="coursessection.course9.title"
               year="coursessection.course9.year"
               web="coursessection.course9.web"

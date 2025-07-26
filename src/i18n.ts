@@ -147,6 +147,11 @@ i18n
               year: "2025",
               web: "Frontend Masters",
             },
+            course10: {
+              title: "Figma for Developers, v2",
+              year: "2025",
+              web: "Frontend Masters",
+            },
           },
           send_email: {
             title: "Send me an email",
@@ -287,6 +292,16 @@ i18n
               title: "Professional React Course",
               year: "2023",
               web: "Codigo Facilito",
+            },
+            course9: {
+              title: "Web UX Design for High Converting Websites",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course10: {
+              title: "Figma for Developers, v2",
+              year: "2025",
+              web: "Frontend Masters",
             },
           },
           send_email: {
