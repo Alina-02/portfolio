@@ -152,6 +152,16 @@ i18n
               year: "2025",
               web: "Frontend Masters",
             },
+            course11: {
+              title: "Introduction to Node.js, v3",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course12: {
+              title: "Next.js Fundamentals, v4",
+              year: "2025",
+              web: "Frontend Masters",
+            },
           },
           send_email: {
             title: "Send me an email",
@@ -300,6 +310,16 @@ i18n
             },
             course10: {
               title: "Figma for Developers, v2",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course11: {
+              title: "Introduction to Node.js, v3",
+              year: "2025",
+              web: "Frontend Masters",
+            },
+            course12: {
+              title: "Next.js Fundamentals, v4",
               year: "2025",
               web: "Frontend Masters",
             },

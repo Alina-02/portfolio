@@ -45,6 +45,20 @@ const Courses = (props: Props) => {
         >
           <div className="course-card-container">
             <CourseCard
+              mainInfo="coursessection.course12.title"
+              year="coursessection.course12.year"
+              web="coursessection.course12.web"
+              imgLink="/portfolio/img/fm.png"
+            />
+            <CourseCard
+              mainInfo="coursessection.course11.title"
+              year="coursessection.course11.year"
+              web="coursessection.course11.web"
+              imgLink="/portfolio/img/fm.png"
+            />
+          </div>
+          <div className="course-card-container">
+            <CourseCard
               mainInfo="coursessection.course10.title"
               year="coursessection.course10.year"
               web="coursessection.course10.web"
