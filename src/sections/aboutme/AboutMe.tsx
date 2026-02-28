@@ -13,21 +13,14 @@ const AboutMe = (props: Props) => {
   const { t } = useTranslation();
   return (
     <div
+      id="about-me"
       className="about-me-container"
       style={{
-        backgroundColor: styles[style]?.sectionsBackground,
-        color: styles[style]?.sectionsTextColor,
+        backgroundColor: "black",
+        color: "white",
       }}
     >
       <div className="about-me-information-wrapper">
-        <div
-          className="about-me-photo"
-          style={{
-            border: `30px solid ${styles[style]?.ringAboutMe}`,
-          }}
-        >
-          <p className="about-me-text">{t("photo progress")}</p>
-        </div>
         <TextFade
           staggerChildren={0.7}
           direction="up"

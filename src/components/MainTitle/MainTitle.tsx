@@ -20,9 +20,22 @@ const MainTitle = (props: Props) => {
         direction="up"
         className="pt-0 pb-5 flex-col flex justify-center items-center space-y-0"
       >
-        <h1 style={{ marginBottom: "0.2rem" }}>{t("Hi")}</h1>
-        <h1 style={{ marginBottom: "1rem", marginTop: "0.8rem" }}>
-          {t("I am")}
+        <h1
+          style={{
+            marginBottom: "0.2rem",
+            fontFamily: `${styles[style].font}`,
+          }}
+        >
+          {t("Welcome").toUpperCase()}
+        </h1>
+        <h1
+          style={{
+            marginBottom: "1rem",
+            marginTop: "0.8rem",
+            fontFamily: `${styles[style].font}`,
+          }}
+        >
+          {t("I am").toUpperCase()}
         </h1>
 
         <h1
@@ -33,7 +46,7 @@ const MainTitle = (props: Props) => {
             marginBottom: "3.5rem",
           }}
         >
-          Alina
+          ALINA
         </h1>
         <div
           style={{
@@ -45,21 +58,21 @@ const MainTitle = (props: Props) => {
             alignItems: "center",
           }}
         >
-          <button className="arrow-button" onClick={onLeftStyle}>
+          {/*<button className="arrow-button" onClick={onLeftStyle}>
             <img
               src={"/portfolio/icons/arrow-sm-left-svgrepo-com.svg"}
               alt="mySvgImage"
               style={{ width: "30px", height: "30px" }}
             />
-          </button>
-          <h2 style={{ fontSize: "2rem" }}>{t("but also")}</h2>
-          <button className="arrow-button" onClick={onRightStyle}>
+          </button>*/}
+          {/*<h2 style={{ fontSize: "2rem" }}>{t("but also")}</h2>*/}
+          {/*<button className="arrow-button" onClick={onRightStyle}>
             <img
               src={"/portfolio/icons/arrow-sm-right-svgrepo-com.svg"}
               alt="mySvgImage"
               style={{ width: "30px", height: "30px" }}
             />
-          </button>
+          </button>*/}
         </div>
       </TextFade>
     </div>

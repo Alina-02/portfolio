@@ -23,6 +23,11 @@
   src: url(/fonts/Shadigo-Trial.woff);
 }
 
+@font-face {
+  font-family: CompactaUnicode;
+  src: url(/fonts/Aka-AcidGR-Compacta.ttf);
+}
+
 html {
   scroll-behavior: smooth;
 }

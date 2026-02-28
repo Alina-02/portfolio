@@ -18,7 +18,7 @@ export const styles = [
     circlesFontSize: "1.5rem",
   },
   {
-    font: "LemonGarlic",
+    font: "CompactaUnicode",
     circleBackground:
       "linear-gradient(0deg,rgba(255, 0, 128, 1) 0%, rgba(179, 255, 0, 1) 72%, rgba(0, 255, 255, 1) 100%)",
     reverseBackground:

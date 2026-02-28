@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
-
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import "./App.css";
 import "./styles/floatingbutton.css";
 import "./styles/bubbles.css";
@@ -18,12 +17,13 @@ import Transition from "./sections/main/MainSection";
 import ProjectsSection from "./sections/main/Projects";
 import ContactEmail from "./components/Email/ContactEmail";
 import MainTitle from "./components/MainTitle/MainTitle";
+import Dragon from "./components/Dragon/Dragon";
 
 function App() {
   const { t } = useTranslation();
   const { scrollY } = useScroll();
 
-  const [style, setStyle] = useState<number>(0);
+  const [style, setStyle] = useState<number>(1);
 
   const [zoom, setZoom] = useState<boolean>(false);
   const [circleSelected, setCircleSelected] = useState<
@@ -69,7 +69,7 @@ function App() {
       )}
 
       <div className="floating-button-container">
-        <a href="#main-container">
+        <a href="#about-me">
           <button
             style={{
               backgroundColor: "white",
@@ -148,32 +148,18 @@ function App() {
       )}
       <div style={{ backgroundColor: "black", height: "40vh" }}></div>
       {style !== 1 && <Transition zoom={zoom} style={style} />}
-      <div
-        style={{
-          background: styles[style]?.reverseBackground,
-          height: "900px",
-        }}
-      ></div>
+
+      <Dragon />
+
+      <AboutMe style={style} />
+
       <div className="main-container" id="main-container">
         <div ref={circlesRef} className="circles-container">
           <div className="circle-container">
-            <motion.div
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 4,
-                ease: "linear",
-                repeat: Infinity,
-              }}
-              className="circle-animation"
-              style={{
-                background: `${styles[style]?.ringBackground}`,
-              }}
-            />
             <a
               href="#projects"
               style={{
-                color: "black",
+                color: "white",
                 fontWeight: 500,
               }}
             >
@@ -188,7 +174,7 @@ function App() {
                     fontSize: styles[style]?.circlesFontSize,
                   }}
                 >
-                  {t("projects")}
+                  {t("projects").toUpperCase()}
                 </h2>
               </button>
             </a>
@@ -220,26 +206,13 @@ function App() {
                     fontSize: styles[style]?.circlesFontSize,
                   }}
                 >
-                  {t("courses")}
+                  {t("courses").toUpperCase()}
                 </h2>
               </button>
             </a>
           </div>
 
           <div className="circle-container">
-            <motion.div
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 4,
-                ease: "linear",
-                repeat: Infinity,
-              }}
-              className="circle-animation"
-              style={{
-                background: `${styles[style]?.ringBackground}`,
-              }}
-            />
             <a href="#curriculum" style={{ color: "black", fontWeight: 500 }}>
               <button
                 className="button"
@@ -252,7 +225,7 @@ function App() {
                     fontSize: styles[style]?.circlesFontSize,
                   }}
                 >
-                  {t("curriculum")}
+                  {t("curriculum").toUpperCase()}
                 </h2>
               </button>
             </a>
@@ -265,7 +238,7 @@ function App() {
         {circleSelected === "Courses" && <Courses style={style} />}
         {circleSelected === "Projects" && <ProjectsSection style={style} />}
       </div>
-      <AboutMe style={style} />
+
       <div style={{ backgroundColor: "white", padding: "2rem" }}>
         <ContactEmail style={style} />
       </div>
