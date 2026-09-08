@@ -28,7 +28,7 @@ export default function ContactEmail(props: Props) {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
@@ -38,7 +38,7 @@ export default function ContactEmail(props: Props) {
         (error) => {
           console.error("FAILED...", error);
           setStatus(t("send_email.error"));
-        }
+        },
       );
   };
 
@@ -78,8 +78,8 @@ export default function ContactEmail(props: Props) {
       <button
         type="submit"
         style={{
-          background: `${styles[style]?.reverseBackground}`,
-          color: `${styles[style]?.sectionsTextColor}`,
+          background: "black",
+          color: "white",
         }}
       >
         {t("send_email.send")}

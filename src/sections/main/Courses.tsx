@@ -22,8 +22,8 @@ const Courses = (props: Props) => {
           zIndex: "1",
           padding: "2rem",
 
-          color: styles[style]?.sectionsTextColor,
-          backgroundColor: styles[style]?.sectionsBackground,
+          color: "black",
+          backgroundColor: "white",
         }}
       >
         <h2

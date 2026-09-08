@@ -24,10 +24,7 @@ const ContactMeElement = (props: Props) => {
         style={{
           width: "30px",
           height: "30px",
-          filter:
-            styles[style]?.sectionsTextColor === "black"
-              ? ""
-              : `${styles[style]?.iconstFilter}`,
+          filter: "brightness(0) invert(1)",
         }}
       />
 

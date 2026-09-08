@@ -1,6 +1,6 @@
 .contact-form {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 20px;
   background: #ffffff;
   border: 1px solid #e0e0e0;
@@ -29,7 +29,9 @@
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
   color: rgba(39, 39, 39, 0.87);
 }
 
@@ -64,7 +66,9 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+  transition:
+    background 0.3s,
+    transform 0.2s;
 }
 
 .contact-form button:hover {

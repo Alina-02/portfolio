@@ -60,22 +60,30 @@ i18n
             experiencedate1: "December 2023 – May 2025",
             experiencelist11:
               "Developed and maintained user interfaces using React and TypeScript.",
-            experiencelist21:
+            experiencelist12:
               "Implemented responsive components with Material UI.",
-            experiencelist31:
+            experiencelist13:
               "Collaborated with back-end team to integrate RESTful APIs.",
-            experiencelist41:
+            experiencelist14:
               "Improved UI performance and usability through refactoring and testing.",
             experiencetitle2:
               "Universitat Politècnica de València Undergraduate Research Student",
-            experiencedate2: "February 2024 – August 2025",
-            experiencelist12:
+            experiencedate2: "February 2025 – August 2025",
+            experiencelist21:
               "Conducted research for final thesis on applying AI in the tourism industry.",
             experiencelist22:
               "Developed a prototype recommendation system for travel personalization.",
-            experiencelist32:
+            experiencelist23:
               "Analyzed existing solutions and proposed innovative improvements.",
-            download: "Download CV",
+            experiencetitle3: "Solver AI Full-Stack Developer",
+            experiencedate3: "October 2025 – Present",
+            experiencelist31:
+              "Developed full-stack application with Angular, Java SpringBoot and MariaDB. ",
+            experiencelist32:
+              "Collected data through web scraping for analysis purposes.",
+            experiencelist33:
+              "Researched and evaluated different technology stacks to identify optimal solutions for various problems.",
+            download: "download",
           },
           projectssection: {
             project1: {
@@ -205,21 +213,29 @@ i18n
             experiencedate1: "Diciembre 2023 – Mayo 2025",
             experiencelist11:
               "Desarrollo y mantenimiento de interfaces usando React y TypeScript.",
-            experiencelist21:
+            experiencelist12:
               "Implementación de componentes responsivos con Material UI.",
-            experiencelist31:
+            experiencelist13:
               "Colaboración con un equipo back-end mediante la integración de APIs RESTful.",
-            experiencelist41:
+            experiencelist14:
               "Mejora del desempeño y usabilidad de la interfaz mediante refactorización y testeo.",
             experiencetitle2:
               "Universitat Politècnica de València Desarrollo e Investigación",
-            experiencedate2: "Febrero 2024 – Agosto 2025",
-            experiencelist12:
+            experiencedate2: "Febrero 2025 – Agosto 2025",
+            experiencelist21:
               "Investigación orientada al TFG respecto a la aplicación de la IA en la industria turística.",
             experiencelist22:
               "Desarrollo de un prototipo de recomendación personalizado para viajes.",
-            experiencelist32: "Análisis de soluciones actuales e innovaciones.",
-            download: "Descargar CV",
+            experiencelist23: "Análisis de soluciones actuales e innovaciones.",
+            experiencetitle3: "Solver AI Full-Stack Developer",
+            experiencedate3: "Ostubre 2025 – Presente",
+            experiencelist31:
+              "Desarrollo full-stack de aplicaciones con Angular, Java SpringBoot y MariaDB.",
+            experiencelist32:
+              "Recolección de datas a través de web scraping para análisis posterior.",
+            experiencelist33:
+              "Invertigación y evaluación de tecnologías para identificar soluciones óptimas a diferentes productos.",
+            download: "descargar",
           },
 
           projectssection: {

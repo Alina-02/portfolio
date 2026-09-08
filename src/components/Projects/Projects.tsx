@@ -3,6 +3,7 @@
 import "./projects.css";
 import ProjectCard from "./ProjectCard";
 import TechChip from "./TechChip";
+import { useEffect, useRef } from "react";
 
 interface Props {
   style: number;
@@ -10,15 +11,46 @@ interface Props {
 
 export default function Projects(props: Props) {
   const { style } = props;
+
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const onWheel = (e: WheelEvent) => {
+      const isScrollingDown = e.deltaY > 0;
+      const isScrollingUp = e.deltaY < 0;
+
+      const canScrollRight = el.scrollLeft + el.clientWidth < el.scrollWidth;
+      const canScrollLeft = el.scrollLeft > 0;
+
+      if (
+        (isScrollingDown && canScrollRight) ||
+        (isScrollingUp && canScrollLeft)
+      ) {
+        e.preventDefault();
+        el.scrollLeft += e.deltaY;
+      }
+    };
+
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, []);
+
   return (
     <div
+      ref={scrollRef}
       className="scrollbar"
       style={{
         display: "flex",
         gap: "3rem",
-        maxWidth: "1280px",
-        overflowX: "scroll",
+        maxWidth: "1980px",
+        overflowX: "auto",
         overflowY: "hidden",
+        marginLeft: "2rem",
+        marginRight: "2rem",
+        scrollBehavior: "smooth",
       }}
     >
       <ProjectCard
