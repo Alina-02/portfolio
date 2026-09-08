@@ -9,7 +9,7 @@ interface Props {
 }
 
 const MainTitle = (props: Props) => {
-  const { style, onLeftStyle, onRightStyle } = props;
+  const { style } = props;
 
   const { t } = useTranslation();
 

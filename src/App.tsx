@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import {
   motion,
   useMotionValueEvent,
@@ -21,21 +21,19 @@ import Courses from "./sections/main/Courses";
 import Transition from "./sections/main/MainSection";
 import ProjectsSection from "./sections/main/Projects";
 import ContactEmail from "./components/Email/ContactEmail";
-import MainTitle from "./components/MainTitle/MainTitle";
+import { TextFade } from "./components/TextFade";
 import Dragon from "./components/Dragon/Dragon";
 
 function App() {
   const { t } = useTranslation();
   const { scrollY } = useScroll();
 
-  const [style, setStyle] = useState<number>(1);
+  const style: number = 1;
 
   const [zoom, setZoom] = useState<boolean>(false);
   const [circleSelected, setCircleSelected] = useState<
     "None" | "Projects" | "Courses" | "Curriculum" | "Email"
   >("Projects");
-
-  const circlesRef = useRef(null);
 
   const buttonVariants: Variants = {
     hover: {
@@ -48,28 +46,12 @@ function App() {
     },
   };
 
-  const menuItems = [
+  const menuItems: { label: string; value: typeof circleSelected }[] = [
     { label: "PROJECTS", value: "Projects" },
     { label: "CURRICULUM", value: "Curriculum" },
     { label: "COURSES", value: "Courses" },
     { label: "CONTACT ME", value: "Email" },
   ];
-
-  const onLeftStyle = () => {
-    if (style === 0) {
-      setStyle(styles.length - 1);
-    } else {
-      setStyle(style - 1);
-    }
-  };
-
-  const onRightStyle = () => {
-    if (style === styles.length - 1) {
-      setStyle(0);
-    } else {
-      setStyle(style + 1);
-    }
-  };
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 250 && latest < 700 && !zoom) {
@@ -124,7 +106,7 @@ function App() {
         <LanguageSwitch />
       </div>
 
-      <div className="title-div">
+      <div className="title-div" style={{ color: "white" }}>
         <TextFade
           staggerChildren={0.2}
           direction="up"
@@ -144,46 +126,44 @@ function App() {
           >
             Alina
           </h1>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-
-              width: "100%",
-              position: "absolute",
-              top: "350px",
-            }}
-          >
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <img
-                src={"/portfolio/dragon/left_eye.svg"}
-                alt="mySvgImage"
-                style={{ width: "400px", height: "350px" }}
-              />
-              <div style={{ width: "350px" }} />
-              <img
-                src={"/portfolio/dragon/right_eye.svg"}
-                alt="mySvgImage"
-                style={{ width: "400px", height: "350px" }}
-              />
-            </button>
-            <h2 className="subtitle-but-also">{t("but also")}</h2>
-            <button className="arrow-button" onClick={onRightStyle}>
-              <img
-                src={"/portfolio/dragon/nose.svg"}
-                alt="mySvgImage"
-                style={{ width: "110px", height: "45px" }}
-              />
-            </div>
-          </div>
-        </>
-      )}
+        </TextFade>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: "100%",
+          position: "absolute",
+          top: "350px",
+        }}
+      >
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <img
+            src={"/portfolio/dragon/left_eye.svg"}
+            alt="mySvgImage"
+            style={{ width: "400px", height: "350px" }}
+          />
+          <div style={{ width: "350px" }} />
+          <img
+            src={"/portfolio/dragon/right_eye.svg"}
+            alt="mySvgImage"
+            style={{ width: "400px", height: "350px" }}
+          />
+        </div>
+        <div>
+          <img
+            src={"/portfolio/dragon/nose.svg"}
+            alt="mySvgImage"
+            style={{ width: "110px", height: "45px" }}
+          />
+        </div>
+      </div>
       <div style={{ backgroundColor: "black", height: "40vh" }}></div>
       {style !== 1 && <Transition zoom={zoom} style={style} />}
 

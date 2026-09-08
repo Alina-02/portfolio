@@ -2,7 +2,6 @@ import { TextFade } from "../../components/TextFade";
 import { styles } from "../../utils/styles";
 
 import "../../styles/contactme.css";
-import { useTranslation } from "react-i18next";
 import ContactMeElement from "./ContactMeElement";
 
 interface Props {
@@ -11,7 +10,6 @@ interface Props {
 
 const ContactMe = (props: Props) => {
   const { style } = props;
-  const { t } = useTranslation();
   return (
     <div
       className="contact-me-container"
