@@ -4,7 +4,6 @@
   overflow: auto;
   padding: 0 10px;
 }
-/*       ScrollBar 1        */
 
 .scrollbar::-webkit-scrollbar {
   width: 10px;
@@ -18,5 +17,5 @@
 
 .scrollbar::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background-color: #d55959;
+  background-color: black;
 }

@@ -17,11 +17,9 @@ const ProjectsSection = (props: Props) => {
           display: "flex",
           flexDirection: "column",
           zIndex: "1",
-          alignItems: "center",
-          padding: "2rem",
-
-          color: styles[style]?.sectionsTextColor,
-          backgroundColor: styles[style]?.sectionsBackground,
+          paddingTop: "2rem",
+          color: "black",
+          backgroundColor: "white",
         }}
       >
         <h2

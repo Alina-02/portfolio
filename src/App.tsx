@@ -1,5 +1,10 @@
 import { useRef, useState } from "react";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  Variants,
+} from "framer-motion";
 import "./App.css";
 import "./styles/floatingbutton.css";
 import "./styles/bubbles.css";
@@ -27,10 +32,28 @@ function App() {
 
   const [zoom, setZoom] = useState<boolean>(false);
   const [circleSelected, setCircleSelected] = useState<
-    "None" | "Projects" | "Courses" | "Curriculum"
-  >("None");
+    "None" | "Projects" | "Courses" | "Curriculum" | "Email"
+  >("Projects");
 
   const circlesRef = useRef(null);
+
+  const buttonVariants: Variants = {
+    hover: {
+      x: 20,
+      backgroundColor: "#1a1a1a",
+      transition: { type: "spring", stiffness: 300, damping: 20 },
+    },
+    tap: {
+      scale: 0.95,
+    },
+  };
+
+  const menuItems = [
+    { label: "PROJECTS", value: "Projects" },
+    { label: "CURRICULUM", value: "Curriculum" },
+    { label: "COURSES", value: "Courses" },
+    { label: "CONTACT ME", value: "Email" },
+  ];
 
   const onLeftStyle = () => {
     if (style === 0) {
@@ -53,7 +76,7 @@ function App() {
       setZoom(true);
     } else if (latest < 250 && zoom) {
       setZoom(false);
-      setCircleSelected("None");
+      setCircleSelected("Projects");
     }
   });
 
@@ -152,96 +175,51 @@ function App() {
       <Dragon />
 
       <AboutMe style={style} />
-
-      <div className="main-container" id="main-container">
-        <div ref={circlesRef} className="circles-container">
-          <div className="circle-container">
-            <a
-              href="#projects"
+      <div
+        id="main-container"
+        style={{ display: "flex", flexDirection: "row" }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            maxWidth: "fit-content",
+            gap: "10px", // Espaciado entre botones
+          }}
+        >
+          {menuItems.map((item) => (
+            <motion.button
+              key={item.value}
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
               style={{
+                background: "black",
                 color: "white",
-                fontWeight: 500,
+                width: "250px",
+                fontSize: "2rem",
+                fontFamily: styles[style]?.font,
+                border: "none",
+                cursor: "pointer",
+                textAlign: "left",
+                padding: "10px 20px",
               }}
+              onClick={() => setCircleSelected(item.value)}
             >
-              <button
-                className="button"
-                onClick={() => setCircleSelected("Projects")}
-              >
-                <h2
-                  style={{
-                    marginBottom: "0",
-                    fontFamily: `${styles[style]?.font}`,
-                    fontSize: styles[style]?.circlesFontSize,
-                  }}
-                >
-                  {t("projects").toUpperCase()}
-                </h2>
-              </button>
-            </a>
-          </div>
+              {item.label}
+            </motion.button>
+          ))}
+        </div>
 
-          <div className="circle-container">
-            <motion.div
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 4,
-                ease: "linear",
-                repeat: Infinity,
-              }}
-              className="circle-animation"
-              style={{
-                background: `${styles[style]?.ringBackground}`,
-              }}
-            />
-            <a href="#courses" style={{ color: "black", fontWeight: 500 }}>
-              <button
-                className="button"
-                onClick={() => setCircleSelected("Courses")}
-              >
-                <h2
-                  style={{
-                    marginBottom: "0",
-                    fontFamily: `${styles[style]?.font}`,
-                    fontSize: styles[style]?.circlesFontSize,
-                  }}
-                >
-                  {t("courses").toUpperCase()}
-                </h2>
-              </button>
-            </a>
-          </div>
-
-          <div className="circle-container">
-            <a href="#curriculum" style={{ color: "black", fontWeight: 500 }}>
-              <button
-                className="button"
-                onClick={() => setCircleSelected("Curriculum")}
-              >
-                <h2
-                  style={{
-                    marginBottom: "0",
-                    fontFamily: `${styles[style]?.font}`,
-                    fontSize: styles[style]?.circlesFontSize,
-                  }}
-                >
-                  {t("curriculum").toUpperCase()}
-                </h2>
-              </button>
-            </a>
-          </div>
+        <div style={{ width: "100%", background: "white" }}>
+          {circleSelected === "Curriculum" && <Curriculum style={style} />}
+          {circleSelected === "Courses" && <Courses style={style} />}
+          {circleSelected === "Projects" && <ProjectsSection style={style} />}
+          {circleSelected === "Email" && <ContactEmail style={style} />}
         </div>
       </div>
       <div id="main-information" />
-      <div>
-        {circleSelected === "Curriculum" && <Curriculum style={style} />}
-        {circleSelected === "Courses" && <Courses style={style} />}
-        {circleSelected === "Projects" && <ProjectsSection style={style} />}
-      </div>
 
-      <div style={{ backgroundColor: "white", padding: "2rem" }}>
-        <ContactEmail style={style} />
-      </div>
       <ContactMe style={style} />
     </div>
   );
