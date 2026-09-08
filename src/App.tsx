@@ -1,11 +1,13 @@
 import { useRef, useState } from "react";
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
-
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  Variants,
+} from "framer-motion";
 import "./App.css";
 import "./styles/floatingbutton.css";
 import "./styles/bubbles.css";
-
-import { TextFade } from "./components/TextFade";
 
 import { styles } from "./utils/styles";
 import { useTranslation } from "react-i18next";
@@ -19,19 +21,39 @@ import Courses from "./sections/main/Courses";
 import Transition from "./sections/main/MainSection";
 import ProjectsSection from "./sections/main/Projects";
 import ContactEmail from "./components/Email/ContactEmail";
+import MainTitle from "./components/MainTitle/MainTitle";
+import Dragon from "./components/Dragon/Dragon";
 
 function App() {
   const { t } = useTranslation();
   const { scrollY } = useScroll();
 
-  const [style, setStyle] = useState<number>(0);
+  const [style, setStyle] = useState<number>(1);
 
   const [zoom, setZoom] = useState<boolean>(false);
   const [circleSelected, setCircleSelected] = useState<
-    "None" | "Projects" | "Courses" | "Curriculum"
-  >("None");
+    "None" | "Projects" | "Courses" | "Curriculum" | "Email"
+  >("Projects");
 
   const circlesRef = useRef(null);
+
+  const buttonVariants: Variants = {
+    hover: {
+      x: 20,
+      backgroundColor: "#1a1a1a",
+      transition: { type: "spring", stiffness: 300, damping: 20 },
+    },
+    tap: {
+      scale: 0.95,
+    },
+  };
+
+  const menuItems = [
+    { label: "PROJECTS", value: "Projects" },
+    { label: "CURRICULUM", value: "Curriculum" },
+    { label: "COURSES", value: "Courses" },
+    { label: "CONTACT ME", value: "Email" },
+  ];
 
   const onLeftStyle = () => {
     if (style === 0) {
@@ -61,7 +83,7 @@ function App() {
   });
 
   return (
-    <>
+    <div style={{ backgroundColor: "black" }}>
       {style === 4 && (
         <>
           <Flower left={30} top={-30} />
@@ -72,7 +94,7 @@ function App() {
       )}
 
       <div className="floating-button-container">
-        <a href="#main-container">
+        <a href="#about-me">
           <button
             style={{
               backgroundColor: "white",
@@ -125,156 +147,96 @@ function App() {
           <div
             style={{
               display: "flex",
-              flexDirection: "row",
-              width: "375px",
-              justifyContent: "space-between",
-              marginBottom: "2rem",
-              alignItems: "center",
+              flexDirection: "column",
+
+              width: "100%",
+              position: "absolute",
+              top: "350px",
             }}
           >
-            <button className="arrow-button" onClick={onLeftStyle}>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <img
-                src={"/portfolio/icons/arrow-sm-left-svgrepo-com.svg"}
+                src={"/portfolio/dragon/left_eye.svg"}
                 alt="mySvgImage"
-                style={{ width: "30px", height: "30px" }}
+                style={{ width: "400px", height: "350px" }}
+              />
+              <div style={{ width: "350px" }} />
+              <img
+                src={"/portfolio/dragon/right_eye.svg"}
+                alt="mySvgImage"
+                style={{ width: "400px", height: "350px" }}
               />
             </button>
             <h2 className="subtitle-but-also">{t("but also")}</h2>
             <button className="arrow-button" onClick={onRightStyle}>
               <img
-                src={"/portfolio/icons/arrow-sm-right-svgrepo-com.svg"}
+                src={"/portfolio/dragon/nose.svg"}
                 alt="mySvgImage"
-                style={{ width: "30px", height: "30px" }}
+                style={{ width: "110px", height: "45px" }}
               />
-            </button>
+            </div>
           </div>
-        </TextFade>
-      </div>
-      <div style={{ backgroundColor: "white", height: "40vh" }}></div>
-      <Transition zoom={zoom} style={style} />
+        </>
+      )}
+      <div style={{ backgroundColor: "black", height: "40vh" }}></div>
+      {style !== 1 && <Transition zoom={zoom} style={style} />}
+
+      <Dragon />
+
+      <AboutMe style={style} />
       <div
-        style={{
-          background: styles[style]?.reverseBackground,
-          height: "900px",
-        }}
-      ></div>
-      <div className="main-container" id="main-container">
-        <div ref={circlesRef} className="circles-container">
-          <div className="circle-container">
-            <motion.div
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 4,
-                ease: "linear",
-                repeat: Infinity,
-              }}
-              className="circle-animation"
+        id="main-container"
+        style={{ display: "flex", flexDirection: "row" }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            maxWidth: "fit-content",
+            gap: "10px", // Espaciado entre botones
+          }}
+        >
+          {menuItems.map((item) => (
+            <motion.button
+              key={item.value}
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
               style={{
-                background: `${styles[style]?.ringBackground}`,
+                background: "black",
+                color: "white",
+                width: "250px",
+                fontSize: "2rem",
+                fontFamily: styles[style]?.font,
+                border: "none",
+                cursor: "pointer",
+                textAlign: "left",
+                padding: "10px 20px",
               }}
-            />
-            <a
-              href="#projects"
-              style={{
-                color: "black",
-                fontWeight: 500,
-              }}
+              onClick={() => setCircleSelected(item.value)}
             >
-              <button
-                className="button"
-                onClick={() => setCircleSelected("Projects")}
-              >
-                <h2
-                  style={{
-                    marginBottom: "0",
-                    fontFamily: `${styles[style]?.font}`,
-                    fontSize: styles[style]?.circlesFontSize,
-                  }}
-                >
-                  {t("projects")}
-                </h2>
-              </button>
-            </a>
-          </div>
+              {item.label}
+            </motion.button>
+          ))}
+        </div>
 
-          <div className="circle-container">
-            <motion.div
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 4,
-                ease: "linear",
-                repeat: Infinity,
-              }}
-              className="circle-animation"
-              style={{
-                background: `${styles[style]?.ringBackground}`,
-              }}
-            />
-            <a href="#courses" style={{ color: "black", fontWeight: 500 }}>
-              <button
-                className="button"
-                onClick={() => setCircleSelected("Courses")}
-              >
-                <h2
-                  style={{
-                    marginBottom: "0",
-                    fontFamily: `${styles[style]?.font}`,
-                    fontSize: styles[style]?.circlesFontSize,
-                  }}
-                >
-                  {t("courses")}
-                </h2>
-              </button>
-            </a>
-          </div>
-
-          <div className="circle-container">
-            <motion.div
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 4,
-                ease: "linear",
-                repeat: Infinity,
-              }}
-              className="circle-animation"
-              style={{
-                background: `${styles[style]?.ringBackground}`,
-              }}
-            />
-            <a href="#curriculum" style={{ color: "black", fontWeight: 500 }}>
-              <button
-                className="button"
-                onClick={() => setCircleSelected("Curriculum")}
-              >
-                <h2
-                  style={{
-                    marginBottom: "0",
-                    fontFamily: `${styles[style]?.font}`,
-                    fontSize: styles[style]?.circlesFontSize,
-                  }}
-                >
-                  {t("curriculum")}
-                </h2>
-              </button>
-            </a>
-          </div>
+        <div style={{ width: "100%", background: "white" }}>
+          {circleSelected === "Curriculum" && <Curriculum style={style} />}
+          {circleSelected === "Courses" && <Courses style={style} />}
+          {circleSelected === "Projects" && <ProjectsSection style={style} />}
+          {circleSelected === "Email" && <ContactEmail style={style} />}
         </div>
       </div>
       <div id="main-information" />
-      <div>
-        {circleSelected === "Curriculum" && <Curriculum style={style} />}
-        {circleSelected === "Courses" && <Courses style={style} />}
-        {circleSelected === "Projects" && <ProjectsSection style={style} />}
-      </div>
-      <AboutMe style={style} />
-      <div style={{ backgroundColor: "white", padding: "2rem" }}>
-        <ContactEmail style={style} />
-      </div>
+
       <ContactMe style={style} />
-    </>
+    </div>
   );
 }
 

@@ -28,36 +28,14 @@
   height: 100%;
 }
 
-.circle-container {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;
-  width: 225px;
-  height: 225px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.circle-animation {
-  position: absolute;
-  border-radius: 100%;
-  inset: 0;
-  width: 225px;
-  height: 225px;
-  display: flex;
-}
-
 .button {
   position: relative;
-  border-radius: 100%;
   padding: 0;
-  width: 180px;
-  height: 180px;
-  background-color: white;
+  width: 150px;
+  height: 70px;
+  background-color: black;
   text-align: center;
-  color: black;
+  color: white;
 }
 
 .button h2 {

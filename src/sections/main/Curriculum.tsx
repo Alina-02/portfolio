@@ -18,18 +18,34 @@ const Curriculum = (props: Props) => {
         id="curriculum"
         className="curriculum-container"
         style={{
-          backgroundColor: styles[style]?.sectionsBackground,
-          color: styles[style]?.sectionsTextColor,
+          backgroundColor: "white",
+          color: "black",
         }}
       >
-        <h2
-          style={{
-            fontFamily: `${styles[style]?.font}`,
-            fontSize: styles[style]?.h2FontSize,
-          }}
-        >
-          {t("curriculum")}
-        </h2>
+        <div>
+          <h2
+            style={{
+              marginBottom: "0px",
+              fontFamily: `${styles[style]?.font}`,
+              fontSize: styles[style]?.h2FontSize,
+            }}
+          >
+            {t("curriculum")}
+          </h2>
+          <div className="download-button-container">
+            <a
+              className="download-button"
+              href={
+                i18n.language === "en"
+                  ? "docs/CV_Alina_Montoliu_Eng.pdf"
+                  : "docs/CV_Alina_Montoliu_Mateo.pdf"
+              }
+              download
+            >
+              {t("curriculumsection.download")}
+            </a>
+          </div>
+        </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div
             style={{
@@ -66,26 +82,8 @@ const Curriculum = (props: Props) => {
               <br /> <i>{t("curriculumsection.tesodate")}</i> <br />
               {t("curriculumsection.tesodescription")}
             </p>
-
-            <h3 style={{ marginBottom: "0.5vh", fontSize: "1.5rem" }}>
-              {t("curriculumsection.skills")}
-            </h3>
-
-            <div style={{ fontSize: "1rem", marginTop: "0.5vh" }}>
-              <strong>{t("curriculumsection.languages")}</strong>
-              <ul>
-                <li>{t("curriculumsection.language1")}</li>
-                <li>{t("curriculumsection.language2")}</li>
-                <li>{t("curriculumsection.language3")}</li>
-              </ul>
-              <strong>{t("curriculumsection.technical")}</strong>
-              <ul>
-                <li>{t("curriculumsection.technical1")}</li>
-                <li>{t("curriculumsection.technical2")}</li>
-                <li>{t("curriculumsection.technical3")}</li>
-              </ul>
-            </div>
           </div>
+
           <div
             style={{
               maxWidth: "550px",
@@ -101,15 +99,24 @@ const Curriculum = (props: Props) => {
             >
               {t("curriculumsection.experience")}
             </h3>
+            <div style={{ fontSize: "1rem" }}>
+              <strong>{t("curriculumsection.experiencetitle3")}</strong>
+              <br /> <i>{t("curriculumsection.experiencedate3")}</i>
+              <ul style={{ textAlign: "left" }}>
+                <li>{t("curriculumsection.experiencelist31")}</li>
+                <li>{t("curriculumsection.experiencelist32")}</li>
+                <li>{t("curriculumsection.experiencelist33")}</li>
+              </ul>
+            </div>
             <div style={{ fontSize: "1rem", marginTop: "0.5vh" }}>
               <strong>{t("curriculumsection.experiencetitle1")}</strong>
               <br />
               <i>{t("curriculumsection.experiencedate1")}</i> <br />
               <ul style={{ textAlign: "left" }}>
                 <li>{t("curriculumsection.experiencelist11")}</li>
-                <li>{t("curriculumsection.experiencelist21")}</li>
-                <li>{t("curriculumsection.experiencelist31")}</li>
-                <li>{t("curriculumsection.experiencelist41")}</li>
+                <li>{t("curriculumsection.experiencelist12")}</li>
+                <li>{t("curriculumsection.experiencelist13")}</li>
+                <li>{t("curriculumsection.experiencelist14")}</li>
               </ul>
             </div>
             <div style={{ fontSize: "1rem" }}>
@@ -118,21 +125,8 @@ const Curriculum = (props: Props) => {
               <ul style={{ textAlign: "left" }}>
                 <li>{t("curriculumsection.experiencelist21")}</li>
                 <li>{t("curriculumsection.experiencelist22")}</li>
-                <li>{t("curriculumsection.experiencelist32")}</li>
+                <li>{t("curriculumsection.experiencelist23")}</li>
               </ul>
-            </div>
-            <div className="download-button-container">
-              <a
-                className="download-button"
-                href={
-                  i18n.language === "en"
-                    ? "docs/CV_Alina_Montoliu_Eng.pdf"
-                    : "docs/CV_Alina_Montoliu_Mateo.pdf"
-                }
-                download
-              >
-                {t("curriculumsection.download")}
-              </a>
             </div>
           </div>
         </div>

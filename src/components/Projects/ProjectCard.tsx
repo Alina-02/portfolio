@@ -19,6 +19,8 @@ const ProjectCard = (props: Props) => {
   return (
     <div
       style={{
+        border: "2px solid black",
+        borderColor: "black",
         minWidth: "350px",
         width: "350px",
         display: "flex",
@@ -71,9 +73,10 @@ const ProjectCard = (props: Props) => {
       <img
         src={imagelink}
         style={{
+          border: "3px solid black",
           maxWidth: "100%",
           height: "auto !important",
-          borderRadius: "20px ",
+          borderRadius: "10px ",
         }}
       />
     </div>
