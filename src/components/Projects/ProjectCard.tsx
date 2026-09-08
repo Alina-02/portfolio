@@ -55,7 +55,7 @@ const ProjectCard = (props: Props) => {
               color: "black",
             }}
           >
-            Repository
+            {t("repository")}
           </a>
         </p>
         <div style={{ display: "flex" }}>{technologies}</div>

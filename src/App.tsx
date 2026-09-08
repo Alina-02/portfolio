@@ -76,7 +76,9 @@ function App() {
       setZoom(true);
     } else if (latest < 250 && zoom) {
       setZoom(false);
-      setCircleSelected("Projects");
+      setCircleSelected("None");
+    } else if (latest > 1700) {
+      setZoom(false);
     }
   });
 
@@ -122,13 +124,26 @@ function App() {
         <LanguageSwitch />
       </div>
 
-      <MainTitle
-        style={style}
-        onLeftStyle={onLeftStyle}
-        onRightStyle={onRightStyle}
-      />
-      {style === 1 && (
-        <>
+      <div className="title-div">
+        <TextFade
+          staggerChildren={0.2}
+          direction="up"
+          className="pt-0 pb-5 flex-col flex justify-center items-center space-y-0"
+        >
+          <h1 style={{ marginBottom: "0.2rem" }}>{t("Hi")}</h1>
+          <h1 style={{ marginBottom: "1rem", marginTop: "0.8rem" }}>
+            {t("I am")}
+          </h1>
+
+          <h1
+            className="title-name"
+            style={{
+              fontFamily: `${styles[style].font}`,
+              marginBottom: "3.5rem",
+            }}
+          >
+            Alina
+          </h1>
           <div
             style={{
               display: "flex",
@@ -157,9 +172,9 @@ function App() {
                 alt="mySvgImage"
                 style={{ width: "400px", height: "350px" }}
               />
-            </div>
-            <div>
-              {" "}
+            </button>
+            <h2 className="subtitle-but-also">{t("but also")}</h2>
+            <button className="arrow-button" onClick={onRightStyle}>
               <img
                 src={"/portfolio/dragon/nose.svg"}
                 alt="mySvgImage"

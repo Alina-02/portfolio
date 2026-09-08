@@ -54,6 +54,8 @@ h2 {
 
   .about-me-photo {
     margin-bottom: 2rem;
+    height: 300px;
+    width: 300px;
   }
 
   .about-me-text-container {
